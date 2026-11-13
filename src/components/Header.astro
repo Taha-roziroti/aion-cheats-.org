@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from '@/components/starwind/sheet';
 import Icon from './icons/Icon.astro';
+import { SITE_LOGO_ALT } from '../utils/imageAlt';
 import { sheetTitle } from '@/components/starwind/sheet/variants';
 
 import type { IconName } from './icons/types';
@@ -34,7 +35,7 @@ const purchaseUrl = PRIMARY_CHECKOUT_PATH;
       class="pointer-events-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-xl border border-border bg-card/95 px-4 text-foreground shadow-sm sm:px-5 xl:grid xl:h-[4.25rem] xl:max-w-[84rem] xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:items-center xl:gap-4 xl:px-6"
     >
     <a href="/" class="inline-flex min-w-0 max-w-[46%] shrink-0 items-center gap-2 font-[family-name:var(--font-heading)] text-base font-semibold tracking-tight sm:max-w-none xl:justify-self-start xl:text-lg" aria-label={t.ui.homeAria}>
-      <img src="/apple-touch-icon.png" alt="" width="32" height="32" class="size-8 shrink-0 rounded-md" />
+      <img src="/apple-touch-icon.png" alt={SITE_LOGO_ALT} width="32" height="32" class="size-8 shrink-0 rounded-md" />
       <span class="truncate" aria-hidden="true">ABI <span class="text-muted-foreground">Cheats</span></span>
       <span class="sr-only"> site header</span>
     </a>
@@ -71,27 +72,41 @@ const purchaseUrl = PRIMARY_CHECKOUT_PATH;
         >
           <Icon name="menu" size={20} />
         </SheetTrigger>
-        <SheetContent side="right" class="flex w-[min(100vw-2rem,20rem)] flex-col gap-4">
-          <SheetHeader>
+        <SheetContent
+          side="right"
+          class="!flex !w-[min(calc(100vw-2rem),18.75rem)] !max-w-[min(calc(100vw-2rem),18.75rem)] flex-col overflow-x-hidden p-0 sm:!max-w-[18.75rem]"
+        >
+          <SheetHeader class="border-b border-border px-4 py-3">
             <p class={sheetTitle()}>{t.site.name}</p>
           </SheetHeader>
-          <nav class="flex flex-col gap-1" aria-label="Mobile">
-            {t.nav.map((link) => (
-              <a
-                href={link.href}
-                class="nav-link flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                data-nav-link
-                {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
-              >
-                <Icon name={navIcons[link.href] ?? 'navFeatures'} size={16} />
-                {link.label}
-                <span class="sr-only"> mobile menu</span>
-              </a>
-            ))}
-          </nav>
-          <Button as="a" href={purchaseUrl} variant="primary" class="w-full justify-center" aria-label={t.ui.checkoutAria}>
-            {t.ui.browseCheatsMobile}
-          </Button>
+          <div class="flex min-h-0 flex-1 flex-col overflow-y-auto px-2 py-2">
+            <nav class="flex flex-col gap-0.5" aria-label="Mobile">
+              {t.nav.map((link) => (
+                <a
+                  href={link.href}
+                  class="nav-link flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  data-nav-link
+                  {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
+                >
+                  <Icon name={navIcons[link.href] ?? 'navFeatures'} size={16} />
+                  {link.label}
+                  <span class="sr-only"> mobile menu</span>
+                </a>
+              ))}
+            </nav>
+          </div>
+          <div class="shrink-0 border-t border-border p-4">
+            <Button
+              as="a"
+              href={purchaseUrl}
+              variant="primary"
+              size="sm"
+              class="box-border w-full max-w-full justify-center"
+              aria-label={t.ui.checkoutAria}
+            >
+              {t.ui.browseCheatsMobile}
+            </Button>
+          </div>
         </SheetContent>
       </Sheet>
     </div>

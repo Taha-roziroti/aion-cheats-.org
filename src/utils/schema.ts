@@ -1,6 +1,8 @@
 import type { FaqItem } from '../i18n/types';
 import { SITE_BRAND, SUPPORT_EMAIL } from '../config/site';
+import { SITE_PURPOSE } from '../data/site';
 import { SITE_ORIGIN, absoluteAssetUrl, canonicalUrl, getOrganizationSameAs } from '../config/seo';
+import type { MarkdownFaqItem } from './markdownFaq';
 
 export interface ProductOfferInput {
   name: string;
@@ -34,8 +36,7 @@ export function websiteSchema() {
     name: SITE_BRAND,
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
-    description:
-      'Placeholder product description — replace with your primary feature summary.',
+    description: SITE_PURPOSE,
   };
 }
 
@@ -96,6 +97,10 @@ export function webPageSchema(input: { name: string; description: string; url: s
 }
 
 export function faqPageSchema(items: FaqItem[]) {
+  return faqPageSchemaFromPairs(items);
+}
+
+export function faqPageSchemaFromPairs(items: MarkdownFaqItem[] | FaqItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

@@ -1,12 +1,14 @@
 ---
 import { t } from '../i18n';
 import { Separator } from '@/components/starwind/separator';
+import { SITE_LOGO_ALT } from '../utils/imageAlt';
 
 interface Props {
   logoAlt?: string;
 }
 
 const { logoAlt } = Astro.props;
+const footerLogoAlt = logoAlt?.trim() ? logoAlt : SITE_LOGO_ALT;
 
 const resourceLinks = [
   { href: '/arena-breakout-infinite-cheats-pricing/', label: 'Pricing', ariaLabel: 'Pricing' },
@@ -28,7 +30,7 @@ const legalLinks = [
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
         <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-semibold" aria-label={t.ui.homeAria}>
-          <img src="/logo.svg" alt={logoAlt ?? ''} width="32" height="32" class="rounded-md" />
+          <img src="/logo.svg" alt={footerLogoAlt} width="32" height="32" class="rounded-md" />
           <span aria-hidden="true">ABI <span class="text-muted-foreground">Cheats</span></span>
           <span class="sr-only"> site footer</span>
         </a>

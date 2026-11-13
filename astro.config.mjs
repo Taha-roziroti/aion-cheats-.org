@@ -48,9 +48,18 @@ export default defineConfig({
       minify: 'esbuild',
       target: 'es2022',
       modulePreload: { polyfill: false },
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules/gsap')) return 'vendor-gsap';
+            if (id.includes('node_modules/lenis')) return 'vendor-lenis';
+          },
+        },
+      },
     },
   },
   build: {
-    inlineStylesheets: 'always',
+    /** External CSS when large — better cache reuse than inlining on every HTML file. */
+    inlineStylesheets: 'auto',
   },
 });

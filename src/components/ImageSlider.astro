@@ -115,6 +115,11 @@ const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
 {isHero && (
   <script>
     import { setupHeroEmbla } from '../scripts/hero-embla.ts';
-    setupHeroEmbla();
+    const start = () => setupHeroEmbla();
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(start, { timeout: 3000 });
+    } else {
+      window.addEventListener('load', start, { once: true });
+    }
   </script>
 )}

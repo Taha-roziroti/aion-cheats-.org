@@ -1,97 +1,50 @@
 ---
-title: "Arena Breakout Infinite HWID Spoofer | ABI"
+title: "Arena Breakout Infinite HWID Spoofer | Windows PCs"
 description: "Explore HWID spoofing features, Windows requirements and hardware identifier options. Review the listed compatibility before choosing a setup."
 slug: "/arena-breakout-infinite-hwid-spoofer/"
 ---
 
 # Arena Breakout Infinite HWID Spoofer
 
-A Windows PC has several hardware identifiers associated with its configuration. An HWID spoofer is designed to change selected identifiers as part of a system-level setup.
+The **Arena Breakout Infinite HWID spoofer** listing covers hardware identifier changes plus a bundled cleaner on Windows. Treat it as a separate utility checkout from the main ABI plan or Cloud DMA.
 
-The **Arena Breakout Infinite HWID spoofer** page covers the hardware spoofing feature set, its cleaner functionality and the Windows requirements associated with the listed product.
+## Features and compatibility
 
-There is one compatibility detail to confirm before publishing: the current product's supported-title list explicitly names Arena Breakout, but does not separately identify the Arena Breakout Infinite PC client and build.
+Published copy references disk serials, MAC addresses, GPU IDs, and related identifiers, with a cleaner included in the same package. Administrator rights and the vendor setup steps apply because the tool touches system-level values.
 
-**[NEEDS INFO: Confirm exact Arena Breakout Infinite PC-client and build compatibility before making an ABI-specific support claim or publishing this as a confirmed compatible product.]**
+Seller materials mention Arena Breakout under broader anti-cheat notes, but **Arena Breakout Infinite PC builds are not confirmed in our source copy yet.** Verify the exact client and ACE build with the seller before you rely on ABI-specific compatibility claims.
 
-## Arena Breakout Infinite HWID spoofer: product features
+## Requirements and pricing
 
-The listed HWID spoofer includes a Hardware Spoofer with a cleaner.
+Expect 64-bit Windows 10 or 11 with the same security stack noted on other listings (HVCI, Core Isolation, TPM, Secure Boot where required). Run through the [PC requirements checklist](/guides/system-requirements/) first so you are not buying a utility into an incompatible host image.
 
-The product information identifies several categories of hardware identifiers, including:
+The HWID utility does not replace a main ABI plan or Cloud DMA—it sits beside them. If you still need overlays or aim modules, read the [ESP feature guide](/arena-breakout-infinite-esp/) and [ABI plan pricing sheet](/arena-breakout-infinite-cheats-pricing/) before you stack purchases. When virtualization is on the roadmap, budget [Cloud DMA licensing details](/cloud-dma-for-arena-breakout-infinite/) separately.
 
-- Disk serials.
-- MAC addresses.
-- GPU IDs.
-- Related hardware identifiers.
+## Using the cleaner responsibly
 
-The cleaner is included with the hardware spoofing feature set.
+The bundled cleaner is meant to reset stale identifier caches before a spoof session, not to automate ban evasion. Follow the vendor order of operations: back up anything you care about, close anti-cheat clients, run the cleaner, apply the spoof profile, then reboot when instructed. Skipping steps often produces inconsistent serials that support cannot diagnose from logs alone.
 
-These functions belong to the Windows system configuration process, so the supplied setup instructions and required system permissions are part of the product requirements.
+Pair written instructions with the permissions prompt you see on screen—denying elevation mid-run can leave half-written values that require another cleaning pass.
 
-## Supported titles and compatibility information
+## When to open support instead of retrying
 
-The current supported-title listing includes Arena Breakout under its Other Anti-Cheats section and references ACE anti-cheat support.
+Capture your Windows build, motherboard model, and whether BitLocker or third-party disk encryption is enabled before you open a ticket. Support can map those facts to known limitations faster than repeated reinstalls. If the seller has not confirmed Arena Breakout Infinite PC compatibility, ask explicitly rather than inferring from other titles in the same anti-cheat family.
 
-However, Arena Breakout and Arena Breakout Infinite should not automatically be treated as identical compatibility entries.
+[**Continue to HWID spoofer checkout**](/go/hwid-spoofer/)
 
-The exact PC client and current ABI build compatibility need to be confirmed here:
+## Questions
 
-**[NEEDS INFO: Seller-confirmed Arena Breakout Infinite client, anti-cheat and build support.]**
+**What does the spoofer change?**  
+Disk, MAC, GPU, and related hardware identifiers per the vendor feature list.
 
-Once confirmed, this section should identify the precise supported version rather than relying on a broad game-category description.
+**Is a cleaner included?**  
+Yes, the listing pairs a cleaner with the spoofer.
 
-## Windows and system requirements
+**Which Windows versions are supported?**  
+Windows 10 and 11 64-bit on the published requirements.
 
-The listed product requirements include:
+**Is Arena Breakout Infinite confirmed?**  
+Confirm PC-client support with the seller; do not assume parity with Arena Breakout mobile/other entries.
 
-- Windows 10 or Windows 11 (64-bit).
-- HVCI enabled.
-- Core Isolation enabled.
-- TPM enabled.
-- Secure Boot enabled.
-- Administrator rights for spoofing and cleanup steps.
-- A stable internet connection for activation and updates.
-
-The system requirements should be reviewed before choosing the product configuration.
-
-## Available access plans
-
-The current general HWID spoofer listing shows these durations:
-
-| Plan | Price | Duration |
-|---|---:|---|
-| Monthly | $50 | 31 days |
-| Lifetime | $150 | Unlimited access |
-
-**[NEEDS INFO: Confirm that these prices and durations apply to the specific Arena Breakout Infinite-compatible configuration before presenting them as ABI-specific pricing.]**
-
-## Frequently asked questions
-
-### What does an HWID spoofer do?
-
-An HWID spoofer is a tool designed to change selected hardware identifiers associated with a Windows PC.
-
-### Is a cleaner included?
-
-Yes. The listed hardware spoofer includes a cleaner.
-
-### Which operating systems are listed?
-
-The product requirements specify Windows 10 and Windows 11, 64-bit.
-
-### Does the supported-title list include Arena Breakout?
-
-Yes. The current listing includes Arena Breakout under its Other Anti-Cheats section.
-
-### Is Arena Breakout Infinite specifically confirmed?
-
-The current listing names Arena Breakout but does not separately specify Arena Breakout Infinite. Exact PC-client and build compatibility requires confirmation.
-
-### Are administrator permissions required?
-
-Yes. Administrator rights are listed for the spoofing and cleanup steps.
-
----
-
-**Publishing condition:** Keep this page unpublished until the exact Arena Breakout Infinite compatibility and applicable plan pricing have been confirmed.
+**Do I need admin rights?**  
+Setup instructions assume elevated permissions for hardware-level changes.

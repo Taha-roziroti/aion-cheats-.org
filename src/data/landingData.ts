@@ -33,8 +33,8 @@ export const landingProducts: LandingCatalogProduct[] = [
     badge: 'Popular',
     variant: 'popular',
     icon: 'coreProduct',
-    features: ['Feature A', 'Feature B', 'Feature C', 'Feature D', 'Feature E', 'Feature F'],
-    more: 4,
+    features: ['Player & AI ESP', 'Loot readouts', 'Aimbot menu', 'Config profiles'],
+    more: 2,
   },
   {
     slug: 'hwid-spoofer',
@@ -45,8 +45,8 @@ export const landingProducts: LandingCatalogProduct[] = [
     badge: 'Available',
     variant: 'essential',
     icon: 'shieldCheck',
-    features: ['Utility feature 1', 'Utility feature 2', 'Utility feature 3', 'Utility feature 4'],
-    more: 2,
+    features: ['HWID rotation', 'Windows 10/11', 'Post-ban recovery', 'One-time license'],
+    more: 0,
   },
   {
     slug: 'cloud-dma',
@@ -57,28 +57,28 @@ export const landingProducts: LandingCatalogProduct[] = [
     badge: 'Available',
     variant: 'essential',
     icon: 'reqCpu',
-    features: ['Infra feature 1', 'Infra feature 2', 'Infra feature 3', 'Infra feature 4'],
-    more: 1,
+    features: ['Hyper-V host', 'Lifetime license', 'Works with main plan', 'Setup guide linked'],
+    more: 0,
   },
 ];
 
 export const guideCards = [
   {
     title: 'Plan pricing',
-    desc: 'Placeholder — compare monthly and lifetime plans before checkout.',
+    desc: 'Monthly and lifetime listings with Cloud DMA called out separately.',
     href: '/arena-breakout-infinite-cheats-pricing/',
-    readLabel: 'Compare plans',
+    readLabel: 'Open pricing sheet',
   },
   {
     title: 'Cloud DMA setup guide',
-    desc: 'Placeholder — environment and virtualization checks.',
+    desc: 'Hyper-V, firmware virtualization, and pre-flight checks.',
     href: '/guides/cloud-dma-setup/',
-    readLabel: 'Read setup guide',
+    readLabel: 'Start Hyper-V walkthrough',
   },
   {
     title: 'PC system requirements',
-    desc: 'Placeholder — OS, client, and infrastructure prerequisites.',
+    desc: 'RAM, GPU, and Windows security settings in one checklist.',
     href: '/guides/system-requirements/',
-    readLabel: 'Check requirements',
+    readLabel: 'Open requirements checklist',
   },
 ] as const;

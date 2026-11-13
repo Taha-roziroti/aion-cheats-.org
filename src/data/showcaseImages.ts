@@ -80,3 +80,6 @@ export const PRIMARY_SHOWCASE_IMAGE = SHOWCASE_SHOTS[1]!.src;
 
 /** Full-bleed homepage hero backdrop (decorative). */
 export const HERO_SECTION_BACKGROUND = '/images/hero/hero-background.webp';
+
+/** Preload target for homepage LCP (matches ResponsiveImage default src). */
+export const HERO_SECTION_LCP_PRELOAD = '/images/hero/hero-background-640.webp';

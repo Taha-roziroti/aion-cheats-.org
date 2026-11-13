@@ -20,9 +20,9 @@ import { Button } from '@/components/starwind/button';
       {
         guideCards.map((guide) => (
           <article class="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-[transform,border-color] duration-300 hover:-translate-y-0.5 hover:border-primary/35">
-            <h3 class="font-[family-name:var(--font-heading)] text-lg font-bold leading-snug text-foreground">
+            <p class="m-0 font-[family-name:var(--font-heading)] text-lg font-bold leading-snug text-foreground">
               {guide.title}
-            </h3>
+            </p>
             <p class="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{guide.desc}</p>
             <Button as="a" href={guide.href} variant="outline" size="sm" class="mt-6 w-fit rounded-lg">
               {guide.readLabel}

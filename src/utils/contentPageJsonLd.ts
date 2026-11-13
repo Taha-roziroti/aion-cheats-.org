@@ -51,6 +51,36 @@ export function breadcrumbsForRoute(route: string): BreadcrumbItem[] {
       { name: 'System requirements', path: '/guides/system-requirements/' },
     ];
   }
+  if (route === '/arena-breakout-infinite-esp/') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'ESP', path: '/arena-breakout-infinite-esp/' },
+    ];
+  }
+  if (route === '/arena-breakout-infinite-aimbot/') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Aimbot', path: '/arena-breakout-infinite-aimbot/' },
+    ];
+  }
+  if (route === '/arena-breakout-infinite-cheats-pricing/') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Pricing', path: '/arena-breakout-infinite-cheats-pricing/' },
+    ];
+  }
+  if (route === '/cloud-dma-for-arena-breakout-infinite/') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Cloud DMA', path: '/cloud-dma-for-arena-breakout-infinite/' },
+    ];
+  }
+  if (route === '/arena-breakout-infinite-hwid-spoofer/') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'HWID Spoofer', path: '/arena-breakout-infinite-hwid-spoofer/' },
+    ];
+  }
   return [{ name: 'Home', path: '/' }];
 }
 

@@ -7,6 +7,7 @@ import { blogPostPath } from '../utils/path';
 import type { BlogPost } from '../i18n/types';
 import { t } from '../i18n';
 import { getBlogPostTimestamp, getBlogReadMinutes } from '../data/blog';
+import { blogFeaturedImageAlt } from '../utils/imageAlt';
 import { blogTagIcons } from '../data/sectionIcons';
 import type { IconName } from './icons/types';
 import { Badge } from '@/components/starwind/badge';
@@ -58,7 +59,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
   >
     <ResponsiveImage
       src={post.image}
-      alt=""
+      alt={blogFeaturedImageAlt(post.title)}
       width={isFeatured ? 960 : 640}
       height={isFeatured ? 540 : 360}
       widths={isFeatured ? undefined : CARD_IMAGE_WIDTHS}

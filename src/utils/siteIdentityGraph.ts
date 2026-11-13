@@ -18,6 +18,10 @@ export function siteIdentityGraph() {
       name: SITE_NAME,
       url: SITE_URL,
       email: SUPPORT_EMAIL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo.svg`,
+      },
       ...(sameAs.length > 0 ? { sameAs } : {}),
     },
     {

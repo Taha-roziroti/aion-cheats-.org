@@ -12,6 +12,10 @@ let started = false;
 
 const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/** Lenis + heavy scroll FX are desktop-only; mobile keeps native scroll for less main-thread work. */
+const prefersLightMotion = () =>
+  window.matchMedia('(max-width: 1023px)').matches || window.matchMedia('(pointer: coarse)').matches;
+
 /** Elements already on screen at load are left alone (protects LCP and avoids flicker). */
 const isInitiallyVisible = (el: Element) => el.getBoundingClientRect().top < window.innerHeight * 0.9;
 
@@ -95,21 +99,28 @@ function startMotion() {
   if (started || prefersReducedMotion()) return;
   started = true;
 
-  lenis = new Lenis();
-  window.__lenis = lenis;
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add(tick);
-  gsap.ticker.lagSmoothing(0);
+  const light = prefersLightMotion();
+
+  if (!light) {
+    lenis = new Lenis();
+    window.__lenis = lenis;
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(tick);
+    gsap.ticker.lagSmoothing(0);
+  }
 
   ctx = gsap.context(() => {
-    setupReveals();
-    setupStagger();
-    setupParallax();
+    if (!light) {
+      setupReveals();
+      setupStagger();
+      setupParallax();
+    }
   });
 
-  setupAnchorNavigation();
-
-  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+  if (!light) {
+    setupAnchorNavigation();
+    window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+  }
 }
 
 export function initMotion() {

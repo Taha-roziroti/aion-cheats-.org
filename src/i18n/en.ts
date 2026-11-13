@@ -8,7 +8,7 @@ export const en: Translations = {
   site: {
     name: 'ABI Cheats',
     domain: SITE_DOMAIN,
-    title: 'Arena Breakout Infinite Cheats | ESP & Aimbot',
+    title: 'Arena Breakout Infinite Cheats | ESP, Aimbot & Plans',
     description:
       'Arena Breakout Infinite ESP, aimbot, loot displays and more. Review features, system requirements, Cloud DMA, and monthly or lifetime plans.',
     discord: PRIMARY_CHECKOUT_PATH,

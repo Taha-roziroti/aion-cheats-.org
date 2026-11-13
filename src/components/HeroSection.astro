@@ -2,9 +2,12 @@
 import { t } from '../i18n';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import { heroSlides } from '../data/landingData';
-import { HERO_SECTION_BACKGROUND } from '../data/showcaseImages';
 import { compatibilityIcons, heroStatIcons, heroStatusPills } from '../data/sectionIcons';
 import ImageSlider from './ImageSlider.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
+import { HERO_SECTION_BACKGROUND } from '../data/showcaseImages';
+import { HERO_BACKGROUND_ALT } from '../utils/imageAlt';
+import { HERO_IMAGE_WIDTHS } from '../utils/responsiveImage';
 import Icon from './icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
 import { Badge } from '@/components/starwind/badge';
@@ -26,20 +29,23 @@ const heroMarqueePills = [
   aria-labelledby="hero-title"
 >
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-    <img
+    <ResponsiveImage
       src={HERO_SECTION_BACKGROUND}
-      alt=""
+      alt={HERO_BACKGROUND_ALT}
       width={1024}
       height={453}
-      class="absolute inset-0 h-full w-full object-cover object-[center_45%]"
+      widths={HERO_IMAGE_WIDTHS}
+      sizes="100vw"
       loading="eager"
-      fetchpriority="high"
-      decoding="async"
+      fetchPriority="high"
+      class="absolute inset-0 h-full w-full object-cover object-[center_45%] brightness-[1.05] saturate-[1.08]"
     />
-    <div class="absolute inset-0 bg-background/75" />
-    <div class="absolute inset-0 bg-gradient-to-r from-background via-background/88 to-background/25" />
-    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/55" />
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--primary)_0%,transparent_55%)] opacity-15" />
+    <div class="absolute inset-0 bg-background/40" />
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-background/95 from-0% via-background/55 via-45% to-background/15 to-100%"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-background/75 via-transparent via-35% to-background/25" />
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--primary)_0%,transparent_55%)] opacity-10" />
   </div>
 
   <div class="relative mx-auto flex max-w-6xl flex-col justify-center px-5 pb-8 pt-6 md:pb-10 md:pt-8">

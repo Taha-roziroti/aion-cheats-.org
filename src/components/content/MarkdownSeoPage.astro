@@ -1,4 +1,5 @@
 ---
+import '../../styles/content-markdown.css';
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
@@ -7,8 +8,10 @@ import type { CheckoutProductId } from '../checkout/CheckoutProductPicker.astro'
 import AdditionalCostsCallout from '../checkout/AdditionalCostsCallout.astro';
 import { loadContentPage } from '../../utils/loadContentPage';
 import { injectAffiliateLinks, checkoutProductForSlug } from '../../utils/affiliateLinks';
-import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
-import { SITE_NAME } from '../../data/site';
+import { breadcrumbSchema, faqPageSchemaFromPairs, webPageSchema } from '../../utils/schema';
+import { SITE_NAME, ogImageForPath } from '../../data/site';
+import { faqItemsFromMarkdown } from '../../utils/markdownFaq';
+import { productJsonLdForRoute } from '../../utils/productPageJsonLd';
 
 interface Props {
   id: string;
@@ -50,16 +53,29 @@ const patchedEntry = {
 };
 
 const { Content } = await render(patchedEntry);
+
+const pageFaqs = faqItemsFromMarkdown(entry.body);
+const productName =
+  slug === '/arena-breakout-infinite-cheats-pricing/'
+    ? 'Arena Breakout Infinite Cheats Plans'
+    : data.title.replace(/\s*\|.*$/, '').trim();
+const productLd = productJsonLdForRoute(slug, productName, data.description, checkoutProduct);
+const jsonLd = [
+  webPageSchema({ name: data.title, description: data.description, url: slug }),
+  breadcrumbSchema(breadcrumbs),
+  ...(productLd ? [productLd] : []),
+  ...(pageFaqs.length >= 2 ? [faqPageSchemaFromPairs(pageFaqs)] : []),
+];
+const routeOg = ogImageForPath(slug);
 ---
 
 <BaseLayout
   title={data.title}
   description={data.description}
+  ogImage={routeOg}
+  ogImageAlt={data.title}
   noindex={noindex}
-  jsonLd={[
-    webPageSchema({ name: data.title, description: data.description, url: slug }),
-    breadcrumbSchema(breadcrumbs),
-  ]}
+  jsonLd={jsonLd}
   logoAlt={`${data.title} – ${SITE_NAME}`}
 >
   {
@@ -93,71 +109,3 @@ const { Content } = await render(patchedEntry);
     )
   }
 </BaseLayout>
-
-<style is:global>
-  .content-markdown :where(h1) {
-    font-size: clamp(1.875rem, 4vw, 2.5rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.12;
-    margin-bottom: 1rem;
-    color: var(--foreground);
-  }
-  .content-markdown :where(h2) {
-    font-size: 1.375rem;
-    font-weight: 700;
-    margin-top: 2.5rem;
-    margin-bottom: 0.75rem;
-    scroll-margin-top: 7rem;
-    color: var(--foreground);
-  }
-  .content-markdown :where(h3) {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--foreground);
-  }
-  .content-markdown :where(p, ul, ol) {
-    color: var(--muted-foreground);
-    line-height: 1.7;
-    margin-top: 0.75rem;
-  }
-  .content-markdown :where(ul, ol) {
-    padding-left: 1.25rem;
-  }
-  .content-markdown :where(ul) {
-    list-style: disc;
-  }
-  .content-markdown :where(ol) {
-    list-style: decimal;
-  }
-  .content-markdown :where(li + li) {
-    margin-top: 0.35rem;
-  }
-  .content-markdown :where(a:not([data-slot='button'])) {
-    color: var(--primary);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  .content-markdown :where(strong) {
-    color: var(--foreground);
-    font-weight: 600;
-  }
-  .content-markdown :where(table) {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    font-size: 0.875rem;
-  }
-  .content-markdown :where(th, td) {
-    border: 1px solid var(--border);
-    padding: 0.5rem 0.75rem;
-    text-align: left;
-  }
-  .content-markdown :where(th) {
-    background: color-mix(in oklab, var(--muted) 50%, transparent);
-    color: var(--foreground);
-    font-weight: 600;
-  }
-</style>

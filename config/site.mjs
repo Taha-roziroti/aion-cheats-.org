@@ -12,6 +12,7 @@ export const INDEXABLE_MONEY_ROUTES = [
   '/arena-breakout-infinite-aimbot/',
   '/arena-breakout-infinite-cheats-pricing/',
   '/cloud-dma-for-arena-breakout-infinite/',
+  '/arena-breakout-infinite-hwid-spoofer/',
   '/guides/cloud-dma-setup/',
   '/guides/system-requirements/',
   '/faq/',
@@ -49,5 +50,8 @@ export function buildSitemapImages(siteUrl = SITE_URL) {
       { loc: showcase('abi-esp-menu.webp'), title: 'ABI system requirements' },
     ],
     '/faq/': [{ loc: `${siteUrl}/og/faq.jpg`, title: 'ABI FAQ' }],
+    '/arena-breakout-infinite-hwid-spoofer/': [
+      { loc: `${siteUrl}/og/default.jpg`, title: 'Arena Breakout Infinite HWID Spoofer' },
+    ],
   };
 }

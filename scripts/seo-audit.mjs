@@ -126,8 +126,15 @@ function auditPage(route, html, file) {
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1] ?? '';
   const desc = html.match(/name="description" content="([^"]*)"/i)?.[1] ?? '';
   if (!title) fail('technical', `${route}: missing <title>`);
-  else if (indexable && !noindex && (title.length < 25 || title.length > 70)) {
-    fail('technical', `${route}: title length ${title.length} (target ~50–60): ${title.slice(0, 50)}…`);
+  else if (indexable && !noindex && (title.length < 50 || title.length > 60)) {
+    fail('technical', `${route}: title length ${title.length} (target 50–60): ${title.slice(0, 50)}…`);
+  }
+  if (indexable && noindex) {
+    fail('technical', `${route}: indexable route has noindex`);
+  }
+  const robotsMeta = html.match(/name="robots" content="([^"]*)"/i)?.[1] ?? '';
+  if (indexable && /nofollow/i.test(robotsMeta)) {
+    fail('technical', `${route}: indexable route has nofollow`);
   }
   if (!desc) fail('technical', `${route}: missing meta description`);
   else if (indexable && !noindex && (desc.length < 120 || desc.length > 165)) {
@@ -135,7 +142,7 @@ function auditPage(route, html, file) {
   }
 
   const h1Count = (html.match(/<h1[\s>]/gi) ?? []).length;
-  const h1Expected = isHome ? 2 : 1;
+  const h1Expected = 1;
   if (h1Count !== h1Expected) {
     fail('technical', `${route}: expected ${h1Expected} h1, found ${h1Count}`);
   }
@@ -248,6 +255,9 @@ function main() {
 
   runSubcommand('node', ['scripts/verify-redirects.mjs'], 'verify-redirects');
   runSubcommand('node', ['scripts/verify-seo.mjs'], 'verify-seo');
+  runSubcommand('node', ['scripts/verify-unique-copy.mjs'], 'verify-unique-copy');
+  runSubcommand('node', ['scripts/verify-images.mjs'], 'verify-images');
+  runSubcommand('node', ['scripts/verify-anchor-text.mjs'], 'verify-anchor-text');
 
   const files = walkHtmlFiles(dist);
   for (const file of files) {

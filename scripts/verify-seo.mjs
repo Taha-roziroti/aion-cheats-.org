@@ -14,9 +14,57 @@ function readHtml(relativePath) {
   return fs.readFileSync(file, 'utf8');
 }
 
+const TITLE_MIN = 50;
+const TITLE_MAX = 60;
+const DESC_MIN = 120;
+const DESC_MAX = 165;
+const MIN_ARTICLE_WORDS = 400;
+const WORD_COUNT_SKIP = new Set(['/', '/faq/']);
+
+function articleWordCount(html) {
+  const chunk =
+    html.match(/<article[^>]*class="[^"]*content-markdown[\s\S]*?<\/article>/i)?.[0] ??
+    html.match(/<article[\s\S]*?<\/article>/i)?.[0] ??
+    '';
+  const text = chunk.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  if (!text) return 0;
+  return text.split(/\s+/).filter(Boolean).length;
+}
+
 function checkPage(route) {
   const html = readHtml(route);
   if (!html) return;
+
+  const robots = html.match(/name="robots" content="([^"]*)"/i)?.[1] ?? '';
+  if (/noindex/i.test(robots)) {
+    errors.push(`${route}: indexable route must not use noindex`);
+  }
+  if (/nofollow/i.test(robots)) {
+    errors.push(`${route}: indexable route must not use nofollow`);
+  }
+
+  const titleMatchEarly = html.match(/<title>([^<]*)<\/title>/i);
+  if (titleMatchEarly) {
+    const len = titleMatchEarly[1].length;
+    if (len < TITLE_MIN || len > TITLE_MAX) {
+      errors.push(`${route}: title length ${len} (target ${TITLE_MIN}–${TITLE_MAX}): ${titleMatchEarly[1]}`);
+    }
+  }
+
+  const descMatchEarly = html.match(/name="description" content="([^"]*)"/i);
+  if (descMatchEarly) {
+    const len = descMatchEarly[1].length;
+    if (len < DESC_MIN || len > DESC_MAX) {
+      errors.push(`${route}: meta description length ${len} (target ${DESC_MIN}–${DESC_MAX})`);
+    }
+  }
+
+  if (!WORD_COUNT_SKIP.has(route)) {
+    const words = articleWordCount(html);
+    if (words < MIN_ARTICLE_WORDS) {
+      errors.push(`${route}: article body ~${words} words (minimum ${MIN_ARTICLE_WORDS})`);
+    }
+  }
 
   const canonical = `${SITE_URL}${route === '/' ? '/' : route}`;
   if (!html.includes(`<link rel="canonical" href="${canonical}"`)) {
@@ -48,7 +96,7 @@ function checkPage(route) {
   }
 
   const h1Count = (html.match(/<h1[\s>]/gi) ?? []).length;
-  const h1Expected = route === '/' ? 2 : 1;
+  const h1Expected = 1;
   if (h1Count !== h1Expected) {
     errors.push(`${route}: expected ${h1Expected} h1 tag(s), found ${h1Count}`);
   }
@@ -70,6 +118,33 @@ function checkPage(route) {
   }
   if (!html.includes('"@type":"WebSite"') && !html.includes('"@type": "WebSite"')) {
     errors.push(`${route}: missing WebSite JSON-LD`);
+  }
+
+  const requiresProduct =
+    route !== '/faq/' &&
+    !route.startsWith('/guides/') &&
+    INDEXABLE_MONEY_ROUTES.includes(route);
+  if (
+    requiresProduct &&
+    !html.includes('"@type":"Product"') &&
+    !html.includes('"@type": "Product"')
+  ) {
+    errors.push(`${route}: missing Product JSON-LD on money page`);
+  }
+
+  const productFaqRoutes = new Set([
+    '/arena-breakout-infinite-esp/',
+    '/arena-breakout-infinite-aimbot/',
+    '/arena-breakout-infinite-cheats-pricing/',
+    '/cloud-dma-for-arena-breakout-infinite/',
+    '/arena-breakout-infinite-hwid-spoofer/',
+  ]);
+  if (
+    productFaqRoutes.has(route) &&
+    !html.includes('"@type":"FAQPage"') &&
+    !html.includes('"@type": "FAQPage"')
+  ) {
+    errors.push(`${route}: missing FAQPage JSON-LD`);
   }
 }
 

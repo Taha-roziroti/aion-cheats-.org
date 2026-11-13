@@ -1,0 +1,104 @@
+/* Shared long-form copy (money pages + homepage footer note). */
+.content-markdown {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--muted-foreground);
+}
+
+.content-markdown :where(h1) {
+  font-size: clamp(1.875rem, 4vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  color: var(--foreground);
+}
+
+.content-markdown :where(h2) {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 2.75rem 0 1rem;
+  padding-top: 0.25rem;
+  scroll-margin-top: 7rem;
+  color: var(--foreground);
+}
+
+.content-markdown :where(h2:first-child) {
+  margin-top: 0;
+}
+
+.content-markdown :where(h3) {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 1.75rem 0 0.5rem;
+  color: var(--foreground);
+}
+
+.content-markdown :where(p) {
+  margin: 0 0 1.15rem;
+}
+
+.content-markdown :where(p:last-child) {
+  margin-bottom: 0;
+}
+
+.content-markdown :where(p strong, li strong) {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.content-markdown :where(ul, ol) {
+  margin: 0.5rem 0 1.35rem;
+  padding-left: 1.35rem;
+}
+
+.content-markdown :where(ul) {
+  list-style: disc;
+}
+
+.content-markdown :where(ol) {
+  list-style: decimal;
+}
+
+.content-markdown :where(li) {
+  margin: 0.35rem 0;
+  padding-left: 0.15rem;
+}
+
+.content-markdown :where(li > p) {
+  margin: 0.35rem 0;
+}
+
+.content-markdown :where(a:not([data-slot='button'])) {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content-markdown :where(hr) {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.content-markdown :where(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.content-markdown :where(th, td) {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.content-markdown :where(th) {
+  background: color-mix(in oklab, var(--muted) 45%, transparent);
+  color: var(--foreground);
+  font-weight: 600;
+}

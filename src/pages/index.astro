@@ -6,6 +6,7 @@ import { jsonLdForContentPage } from '../utils/contentPageJsonLd';
 import { MAIN_PRODUCT_CHECKOUT } from '../data/productCatalog';
 import { PRODUCT_ID } from '../data/site';
 import { productSchema } from '../utils/schema';
+import { HERO_SECTION_LCP_PRELOAD } from '../data/showcaseImages';
 
 const homeEntry = await loadContentPage('home');
 const home = homeEntry.data as { title: string; description: string; slug: string };
@@ -41,5 +42,13 @@ const jsonLd = [
   ogImageAlt="Arena Breakout Infinite Cheats"
   logoAlt="Arena Breakout Infinite Cheats – logo"
 >
+  <link
+    slot="head"
+    rel="preload"
+    as="image"
+    href={HERO_SECTION_LCP_PRELOAD}
+    type="image/webp"
+    fetchpriority="high"
+  />
   <HomeLanding />
 </BaseLayout>
