@@ -1,40 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { SITE_URL, buildSitemapImages } from '../config/site.mjs';
 
-const SITE_HOST = 'borderlands3cheats.com';
-const SITE_URL = `https://${SITE_HOST}`;
-
-/** Keep in sync with src/data/site.ts SITEMAP_IMAGES */
-const SITEMAP_IMAGES = {
-  '/': [
-    {
-      loc: `${SITE_URL}/images/borderlands3/borderlands-3-campfire-hero-640.webp`,
-      title: 'Borderlands 3 PC gameplay with ESP and soft aim overlays',
-    },
-    {
-      loc: `${SITE_URL}/images/borderlands3/borderlands-3-enemy-esp-gameplay-640.webp`,
-      title: 'Borderlands 3 enemy ESP gameplay overlay',
-    },
-  ],
-  '/pricing/': [
-    {
-      loc: `${SITE_URL}/images/borderlands3/borderlands-3-campfire-hero-640.webp`,
-      title: 'Borderlands 3 cheat plans and pricing',
-    },
-  ],
-  '/cloud-dma/': [{ loc: `${SITE_URL}/og/cloud-dma.jpg`, title: 'Cloud DMA single-PC Hyper-V setup' }],
-  '/hwid-spoofer/': [{ loc: `${SITE_URL}/og/default.jpg`, title: 'HWID Spoofer lifetime utility' }],
-  '/guides/cloud-dma-setup/': [
-    { loc: `${SITE_URL}/og/cloud-dma-setup.jpg`, title: 'Cloud DMA setup guide' },
-  ],
-  '/guides/borderlands-3-cheat-system-requirements/': [
-    {
-      loc: `${SITE_URL}/images/borderlands3/borderlands-3-soft-aim-gameplay-640.webp`,
-      title: 'Borderlands 3 PC system requirements',
-    },
-  ],
-  '/faq/': [{ loc: `${SITE_URL}/og/faq.jpg`, title: 'Borderlands 3 cheats FAQ' }],
-};
+const SITEMAP_IMAGES = buildSitemapImages(SITE_URL);
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
@@ -139,11 +107,15 @@ if (fs.existsSync(cssSrc)) {
   fs.copyFileSync(cssSrc, path.join(dist, 'sitemap.css'));
 }
 
-// Copy og + _redirects
-for (const rel of ['og', '_redirects', 'robots.txt']) {
+// Copy og, redirect rules, robots
+for (const rel of ['og', '_redirects']) {
   const from = path.join(root, 'public', rel);
   const to = path.join(dist, rel);
   if (fs.existsSync(from) && fs.statSync(from).isDirectory()) {
     fs.cpSync(from, to, { recursive: true });
   }
+}
+const robotsSrc = path.join(root, 'public', 'robots.txt');
+if (fs.existsSync(robotsSrc)) {
+  fs.copyFileSync(robotsSrc, path.join(dist, 'robots.txt'));
 }

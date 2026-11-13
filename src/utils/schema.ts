@@ -35,7 +35,7 @@ export function websiteSchema() {
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Borderlands 3 PC cheat features including soft aim, enemy and loot ESP, radar, and recoil options.',
+      'Placeholder product description — replace with your primary feature summary.',
   };
 }
 

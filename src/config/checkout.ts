@@ -9,7 +9,7 @@ export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  borderlands3: 'borderlands-3',
+  mainProduct: 'main-product',
   cloudDma: 'cloud-dma',
   dota2: 'dota-2',
   skinChanger: 'skin-changer',
@@ -22,15 +22,28 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
 ) as Record<string, CheckoutProduct>;
 
 /** Internal checkout path shown to users (hides external URL on hover). */
-export function checkoutPath(product: CheckoutProduct = 'borderlands3'): string {
+export function checkoutPath(product: CheckoutProduct = 'mainProduct'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
-/** Hub where visitors pick Borderlands 3, Cloud DMA, or HWID Spoofer before checkout. */
+/** Hub where visitors pick main product, Cloud DMA, or HWID Spoofer before checkout. */
 export const CHECKOUT_HUB_PATH = '/go/';
 
 /** Default generic buy CTA (header, support pre-checkout). */
 export const PRIMARY_CHECKOUT_PATH = CHECKOUT_HUB_PATH;
+
+export type CheckoutProductPageId = 'main-product' | 'cloud-dma' | 'hwid-spoofer';
+
+export function checkoutPathForProductId(product: CheckoutProductPageId): string {
+  switch (product) {
+    case 'cloud-dma':
+      return checkoutPath('cloudDma');
+    case 'hwid-spoofer':
+      return checkoutPath('hwidSpoofer');
+    default:
+      return checkoutPath('mainProduct');
+  }
+}
 
 /** Map internal product slugs to checkout redirect paths. */
 export function checkoutForSlug(slug: string): string {
@@ -45,12 +58,13 @@ export function checkoutForSlug(slug: string): string {
     case 'lite':
     case 'pro':
     case 'elite':
+    case 'main-product':
     case 'borderlands-3':
-      return checkoutPath('borderlands3');
+      return checkoutPath('mainProduct');
     case 'cloud-dma':
       return checkoutPath('cloudDma');
     default:
-      return checkoutPath('borderlands3');
+      return checkoutPath('mainProduct');
   }
 }
 
@@ -75,11 +89,13 @@ export function resolveCheckoutHref(href: string): string {
     return checkoutPath('cloudDma');
   }
   if (
+    href.includes('the-isle-novaxware') ||
     href.includes('borderlands-3') ||
     href.includes('/products/borderlands-3') ||
-    (href.includes('/go/TAHA') && href.includes('borderlands-3'))
+    (href.includes('/go/TAHA') &&
+      (href.includes('borderlands-3') || href.includes('the-isle-novaxware')))
   ) {
-    return checkoutPath('borderlands3');
+    return checkoutPath('mainProduct');
   }
   if (
     href.includes('%2Fproducts%2Fskin-changer') ||

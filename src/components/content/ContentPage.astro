@@ -2,8 +2,8 @@
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
-import CheckoutProductPicker, { type CheckoutProductId } from '../borderlands3/CheckoutProductPicker.astro';
-import AdditionalCostsCallout from '../borderlands3/AdditionalCostsCallout.astro';
+import CheckoutProductPicker, { type CheckoutProductId } from '../checkout/CheckoutProductPicker.astro';
+import AdditionalCostsCallout from '../checkout/AdditionalCostsCallout.astro';
 import ContentFigures from './ContentFigures.astro';
 import ContentHeroImage from './ContentHeroImage.astro';
 import { defaultWebpSrc, HERO_IMAGE_WIDTHS } from '../../utils/responsiveImage';
@@ -14,6 +14,7 @@ import {
 } from '../../utils/contentPageJsonLd';
 import { Button } from '@/components/starwind/button';
 import { loadContentPage } from '../../utils/loadContentPage';
+import { getPageSeoEntry } from '../../config/pageSeo';
 import SiteFaqSection from '../SiteFaqSection.astro';
 import { faqFilterTopicsForItems, getContentPageFaqs } from '../../data/faq';
 
@@ -27,11 +28,15 @@ const entry = await loadContentPage(id);
 const data = entry.data;
 const { Content: FullContent } = await render(entry);
 
+const pageSeo = getPageSeoEntry(data.route);
+const layoutTitle = pageSeo?.title ?? data.seoTitle;
+const layoutDescription = pageSeo?.description ?? data.metaDescription;
+
 const breadcrumbs = breadcrumbsForRoute(data.route);
 const jsonLd = jsonLdForContentPage({
   route: data.route,
-  seoTitle: data.seoTitle,
-  metaDescription: data.metaDescription,
+  seoTitle: layoutTitle,
+  metaDescription: layoutDescription,
   schemaTypes: data.schemaTypes,
   articlePublished: data.articlePublished,
 });
@@ -41,7 +46,7 @@ const sidebarDefaultProduct: CheckoutProductId =
     ? 'cloud-dma'
     : data.checkout === 'hwid-spoofer'
       ? 'hwid-spoofer'
-      : 'borderlands-3';
+      : 'main-product';
 const useProductShell = data.layout === 'product' || data.layout === 'pricing';
 const ogType = data.layout === 'article' ? 'article' : 'website';
 const lcpPreload =
@@ -50,12 +55,12 @@ const lcpPreload =
     : null;
 
 const logoAltByRoute: Record<string, string> = {
-  '/': 'Borderlands 3 – logo',
+  '/': 'Home – logo',
   '/pricing/': 'Cheats pricing – logo',
   '/cloud-dma/': 'Cloud DMA – logo',
   '/hwid-spoofer/': 'HWID Spoofer – logo',
   '/guides/cloud-dma-setup/': 'DMA setup – logo',
-  '/guides/borderlands-3-cheat-system-requirements/': 'System requirements – logo',
+  '/guides/system-requirements/': 'System requirements – logo',
 };
 const logoAlt = logoAltByRoute[data.route];
 const pageFaqs = getContentPageFaqs(data.route);
@@ -63,8 +68,8 @@ const pageFaqTopics = pageFaqs ? faqFilterTopicsForItems(pageFaqs) : [];
 ---
 
 <BaseLayout
-  title={data.seoTitle}
-  description={data.metaDescription}
+  title={layoutTitle}
+  description={layoutDescription}
   jsonLd={jsonLd}
   ogType={ogType}
   ogImage={data.ogImage}

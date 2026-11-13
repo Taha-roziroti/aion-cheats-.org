@@ -1,151 +1,173 @@
 ---
-route: /
-seoTitle: Borderlands 3 – PC soft aim, ESP, loot radar & plans
-metaDescription: Borderlands 3 PC setup with soft aim, enemy and loot ESP, radar, and recoil options. Compare $35 monthly and $150 lifetime plans plus Cloud DMA.
-schemaTypes:
-  - Product
-  - Offer
-  - BreadcrumbList
-layout: product
-checkout: borderlands-3
-heroImage:
-  src: /images/borderlands3/borderlands-3-campfire-hero.webp
-  alt: Borderlands 3 Vault Hunters gathered around a campfire under a starry sky — official-style key art
-endCtaLabel: Explore our Borderlands 3 cheats and get started today.
-endCtaHref: /go/borderlands-3/
-figures:
-  - alt: Borderlands 3 enemy ESP gameplay overlay
-    src: /images/borderlands3/borderlands-3-enemy-esp-gameplay.webp
-  - alt: Borderlands 3 loot ESP feature showcase
-    src: /images/borderlands3/borderlands-3-loot-esp-showcase.webp
-  - alt: Borderlands 3 soft aim configuration and FOV settings
-    src: /images/borderlands3/borderlands-3-soft-aim-gameplay.webp
-  - alt: Borderlands 3 radar overlay during gameplay
-    src: /images/borderlands3/borderlands-3-radar-gameplay.webp
+title: "Arena Breakout Infinite Cheats | ESP & Aimbot"
+description: "Explore Arena Breakout Infinite cheats with player ESP, AI ESP, loot displays and configurable aimbot options. Review features and access plans."
+slug: "/"
 ---
 
-# Borderlands 3 Cheats for PC with soft aim, loot radar & plans
+# Arena Breakout Infinite Cheats
 
-Pandora is full of enemies, valuable loot and unexpected encounters. Whether you're exploring dangerous locations, taking on powerful bosses or working your way through another challenging area, having the right tools can completely change how you approach the game.
+A raid can change direction in seconds. You might enter a building looking for supplies, spot movement across an open area, or discover that a seemingly ordinary container holds something worth taking home. Arena Breakout Infinite rewards awareness, and the information available during a match can make a real difference to how you approach each situation.
 
-Our **Borderlands 3 cheats** are designed for PC players who want more control over their gameplay, better awareness of their surroundings and a more customizable experience.
+**Arena Breakout Infinite cheats** bring together visual features, player information, inventory displays and configurable aimbot options in one PC product. The feature collection includes Player ESP, AI ESP, distance and health indicators, corpse-value displays, and a range of individual aim settings.
 
-With features including soft aim, enemy ESP, loot ESP, radar and recoil options, you can build a configuration that suits the way you play.
+The idea is straightforward: give each part of the interface a purpose, make the available information easy to review, and let the configuration remain focused on the features that matter to you.
 
-Explore the available features, customize your settings, and tune the software to how you play.
+## Arena Breakout Infinite cheats: explore the complete feature set
 
-Compare [monthly and lifetime cheat pricing](/pricing/), review [Hyper-V license details](/cloud-dma/) requirements, and check the [PC compatibility checklist](/guides/borderlands-3-cheat-system-requirements/) before you buy.
+The ABI package is organized into several feature groups. Visual options cover players, AI and inventory information. World visual options provide additional information about player and AI corpses. The aimbot menu contains its own collection of adjustable settings.
 
-## Borderlands 3 Cheat Features
+Here is a closer look at what the interface includes.
 
-Every player approaches Borderlands 3 differently. Some prefer to focus on combat, while others spend their time exploring, collecting equipment and discovering everything Pandora has to offer.
+### Player ESP and AI ESP
 
-That's why our Borderlands 3 cheat software brings together several useful features in one configuration.
+Player ESP provides several ways to display information about characters throughout a match. Rather than relying on a single marker, the interface has individual options for different details.
 
-### Enemy ESP
+Available visual options include:
 
-Keep track of enemy positions with enemy ESP.
+- Player names.
+- Distance indicators.
+- Health bars.
+- Weapon type.
+- Team index.
+- View direction.
+- Boxes.
+- Head circles.
+- Skeleton displays.
+- Snaplines.
+- Inventory lists.
+- Inventory price information.
+- Level and side information.
 
-The ESP interface provides additional visual information during gameplay, helping you recognize enemy locations and better understand what's happening around you.
+AI ESP is also included as a separate visual category. This lets you work with the player and AI display options independently.
 
-Instead of relying entirely on your immediate surroundings, you can use the available ESP information to make more informed decisions.
+The individual settings make it possible to build a more organized visual layout instead of having every available indicator treated as one combined element.
 
-### Loot ESP
+### Loot and inventory information
 
-Finding interesting equipment is a major part of the Borderlands experience.
+The details surrounding an item can be just as interesting as the item itself. Arena Breakout Infinite includes equipment, supplies and other objects that contribute to the value of a raid.
 
-Loot ESP makes it easier to identify valuable items through visual indicators, helping bring more attention to loot around the environment.
+The inventory options include item price information, while the world visual section includes player corpse and AI corpse displays.
 
-Spend more time discovering useful equipment and less time overlooking items scattered throughout your adventures.
+Price, maximum distance and minimum price are available as individual controls for the corpse-related visual options.
 
-### Soft Aim
+This is particularly useful to explore if you're interested in the inventory and item-value side of Arena Breakout Infinite. The available displays provide more information than a simple marker alone.
 
-Looking for additional control during firefights?
+### Aimbot configuration
 
-The soft aim feature provides customizable aiming assistance, allowing you to configure available settings according to your preferred gameplay style.
+The aimbot section has its own collection of settings, with several independent controls for adjusting the configuration.
 
-Adjust your configuration to find a balance that feels comfortable for your approach to combat.
+The available options include:
 
-### Radar
+- Aimbot FOV.
+- Aimbot smoothness.
+- Aimbot speed.
+- Aimbot filter.
+- Maximum distance.
+- Visible Check.
+- Ignore Knocked.
+- Draw Target Line.
+- Draw FOV.
+- Custom mouse keybind.
+- Enable Akimbo.
 
-Awareness can make a significant difference when exploring busy environments.
+Each setting has a specific place in the interface. FOV, smoothness and speed are separate controls, while visible checks and target filters provide additional configuration options.
 
-The radar feature provides another way to view surrounding activity, helping you maintain a better understanding of your surroundings while moving between locations.
+See the dedicated [Arena Breakout Infinite aimbot page](/arena-breakout-infinite-aimbot/) for a more detailed breakdown.
 
-### No Recoil and No Spread
+## Customize the interface around your preferences
 
-Weapon handling is an important part of any Borderlands 3 loadout.
+The visual and aim features are only part of the available configuration.
 
-Our available recoil and spread options provide additional control over weapon behavior, allowing you to configure your experience around your preferred weapons and combat style.
+The miscellaneous options include Crosshair, Font Size and Combat Mode. Configuration management is also available, with options to create, save, load and delete configurations.
 
-### Stream-Proof Overlay
+That means the interface has dedicated controls for both its presentation and its saved settings.
 
-The software also includes a stream-proof overlay feature as part of its available configuration.
+If you prefer to keep different arrangements for different situations, the configuration options give you a way to organize those settings without rebuilding everything from the beginning each time.
 
-This provides another layer of flexibility when organizing your gameplay interface.
+## PC requirements and supported launchers
 
-## Built Around Customization
+Arena Breakout Infinite is a Windows PC product, and the listed requirements include several Windows security settings that need to be enabled.
 
-There isn't one perfect configuration for every player.
+The supported operating system versions listed include:
 
-Some players prefer a minimal interface with only a few selected features, while others enjoy having more information available during gameplay.
+- Windows 10: 21H2 and 22H2.
+- Windows 11: 21H2, 22H2, 23H2, 24H2 and 25H2.
 
-Our Borderlands 3 cheats give you access to multiple feature options so you can tailor the software around your preferences.
+Additional system requirements include:
 
-Whether you're interested in soft aim, enemy ESP, loot highlighting or radar, you can explore the available settings and create the configuration that works best for you.
+- A modern Intel or AMD processor.
+- An NVIDIA or AMD graphics card.
+- 8 GB RAM minimum, with 16 GB recommended.
+- Approximately 500 MB of free storage.
+- A stable internet connection for authentication.
+- HVCI enabled.
+- Core Isolation enabled.
+- TPM enabled.
+- Secure Boot enabled.
 
-## Borderlands 3 Cheats for PC
+The listed client options include the Arena Breakout Launcher, Steam, Microsoft Store and Epic Games.
 
-Designed for the PC version of Borderlands 3, our cheat software is intended for compatible Windows setups.
+Cloud DMA is required for full functionality on supported builds. Its setup and additional requirements are covered on the [Cloud DMA configuration page](/cloud-dma-for-arena-breakout-infinite/).
 
-The product configuration lists Windows 10 and Windows 11 support, along with the supported Steam and Official Client options.
+## Choose an Arena Breakout Infinite access plan
 
-For the complete experience, Cloud DMA is part of the required configuration on supported builds.
+The main product currently lists two access durations.
 
-We recommend reviewing the [Windows and RAM compatibility guide](/guides/borderlands-3-cheat-system-requirements/) before getting started so that your computer is ready for the complete setup.
+| Plan | Listed price | Access period |
+|---|---:|---|
+| Monthly | $35 | 31 days |
+| Lifetime | $150 | Unlimited access |
 
-## Choose Your Borderlands 3 Cheat Plan
+Both options relate to the same main product. The difference is the listed access duration.
 
-Getting started is straightforward.
+Cloud DMA is a separate product with its own lifetime listing. The Cloud DMA page also identifies additional required services, which should be considered when reviewing the complete setup.
 
-Choose the subscription that matches how long you plan to use the software.
+For a closer breakdown of the available plans, visit [Arena Breakout Infinite cheats pricing](/arena-breakout-infinite-cheats-pricing/).
 
-**Monthly Access**
+[**View Arena Breakout Infinite product options**](AFFILIATE_LINK_PLACEHOLDER)
 
-A flexible option for players who prefer monthly access.
+## Frequently asked questions
 
-**Lifetime Access**
+### What features are included with Arena Breakout Infinite cheats?
 
-A longer-term option for players who want lifetime access to the Borderlands 3 cheat product.
+The feature collection includes Player ESP, AI ESP, inventory information, corpse-value displays, visual customization and configurable aimbot options. Individual controls include distance, health, weapon type, FOV, smoothness, speed and target filters.
 
-Both options give you access to the product according to their respective plan details.
+### Does the product include Player ESP?
 
-Visit our [plan comparison page](/pricing/) to compare the available options and choose your preferred plan.
+Yes. Player ESP is included, with options for names, distance, health bars, weapon type, team index, view direction, boxes, skeletons, head circles and snaplines.
 
-## Frequently Asked Questions
+### Is AI ESP available?
 
-### What features are included in Borderlands 3 cheats?
+Yes. AI ESP is included as a separate visual option alongside Player ESP.
 
-The available features include soft aim, enemy ESP, loot ESP, radar, no recoil, no spread and a stream-proof overlay.
+### Are inventory prices displayed?
 
-### Do Borderlands 3 cheats work on PC?
+Inventory Price is one of the listed visual options. The world visual settings also include price-related controls for player and AI corpse displays.
 
-The product is designed for compatible Windows PC configurations. The listed supported clients include Steam and the Official Client.
+### Does the product have a configurable aimbot?
 
-### Is Cloud DMA included in the setup?
+Yes. Its listed settings include FOV, smoothness, speed, filters, maximum distance, visible checks, target lines and additional options.
 
-Cloud DMA is a required part of the complete configuration on supported builds. Visit the [infrastructure license overview](/cloud-dma/) to explore pricing and setup information.
+### Which Windows versions are supported?
 
-### Can I choose between monthly and lifetime access?
+The listed versions include Windows 10 21H2 and 22H2, as well as Windows 11 versions 21H2 through 25H2. The accompanying security settings must also meet the stated requirements.
 
-Yes. The available Borderlands 3 plans include monthly and lifetime access options.
+### Is Cloud DMA required?
 
-### What Windows version do I need?
+Cloud DMA is listed as required for full functionality on supported builds. Review its separate setup requirements before choosing your configuration.
 
-The listed product requirements include Windows 10 and Windows 11. Additional hardware and configuration requirements apply.
+### What are the available access plans?
 
-## Get Started With Borderlands 3 Cheats
+The main product lists monthly access for 31 days at $35 and lifetime access at $150. Prices should be checked against the current listing before purchase.
 
-Ready to explore a more customizable Borderlands 3 experience?
+### Which launchers are listed?
 
-Review the feature list, check system requirements, and pick monthly or lifetime access on the pricing page.
+The listed clients include the Arena Breakout Launcher, Steam, Microsoft Store and Epic Games.
+
+### Where can I find more information about ESP?
+
+Visit the [dedicated Arena Breakout Infinite ESP page](/arena-breakout-infinite-esp/) for details about player, AI, inventory and world visual options.
+
+---
+
+**Affiliate disclosure:** Some links on this website are affiliate links. We may earn a commission from qualifying purchases made through these links.

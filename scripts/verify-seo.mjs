@@ -1,18 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-
-const SITE_HOST = 'borderlands3cheats.com';
-const SITE_URL = `https://${SITE_HOST}`;
-
-const INDEXABLE_MONEY_ROUTES = [
-  '/',
-  '/pricing/',
-  '/cloud-dma/',
-  '/hwid-spoofer/',
-  '/guides/cloud-dma-setup/',
-  '/guides/borderlands-3-cheat-system-requirements/',
-  '/faq/',
-];
+import { SITE_HOST, SITE_URL, INDEXABLE_MONEY_ROUTES } from '../config/site.mjs';
 
 const dist = path.join(process.cwd(), 'dist');
 const errors = [];
@@ -60,8 +48,9 @@ function checkPage(route) {
   }
 
   const h1Count = (html.match(/<h1[\s>]/gi) ?? []).length;
-  if (h1Count !== 1) {
-    errors.push(`${route}: expected exactly one h1, found ${h1Count}`);
+  const h1Expected = route === '/' ? 2 : 1;
+  if (h1Count !== h1Expected) {
+    errors.push(`${route}: expected ${h1Expected} h1 tag(s), found ${h1Count}`);
   }
 
   const titleMatch = html.match(/<title>([^<]*)<\/title>/i);

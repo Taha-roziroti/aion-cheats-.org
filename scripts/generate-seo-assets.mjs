@@ -4,13 +4,7 @@ import sharp from 'sharp';
 
 const root = process.cwd();
 const ogDir = path.join(root, 'public', 'og');
-const heroSource = path.join(
-  root,
-  'public',
-  'images',
-  'borderlands3',
-  'borderlands-3-campfire-hero.webp',
-);
+const heroSource = path.join(root, 'public', 'images', 'showcase', 'abi-esp-indoor-aimbot.webp');
 
 const outputs = [
   'default.jpg',
@@ -23,7 +17,7 @@ const outputs = [
 ];
 
 if (!fs.existsSync(heroSource)) {
-  console.error('generate-seo-assets: missing hero source at', heroSource);
+  console.error('generate-seo-assets: missing placeholder at', heroSource);
   process.exit(1);
 }
 

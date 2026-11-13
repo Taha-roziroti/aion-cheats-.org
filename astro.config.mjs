@@ -2,17 +2,15 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
-
+import { SITE_URL } from './config/site.mjs';
 export default defineConfig({
-  site: 'https://borderlands3cheats.com',
+  site: SITE_URL,
   trailingSlash: 'always',
   redirects: {
-    '/buy-borderlands-3-cheats/': '/',
-    '/buy-borderlands-3-cheat/': '/',
-    '/borderlands-3-cheats/': '/',
-    '/borderlands-3-cheats-price/': '/pricing/',
-    '/borderlands-3-esp/': '/',
-    '/borderlands-3-aimbot/': '/',
+    '/pricing/': '/arena-breakout-infinite-cheats-pricing/',
+    '/cloud-dma/': '/cloud-dma-for-arena-breakout-infinite/',
+    '/hwid-spoofer/': '/arena-breakout-infinite-hwid-spoofer/',
+    '/guides/borderlands-3-cheat-system-requirements/': '/guides/system-requirements/',
     '/cloud-dma-setup/': '/guides/cloud-dma-setup/',
     '/cheats/': '/',
     '/products/dota-2-cheats/': '/',

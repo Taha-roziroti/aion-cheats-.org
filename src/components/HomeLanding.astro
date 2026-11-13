@@ -5,27 +5,29 @@ import ProductsSection from './ProductsSection.astro';
 import WhySetupSection from './WhySetupSection.astro';
 import WorkflowSection from './WorkflowSection.astro';
 import HomeGuidesSection from './HomeGuidesSection.astro';
-import SiteFaqSection from './SiteFaqSection.astro';
-import { getLandingFaqs, HOME_LANDING_FAQ_SECTION_COPY, faqFilterTopicsForItems } from '../data/faq';
-
-const homeFaqs = getLandingFaqs();
-const homeFaqTopics = faqFilterTopicsForItems(homeFaqs);
+import HomeMarkdownContent from './HomeMarkdownContent.astro';
+import ProductScreenshotGallery from './ProductScreenshotGallery.astro';
+import { PRODUCT_PREVIEW_GALLERY } from '../data/media';
 ---
 
 <HeroSection />
 <FeaturesSection />
+<section class="border-y border-border bg-background py-12 md:py-16" aria-labelledby="showcase-gallery-title">
+  <div class="mx-auto max-w-6xl px-5">
+    <h2
+      id="showcase-gallery-title"
+      class="mb-6 font-[family-name:var(--font-heading)] text-2xl font-bold text-foreground md:text-3xl"
+      data-reveal="up"
+    >
+      Feature previews
+    </h2>
+    <div data-reveal="scale" data-lenis-prevent>
+      <ProductScreenshotGallery images={PRODUCT_PREVIEW_GALLERY} id="home-showcase-gallery" />
+    </div>
+  </div>
+</section>
 <ProductsSection />
 <WhySetupSection />
 <WorkflowSection />
 <HomeGuidesSection />
-<SiteFaqSection
-  id="faq"
-  titleId="faq-title"
-  titleAs="h2"
-  items={homeFaqs}
-  eyebrow={HOME_LANDING_FAQ_SECTION_COPY.eyebrow}
-  title={HOME_LANDING_FAQ_SECTION_COPY.title}
-  subtitle={HOME_LANDING_FAQ_SECTION_COPY.subtitle}
-  showFilters={homeFaqTopics.length > 1}
-  filterTopics={homeFaqTopics}
-/>
+<HomeMarkdownContent />

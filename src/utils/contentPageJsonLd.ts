@@ -1,12 +1,13 @@
 import { checkoutPath } from '../config/checkout';
 import {
-  BL3_CHECKOUT,
-  bl3ProductOffers,
   cloudDmaOffer,
   CLOUD_DMA_CHECKOUT,
   hwidSpooferOffer,
   HWID_SPOOFER_CHECKOUT,
-} from '../data/borderlands3Site';
+  MAIN_PRODUCT_CHECKOUT,
+  mainProductOffers,
+} from '../data/productCatalog';
+import { PLACEHOLDER_COPY, PLACEHOLDER_IMAGE } from '../data/placeholders';
 import { PRODUCT_ID, SITE_URL } from '../data/site';
 import {
   breadcrumbSchema,
@@ -39,15 +40,15 @@ export function breadcrumbsForRoute(route: string): BreadcrumbItem[] {
   if (route === '/guides/cloud-dma-setup/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Cloud DMA', path: '/cloud-dma/' },
+      { name: 'Cloud DMA', path: '/cloud-dma-for-arena-breakout-infinite/' },
       { name: 'Setup guide', path: '/guides/cloud-dma-setup/' },
     ];
   }
-  if (route === '/guides/borderlands-3-cheat-system-requirements/') {
+  if (route === '/guides/system-requirements/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Cheat plans', path: '/pricing/' },
-      { name: 'System requirements', path: '/guides/borderlands-3-cheat-system-requirements/' },
+      { name: 'Plans', path: '/arena-breakout-infinite-cheats-pricing/' },
+      { name: 'System requirements', path: '/guides/system-requirements/' },
     ];
   }
   return [{ name: 'Home', path: '/' }];
@@ -67,20 +68,20 @@ export function jsonLdForContentPage(input: {
     if (input.route === '/') {
       blocks.push(
         productSchema({
-          name: 'Borderlands 3 Cheats for PC',
+          name: PLACEHOLDER_COPY.productName,
           description: input.metaDescription,
           url: '/',
-          offerUrl: BL3_CHECKOUT,
-          sku: 'borderlands-3-cheats',
-          image: '/images/borderlands3/borderlands-3-esp-soft-aim-hero.webp',
+          offerUrl: MAIN_PRODUCT_CHECKOUT,
+          sku: 'main-product',
+          image: PLACEHOLDER_IMAGE,
           productId: PRODUCT_ID,
-          offers: [...bl3ProductOffers],
+          offers: [...mainProductOffers],
         }),
       );
     } else if (input.route === '/cloud-dma/') {
       blocks.push(
         productSchema({
-          name: 'Cloud DMA for Game Cheats',
+          name: 'Cloud DMA',
           description: input.metaDescription,
           url: '/cloud-dma/',
           offerUrl: CLOUD_DMA_CHECKOUT,
@@ -146,13 +147,13 @@ export function jsonLdForContentPage(input: {
 
 export function defaultEndCtaHref(
   route: string,
-  checkout?: 'borderlands-3' | 'cloud-dma' | 'hwid-spoofer',
+  checkout?: 'main-product' | 'cloud-dma' | 'hwid-spoofer',
 ): string {
   if (checkout === 'cloud-dma') return checkoutPath('cloudDma');
   if (checkout === 'hwid-spoofer') return checkoutPath('hwidSpoofer');
-  if (checkout === 'borderlands-3') return checkoutPath('borderlands3');
-  if (route === '/pricing/') return checkoutPath('borderlands3');
+  if (checkout === 'main-product') return checkoutPath('mainProduct');
+  if (route === '/pricing/') return checkoutPath('mainProduct');
   if (route === '/cloud-dma/') return checkoutPath('cloudDma');
   if (route === '/hwid-spoofer/') return checkoutPath('hwidSpoofer');
-  return checkoutPath('borderlands3');
+  return checkoutPath('mainProduct');
 }

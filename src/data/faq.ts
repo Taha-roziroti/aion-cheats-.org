@@ -31,9 +31,9 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const pricingPage = link('monthly and lifetime pricing page', '/pricing/');
-const cloudDmaPage = link('Cloud DMA product overview', '/cloud-dma/');
-const requirementsGuide = link('Windows and RAM requirements guide', '/guides/borderlands-3-cheat-system-requirements/');
+const pricingPage = link('monthly and lifetime pricing page', '/arena-breakout-infinite-cheats-pricing/');
+const cloudDmaPage = link('Cloud DMA product overview', '/cloud-dma-for-arena-breakout-infinite/');
+const requirementsGuide = link('Windows and RAM requirements guide', '/guides/system-requirements/');
 const setupGuide = link('Hyper-V Cloud DMA setup walkthrough', '/guides/cloud-dma-setup/');
 const checkout = link('secure checkout', PRIMARY_CHECKOUT_PATH);
 const faqPage = link('full FAQ topic list', ROUTES.faq);
@@ -52,7 +52,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'features',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What features are included in Borderlands 3 cheats?',
+    q: 'What features are included in Main product cheats?',
     a: a(
       'Soft aim, enemy ESP, loot ESP, radar, no recoil, no spread, and a stream-proof overlay. See the homepage feature section for an overview.',
     ),
@@ -79,7 +79,7 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
     a: a(
-      'Borderlands 3 on Windows 10 or 11 64-bit with supported Steam or Official Client builds. macOS and Linux are not supported.',
+      'Main product on Windows 10 or 11 64-bit with supported Steam or Official Client builds. macOS and Linux are not supported.',
     ),
   },
   {
@@ -96,14 +96,14 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqComparePlans',
     q: 'Can I choose between monthly and lifetime access?',
-    a: `Yes. Compare monthly and lifetime Borderlands 3 plans on the ${pricingPage}.`,
+    a: `Yes. Compare monthly and lifetime Main product plans on the ${pricingPage}.`,
   },
   {
     id: 'plan-prices',
     topic: 'plans',
     icon: 'faqRankTiers',
-    q: 'How much do Borderlands 3 cheats cost?',
-    a: `Monthly and lifetime prices are listed on the ${link('cheat plan pricing table', '/pricing/')}. Cloud DMA is a separate lifetime license on the ${link('$50 Cloud DMA license page', '/cloud-dma/')}.`,
+    q: 'How much do Main product cheats cost?',
+    a: `Monthly and lifetime prices are listed on the ${link('cheat plan pricing table', '/arena-breakout-infinite-cheats-pricing/')}. Cloud DMA is a separate lifetime license on the ${link('$50 Cloud DMA license page', '/cloud-dma-for-arena-breakout-infinite/')}.`,
   },
   {
     id: 'cloud-dma',
@@ -117,21 +117,21 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqUgcWhat',
     q: 'What does Cloud DMA cost beyond the cheat license?',
-    a: `The Cloud DMA lifetime license is listed on the ${link('Cloud DMA pricing overview', '/cloud-dma/')}. GREENWARD, static server hosting, and AWS resources are purchased separately.`,
+    a: `The Cloud DMA lifetime license is listed on the ${link('Cloud DMA pricing overview', '/cloud-dma-for-arena-breakout-infinite/')}. GREENWARD, static server hosting, and AWS resources are purchased separately.`,
   },
   {
     id: 'hwid-spoofer',
     topic: 'products',
     icon: 'faqProductsPage',
     q: 'What does the HWID Spoofer change?',
-    a: `It targets common hardware identifiers used in ban workflows. Read the ${link('HWID Spoofer product page', '/hwid-spoofer/')} for scope, limits, and setup before checkout.`,
+    a: `It targets common hardware identifiers used in ban workflows. Read the ${link('HWID Spoofer product page', '/arena-breakout-infinite-hwid-spoofer/')} for scope, limits, and setup before checkout.`,
   },
   {
     id: 'windows-req',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'What Windows version do I need?',
-    a: `Windows 10 or 11 with virtualization enabled for Cloud DMA. See the ${link('Borderlands 3 PC requirements checklist', '/guides/borderlands-3-cheat-system-requirements/')} for RAM, CPU, and client compatibility.`,
+    a: `Windows 10 or 11 with virtualization enabled for Cloud DMA. See the ${link('Main product PC requirements checklist', '/guides/system-requirements/')} for RAM, CPU, and client compatibility.`,
   },
   {
     id: 'soft-aim',
@@ -180,9 +180,9 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'publisher',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'Are you affiliated with Gearbox or 2K?',
+    q: 'Are you affiliated with the Arena Breakout Infinite publisher?',
     a: a(
-      'No. Borderlands 3 Cheats is independent and uses the game name only to describe supported software.',
+      'No. ABI Cheats is an independent resource and uses the game name only to describe supported software on Windows.',
     ),
   },
   {
@@ -190,7 +190,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'all',
     icon: 'faqMore',
     q: 'Where is the full FAQ?',
-    a: `This page collects plan, feature, Cloud DMA, and setup answers. Start on the ${link('Borderlands 3 cheats homepage', '/')}, then read the ${faqPage} filters for every topic.`,
+    a: `This page collects plan, feature, Cloud DMA, and setup answers. Start on the ${link('Main product cheats homepage', '/')}, then read the ${faqPage} filters for every topic.`,
   },
 ];
 
@@ -236,10 +236,10 @@ export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
 ];
 
 export const HOME_LANDING_FAQ_SECTION_COPY = {
-  eyebrow: 'Cheat FAQ',
-  title: 'Borderlands 3 cheats questions',
+  eyebrow: 'ABI FAQ',
+  title: 'Arena Breakout Infinite questions',
   subtitle:
-    'Straight answers on plans, Cloud DMA, bans, and setup—open the full FAQ for every topic.',
+    'Answers on ESP, aimbot, plans, Cloud DMA, and Windows requirements—open the full FAQ for every topic.',
 } as const;
 
 /** Section copy when FAQ list is scoped to the current page (not /faq/). */

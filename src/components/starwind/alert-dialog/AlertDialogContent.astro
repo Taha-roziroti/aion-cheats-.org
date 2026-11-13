@@ -21,6 +21,7 @@ const { class: className, ...rest } = Astro.props;
   class={alertDialogContent({ class: className })}
   role="alertdialog"
   data-state="closed"
+  data-lenis-prevent
   {...rest}
   data-slot="alert-dialog-content"
 >

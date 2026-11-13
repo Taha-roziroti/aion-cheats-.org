@@ -1,0 +1,41 @@
+version: '0.2'
+language: en-US
+dictionaries:
+  - softwareTerms
+  - typescript
+  - companies
+words:
+  - ABI
+  - aimbot
+  - aimbots
+  - hypervisor
+  - Hyper-V
+  - HVCI
+  - GREENWARD
+  - HWID
+  - hwid
+  - srcset
+  - webp
+  - isle-hack
+  - Astro
+  - Starwind
+  - Embla
+  - loot
+  - spoofer
+  - snaplines
+  - Snaplines
+  - Wallhack
+  - wallhack
+  - keybind
+  - keybinds
+  - Streamproof
+  - streamproof
+  - Orbwalker
+  - bento
+  - Unban
+ignorePaths:
+  - dist/**
+  - node_modules/**
+  - package-lock.json
+  - src/i18n/en.ts
+  - src/data/faq.ts

@@ -1,4 +1,6 @@
 ---
+type MotionReveal = 'up' | 'left' | 'right' | 'scale' | '3d';
+
 interface Props {
   eyebrow: string;
   title: string;
@@ -8,9 +10,12 @@ interface Props {
   titleAs?: 'h1' | 'h2';
   centered?: boolean;
   wide?: boolean;
+  /** Scroll reveal for section headers below the fold (never use on page heroes). */
+  motionReveal?: MotionReveal;
 }
 
-const { eyebrow, title, desc, titleId, titleAs = 'h1', centered = false, wide = false } = Astro.props;
+const { eyebrow, title, desc, titleId, titleAs = 'h1', centered = false, wide = false, motionReveal } =
+  Astro.props;
 const TitleTag = titleAs;
 ---
 
@@ -20,6 +25,7 @@ const TitleTag = titleAs;
     wide && 'section-header--wide',
     centered && 'mx-auto text-center',
   ]}
+  data-reveal={motionReveal}
 >
   <p class="section-header__eyebrow">{eyebrow}</p>
   <TitleTag id={titleId} class="section-header__title">{title}</TitleTag>

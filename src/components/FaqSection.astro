@@ -96,7 +96,7 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
       )
     }
 
-    <Accordion type="single" collapsible class="mt-8 w-full" data-faq-list>
+    <Accordion type="single" collapsible class="mt-8 w-full" data-faq-list data-lenis-prevent>
       {items.map((faq, i) => (
         <div data-faq-topic={faq.topic}>
           <AccordionItem value={`faq-${i}`}>

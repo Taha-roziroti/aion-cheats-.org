@@ -1,0 +1,62 @@
+---
+import Icon from '../icons/Icon.astro';
+import { Button } from '@/components/starwind/button';
+import { checkoutPathForProductId } from '../../config/checkout';
+import type { CheckoutProductId } from './CheckoutProductPicker.astro';
+import { formatPlanPrice, getProductPlans } from '../../data/productPricing';
+
+interface Props {
+  product: CheckoutProductId;
+  class?: string;
+}
+
+const { product, class: className } = Astro.props;
+
+const catalog: Record<
+  CheckoutProductId,
+  { label: string; detail: string; planSlug: CheckoutProductId }
+> = {
+  'main-product': {
+    label: 'Arena Breakout Infinite Cheats',
+    detail: 'Main plan — ESP, aimbot, loot displays',
+    planSlug: 'main-product',
+  },
+  'cloud-dma': {
+    label: 'Cloud DMA license',
+    detail: 'Hyper-V infrastructure layer',
+    planSlug: 'cloud-dma',
+  },
+  'hwid-spoofer': {
+    label: 'HWID Spoofer',
+    detail: 'Hardware ID reset utility',
+    planSlug: 'hwid-spoofer',
+  },
+};
+
+const meta = catalog[product];
+const price =
+  product === 'main-product'
+    ? `From ${formatPlanPrice(getProductPlans('main-product')[0]!.priceUsd)}`
+    : formatPlanPrice(getProductPlans(meta.planSlug)[0]!.priceUsd);
+const href = checkoutPathForProductId(product);
+---
+
+<aside
+  class:list={['text-left lg:sticky lg:top-28', className]}
+  aria-labelledby="checkout-direct-title"
+>
+  <div class="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+    <div class="border-b border-border bg-muted/30 px-5 py-4">
+      <p class="text-sm font-medium text-muted-foreground">Purchase</p>
+      <h2 id="checkout-direct-title" class="text-base font-semibold text-foreground">{meta.label}</h2>
+      <p class="mt-1 text-xs text-muted-foreground">{meta.detail}</p>
+    </div>
+    <div class="space-y-4 px-5 py-5">
+      <p class="text-sm font-semibold tabular-nums text-foreground">{price}</p>
+      <Button as="a" href={href} variant="primary" size="lg" class="w-full rounded-xl" rel="sponsored noopener">
+        Continue to checkout
+        <Icon name="arrowRight" size={17} />
+      </Button>
+    </div>
+  </div>
+</aside>

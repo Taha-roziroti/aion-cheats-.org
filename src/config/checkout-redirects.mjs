@@ -1,35 +1,51 @@
-/** Zadeyo affiliate gateway (TAHA) — used for Borderlands 3 checkout redirects. */
-const AFFILIATE_GO = 'https://zadeyo.com/go/TAHA';
+/** External checkout destinations (Zadeyo affiliate). */
+import { SITE_URL } from '../../config/site.mjs';
 
-function affiliateTo(productPath) {
-  return `${AFFILIATE_GO}?to=${encodeURIComponent(productPath)}`;
-}
-
-/** Checkout destinations keyed by internal product id. */
 export const CHECKOUT_URLS = {
-  borderlands3: affiliateTo('/products/borderlands-3'),
-  cloudDma: affiliateTo('/products/cloud-dma'),
-  dota2: 'https://zadeyo.com/products/dota-2',
-  skinChanger: 'https://zadeyo.com/products/skin-changer',
-  hwidSpoofer: affiliateTo('/products/hwid-spoofer'),
-  ugc: 'https://zadeyo.com/products/ugc',
+  mainProduct: 'https://zadeyo.com/go/TAHA?to=%2Fproducts%2Fthe-isle-novaxware',
+  cloudDma: 'https://zadeyo.com/go/TAHA?to=%2Fproducts%2Fcloud-dma',
+  hwidSpoofer: 'https://zadeyo.com/go/TAHA?to=%2Fproducts%2Fhwid-spoofer',
+  dota2: `${SITE_URL}/`,
+  skinChanger: `${SITE_URL}/`,
+  ugc: `${SITE_URL}/`,
 };
 
-/** Checkout paths → external product URLs (used by Node serve + Astro middleware + _redirects). */
+/** Slugs served by `src/pages/go/[slug].astro` (instant client redirect — no edge 302). */
+export const CHECKOUT_BRIDGE_SLUGS = ['main-product', 'cloud-dma', 'hwid-spoofer'];
+
+const bridgePathSet = new Set(CHECKOUT_BRIDGE_SLUGS.map((s) => `/go/${s}/`));
+
+/** Edge / serve redirects for legacy `/go/*` paths only (bridge slugs use static HTML). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/borderlands-3', CHECKOUT_URLS.borderlands3],
-  ['/go/borderlands-3/', CHECKOUT_URLS.borderlands3],
-  ['/go/cloud-dma', CHECKOUT_URLS.cloudDma],
-  ['/go/cloud-dma/', CHECKOUT_URLS.cloudDma],
+  ['/go/borderlands-3', CHECKOUT_URLS.mainProduct],
+  ['/go/borderlands-3/', CHECKOUT_URLS.mainProduct],
   ['/go/dota-2', CHECKOUT_URLS.dota2],
   ['/go/dota-2/', CHECKOUT_URLS.dota2],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
-  ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],
-  ['/go/hwid-spoofer/', CHECKOUT_URLS.hwidSpoofer],
   ['/go/ugc', CHECKOUT_URLS.ugc],
   ['/go/ugc/', CHECKOUT_URLS.ugc],
 ]);
+
+export function checkoutDestinationForSlug(slug) {
+  switch (slug) {
+    case 'main-product':
+    case 'borderlands-3':
+      return CHECKOUT_URLS.mainProduct;
+    case 'cloud-dma':
+      return CHECKOUT_URLS.cloudDma;
+    case 'hwid-spoofer':
+      return CHECKOUT_URLS.hwidSpoofer;
+    case 'dota-2':
+      return CHECKOUT_URLS.dota2;
+    case 'skin-changer':
+      return CHECKOUT_URLS.skinChanger;
+    case 'ugc':
+      return CHECKOUT_URLS.ugc;
+    default:
+      return null;
+  }
+}
 
 function mergeSearchParams(destination, search) {
   if (!search || search === '?') return destination;
@@ -45,6 +61,11 @@ function mergeSearchParams(destination, search) {
 
 export function resolveCheckoutPathRedirect(pathname, search = '') {
   if (pathname === '/go' || pathname === '/go/') return null;
+
+  const normalized =
+    pathname !== '/' && !pathname.endsWith('/') ? `${pathname}/` : pathname;
+
+  if (bridgePathSet.has(normalized)) return null;
 
   let base =
     CHECKOUT_PATH_REDIRECTS.get(pathname) ??

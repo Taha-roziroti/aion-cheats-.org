@@ -14,10 +14,18 @@ function isScriptsHero(title: string) {
 
 <section id="features" class="border-y border-border bg-muted/20 py-16 md:py-24" aria-labelledby="features-title">
   <div class="mx-auto max-w-6xl px-5">
-    <SectionHeader eyebrow={s.eyebrow} title={s.title} desc={s.subtitle} titleId="features-title" titleAs="h2" />
+    <SectionHeader
+      eyebrow={s.eyebrow}
+      title={s.title}
+      desc={s.subtitle}
+      titleId="features-title"
+      titleAs="h2"
+      motionReveal="up"
+    />
 
     <div
       class="features-bento mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-[repeat(4,auto)] lg:items-stretch lg:gap-4"
+      data-reveal-stagger
     >
       {
         s.items.map((item) => {
@@ -25,7 +33,7 @@ function isScriptsHero(title: string) {
           return (
             <article
               class:list={[
-                'group flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border bg-card text-left shadow-sm transition-colors hover:border-primary/35',
+                'group flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border bg-card text-left shadow-sm transition-[transform,border-color] duration-300 hover:-translate-y-0.5 hover:border-primary/35',
                 item.bento ?? 'sm:col-span-2 lg:col-span-4',
                 scriptsHero && 'features-bento-card--scripts',
               ]}

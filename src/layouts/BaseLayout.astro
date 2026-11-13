@@ -75,7 +75,7 @@ const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pat
 ---
 
 <!doctype html>
-<html lang="en" class="dark fonts-pending">
+<html lang="en-US" class="dark fonts-pending">
   <head>
     <meta charset="UTF-8" />
     <script is:inline>
@@ -92,8 +92,6 @@ const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pat
     <meta name="theme-color" content="#0d0a14" />
     <link rel="canonical" href={canonical} />
     <link rel="image_src" href={ogImageUrl} />
-    <link rel="alternate" hreflang="en" href={canonical} />
-    <link rel="alternate" hreflang="x-default" href={canonical} />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -170,6 +168,10 @@ const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pat
     <Footer logoAlt={logoAlt} />
     <script>
       import '../scripts/site.ts';
+    </script>
+    <script>
+      import { initMotion } from '../scripts/motion.ts';
+      initMotion();
     </script>
     {
       GA_MEASUREMENT_ID && (

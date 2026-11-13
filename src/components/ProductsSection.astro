@@ -1,7 +1,7 @@
 ---
 import '../styles/product-cheat-page.css';
 import { t } from '../i18n';
-import { borderlandsLandingProducts } from '../data/borderlands3Landing';
+import { landingProducts } from '../data/landingData';
 import SectionHeader from './SectionHeader.astro';
 import CatalogCard from './CatalogCard.astro';
 import {
@@ -14,20 +14,27 @@ import {
 
 const s = t.products;
 
-function cardIcon(product: (typeof borderlandsLandingProducts)[number]) {
+function cardIcon(product: (typeof landingProducts)[number]) {
   return product.icon;
 }
 
-function cardLabel(product: (typeof borderlandsLandingProducts)[number]) {
+function cardLabel(product: (typeof landingProducts)[number]) {
   return product.label;
 }
 ---
 
 <section id="products" class="py-16 md:py-24" aria-labelledby="products-title">
   <div class="mx-auto max-w-6xl px-5">
-    <SectionHeader eyebrow={s.eyebrow} title={s.title} desc={s.subtitle} titleId="products-title" titleAs="h2" />
+    <SectionHeader
+      eyebrow={s.eyebrow}
+      title={s.title}
+      desc={s.subtitle}
+      titleId="products-title"
+      titleAs="h2"
+      motionReveal="up"
+    />
 
-    <div class="products-carousel" data-products-carousel>
+    <div class="products-carousel" data-products-carousel data-lenis-prevent>
       <Carousel
         autoInit
         opts={{ align: 'start', containScroll: 'trimSnaps', dragFree: false }}
@@ -39,7 +46,7 @@ function cardLabel(product: (typeof borderlandsLandingProducts)[number]) {
           <div class="products-carousel__viewport">
             <CarouselContent class="products-carousel__track">
               {
-                borderlandsLandingProducts.map((product) => (
+                landingProducts.map((product) => (
                   <CarouselItem class="products-carousel__slide">
                     <CatalogCard
                       class="catalog-card--carousel"

@@ -1,3 +1,5 @@
+import { scrollToElement } from './scroll-target';
+
 function initFonts() {
   const root = document.documentElement;
 
@@ -49,7 +51,7 @@ function initInPageScroll() {
       if (!target) return;
 
       event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollToElement(target);
     });
   });
 }
@@ -61,8 +63,8 @@ function initSkipLink() {
       if (!main) return;
 
       main.setAttribute('tabindex', '-1');
-      main.focus({ preventScroll: false });
-      main.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      main.focus({ preventScroll: true });
+      scrollToElement(main);
     });
   });
 }

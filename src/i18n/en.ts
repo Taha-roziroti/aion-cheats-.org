@@ -1,38 +1,38 @@
 import type { Translations } from './types';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
-import { PRODUCT_BASE } from '../config/site';
+import { PRODUCT_BASE, SITE_DOMAIN, SUPPORT_EMAIL } from '../config/site';
 
 const productBase = PRODUCT_BASE;
 
 export const en: Translations = {
   site: {
-    name: 'Borderlands 3 Cheats',
-    domain: 'borderlands3cheats.com',
-    title: 'Borderlands 3 Cheats for PC | ESP & Soft Aim',
+    name: 'ABI Cheats',
+    domain: SITE_DOMAIN,
+    title: 'Arena Breakout Infinite Cheats | ESP & Aimbot',
     description:
-      'Borderlands 3 PC cheat features: soft aim, enemy and loot ESP, radar and recoil options. Review plans, Cloud DMA requirements, and checkout details.',
+      'Arena Breakout Infinite ESP, aimbot, loot displays and more. Review features, system requirements, Cloud DMA, and monthly or lifetime plans.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [
     { href: '/#features', label: 'Features' },
-    { href: '/pricing/', label: 'Cheat plans' },
-    { href: '/#products', label: 'Products' },
-    { href: '/cloud-dma/', label: 'DMA license' },
-    { href: '/hwid-spoofer/', label: 'HWID spoofer' },
+    { href: '/arena-breakout-infinite-esp/', label: 'ESP' },
+    { href: '/arena-breakout-infinite-aimbot/', label: 'Aimbot' },
+    { href: '/arena-breakout-infinite-cheats-pricing/', label: 'Pricing' },
+    { href: '/cloud-dma-for-arena-breakout-infinite/', label: 'Cloud DMA' },
     { href: '/faq/', label: 'FAQ' },
     { href: '/support/', label: 'Support' },
   ],
   hero: {
-    status: 'Borderlands 3 — supported Windows builds',
-    eyebrow: 'Private Borderlands 3 PC tools',
-    titleLine1: 'Borderlands 3 Cheats',
-    titleLine2: 'ESP, radar & soft aim',
+    status: 'Arena Breakout Infinite — Windows 10 & 11',
+    eyebrow: 'ABI Cheats for PC',
+    titleLine1: 'Arena Breakout Infinite',
+    titleLine2: 'ESP, loot & aimbot',
     subtitle:
-      'Borderlands 3 PC cheats with enemy and loot ESP, soft aim, radar, and recoil options—plus Cloud DMA and HWID utilities on separate checkouts.',
+      'Player ESP, AI ESP, loot value displays, and configurable aimbot options—plus Cloud DMA on a separate checkout for supported builds.',
     ctaPrimary: 'Buy now',
     ctaDiscord: 'Compare plans',
-    modesLabel: 'Supported client',
-    modes: ['Steam', 'Official client', 'Windows 10 & 11'],
+    modesLabel: 'Supported launchers',
+    modes: ['ABI Launcher', 'Steam', 'Epic / Microsoft Store'],
     metrics: [
       { label: 'Platform', strong: 'Windows PC' },
       { label: 'Plans', strong: '3' },
@@ -41,10 +41,10 @@ export const en: Translations = {
     ],
   },
   features: {
-    eyebrow: 'Cheat features',
-    title: 'Borderlands 3 modules you can review before checkout',
+    eyebrow: 'ABI features',
+    title: 'Arena Breakout Infinite modules to review before checkout',
     subtitle:
-      'Enemy and loot ESP, soft aim, radar, and weapon tuning from the current Borderlands 3 listing—no unrelated game bundles.',
+      'Player ESP, AI ESP, loot value displays, aimbot controls, and visual customization from the main ABI product listing.',
     items: [
       {
         title: 'Enemy ESP',
@@ -118,15 +118,15 @@ export const en: Translations = {
   },
   whyUs: {
     eyebrow: 'Why us',
-    title: 'A Borderlands 3–focused catalog—not a mixed-game marketplace',
+    title: 'A Main product–focused catalog—not a mixed-game marketplace',
     subtitle:
-      'Plans, Cloud DMA, and HWID utilities stay on Borderlands 3 PC with listed features only and support you can reach before checkout.',
-    usLabel: 'Borderlands 3 Cheats',
+      'Plans, Cloud DMA, and HWID utilities stay on Main product PC with listed features only and support you can reach before checkout.',
+    usLabel: 'Your site',
     otherLabel: 'Typical listing',
     rows: [
       {
-        title: 'Borderlands 3 only',
-        desc: 'Pricing, guides, and checkout paths stay on Borderlands 3 PC instead of bundling unrelated titles.',
+        title: 'Main product only',
+        desc: 'Pricing, guides, and checkout paths stay on Main product PC instead of bundling unrelated titles.',
       },
       {
         title: 'Listed features only',
@@ -153,7 +153,7 @@ export const en: Translations = {
       {
         value: '$35',
         title: 'Monthly plan',
-        desc: '31-day Borderlands 3 cheat access billed in USD.',
+        desc: '31-day Main product cheat access billed in USD.',
       },
       {
         value: '$150',
@@ -175,13 +175,13 @@ export const en: Translations = {
       'Confirm compatibility, finish checkout, then follow delivery notes for Windows PC, Cloud DMA where required, and your saved cheat profile.',
     ctaPrimary: 'Compare plans',
     ctaSecondary: 'Setup FAQ',
-    ctaPrimaryHref: '/pricing/',
+    ctaPrimaryHref: '/arena-breakout-infinite-cheats-pricing/',
     ctaSecondaryHref: '/faq/',
     steps: [
       {
         step: 'Step 1',
         title: 'Confirm status and requirements',
-        desc: 'Review the PC requirements guide and Cloud DMA notes before you buy or launch Borderlands 3.',
+        desc: 'Review the PC requirements guide and Cloud DMA notes before you buy or launch Main product.',
       },
       {
         step: 'Step 2',
@@ -197,7 +197,7 @@ export const en: Translations = {
   },
   compatibility: {
     eyebrow: 'Platform support',
-    title: 'Built for Borderlands 3 on Windows PC.',
+    title: 'Built for the main product on Windows PC.',
     subtitle: 'Confirm Steam or official client support and Cloud DMA prerequisites before launch.',
     items: ['Windows 10 & 11', 'Steam client', 'Official client', 'Cloud DMA option', 'HWID utility', 'Secure checkout', 'Setup guides', 'Email support'],
   },
@@ -223,7 +223,7 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Shop',
-    title: 'Borderlands 3 products',
+    title: 'Main product products',
     subtitle: 'Main cheat plans, HWID Spoofer, and Cloud DMA license—three focused utilities for PC.',
     viewAll: 'View all products',
     get: 'Get',
@@ -461,9 +461,9 @@ export const en: Translations = {
     titleHighlight: 'saved config.',
     titleAfter: '',
     subtitle:
-      'A straight path from reviewing Borderlands 3 compatibility to a profile you can reuse every session.',
+      'A straight path from reviewing Main product compatibility to a profile you can reuse every session.',
     ctaLabel: 'Compare plans',
-    ctaHref: '/pricing/',
+    ctaHref: '/arena-breakout-infinite-cheats-pricing/',
     ctaSecondary: 'Read setup FAQ',
     ctaSecondaryHref: '/faq/',
     items: [
@@ -471,7 +471,7 @@ export const en: Translations = {
         num: '01',
         phase: 'Before purchase',
         title: 'Check requirements',
-        desc: 'Read the PC requirements and Cloud DMA guides after any Borderlands 3 or Windows update.',
+        desc: 'Read the PC requirements and Cloud DMA guides after any Main product or Windows update.',
       },
       {
         num: '02',
@@ -518,8 +518,8 @@ export const en: Translations = {
         icon: 'headphones',
         title: 'Email support',
         desc: "We're here for checkout, Cloud DMA setup, and license delivery questions.",
-        linkLabel: 'support@borderlands3cheats.com',
-        href: 'mailto:support@borderlands3cheats.com',
+        linkLabel: SUPPORT_EMAIL,
+        href: `mailto:${SUPPORT_EMAIL}`,
       },
       {
         icon: 'navFaq',
@@ -539,7 +539,7 @@ export const en: Translations = {
     ticketTitle: 'Support: Include in your ticket',
     ticketItems: [
       { title: 'Order email', desc: 'The address used at checkout via our secure partner.' },
-      { title: 'Platform', desc: 'Windows 10 or 11, Borderlands 3 client (Steam or Official), and Cloud DMA status.' },
+      { title: 'Platform', desc: 'Windows 10 or 11, Main product client (Steam or Official), and Cloud DMA status.' },
       { title: 'Error detail', desc: 'Screenshot or exact message from the loader, Hyper-V, or game client.' },
     ],
   },
@@ -583,10 +583,10 @@ export const en: Translations = {
   footer: {
     explore: 'Explore',
     tagline:
-      'Borderlands 3 PC cheat features, Cloud DMA infrastructure, and setup guides at borderlands3cheats.com.',
+      `Main product PC cheat features, Cloud DMA infrastructure, and setup guides at ${SITE_DOMAIN}.`,
     exploreLinks: [
       { href: '/#features', label: 'Feature overview', ariaLabel: 'Features' },
-      { href: '/pricing/', label: 'Cheat plans', ariaLabel: 'Pricing' },
+      { href: '/arena-breakout-infinite-cheats-pricing/', label: 'Cheat plans', ariaLabel: 'Pricing' },
       { href: '/#products', label: 'All products', ariaLabel: 'Products' },
       { href: '/guides/cloud-dma-setup/', label: 'Setup walkthrough', ariaLabel: 'Setup guide' },
       { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
@@ -599,25 +599,25 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About Borderlands 3 Cheats — guides, pricing & cloud',
+      title: 'About Your site — guides, pricing & cloud',
       description:
-        'Borderlands 3 Cheats publishes PC feature guides, Cloud DMA setup, pricing, and support resources at borderlands3cheats.com.',
+        `Your site publishes PC feature guides, Cloud DMA setup, pricing, and support resources at ${SITE_DOMAIN}.`,
       sections: [
         {
-          heading: 'Borderlands 3 Cheats: Who we are',
+          heading: 'Your site: Who we are',
           paragraphs: [
-            'Borderlands 3 Cheats is an independent resource for PC players exploring soft aim, enemy and loot ESP, radar, and related configuration options. We publish pricing, system requirements, and Cloud DMA setup guides so you can evaluate the product before checkout.',
+            'Your site is an independent resource for PC players exploring soft aim, enemy and loot ESP, radar, and related configuration options. We publish pricing, system requirements, and Cloud DMA setup guides so you can evaluate the product before checkout.',
             'We are not affiliated with, endorsed by, or sponsored by the game publisher or its licensors. Product names are used for identification only.',
-            'Borderlands 3 cheats content on this site explains supported features, plan lengths, and the separate Cloud DMA license—without claiming official publisher approval.',
+            'main product content on this site explains supported features, plan lengths, and the separate Cloud DMA license—without claiming official publisher approval.',
             'Listed offers on this site include a $35 monthly cheat plan, a $150 lifetime cheat plan, and a $50 lifetime Cloud DMA license, each with separate checkout flows.',
           ],
         },
         {
           heading: 'What we publish',
           paragraphs: [
-            'Our site covers Borderlands 3 cheat plans (monthly and lifetime), the Cloud DMA infrastructure license, Hyper-V setup steps, and pre-purchase FAQ. Content is updated when requirements or checkout flows change.',
+            'Our site covers Main product cheat plans (monthly and lifetime), the Cloud DMA infrastructure license, Hyper-V setup steps, and pre-purchase FAQ. Content is updated when requirements or checkout flows change.',
             'Review the system requirements and Cloud DMA pages before purchase so your Windows PC matches the listed configuration.',
-            'Borderlands 3 cheats guides focus on Windows 10 and 11, supported clients, and realistic setup order: requirements, Cloud DMA, then cheat checkout.',
+            'main product guides focus on Windows 10 and 11, supported clients, and realistic setup order: requirements, Cloud DMA, then cheat checkout.',
           ],
         },
         {
@@ -629,16 +629,16 @@ export const en: Translations = {
       ],
     },
     privacy: {
-      title: 'Privacy Policy — analytics, cookies & Borderlands 3 Cheats',
+      title: 'ABI Privacy Policy — analytics & support email',
       description:
-        'Privacy at Borderlands 3 Cheats: how we handle analytics, cookies, and contact data when you use borderlands3cheats.com.',
+        `Privacy policy for ${SITE_DOMAIN}: analytics cookies, support email, and checkout partner data for Arena Breakout Infinite customers.`,
       sections: [
         {
           heading: 'Privacy: information we collect',
           paragraphs: [
-            'We may collect standard web analytics such as page views, device type, browser, and approximate region through Google Analytics when enabled. Checkout and license delivery happen on external checkout pages—we do not store payment card data on borderlands3cheats.com.',
-            'Privacy practices here apply only to pages hosted on borderlands3cheats.com, not to third-party checkout or payment processors.',
-            'If you email support@borderlands3cheats.com, we process your message to answer checkout, Cloud DMA, or license questions—not for marketing lists.',
+            `We may collect standard web analytics such as page views, device type, browser, and approximate region through Google Analytics when enabled. Checkout and license delivery happen on external checkout pages—we do not store payment card data on ${SITE_DOMAIN}.`,
+            `Privacy practices here apply only to pages hosted on ${SITE_DOMAIN}, not to third-party checkout or payment processors.`,
+            `If you email ${SUPPORT_EMAIL}, we process your message to answer checkout, Cloud DMA, or license questions—not for marketing lists.`,
           ],
         },
         {
@@ -665,28 +665,28 @@ export const en: Translations = {
       ],
     },
     terms: {
-      title: 'Terms & Conditions — purchase, license, refund policy details',
+      title: 'ABI Terms — licenses, refunds & Cloud DMA',
       description:
-        'Purchase, license, refund, and use terms for Borderlands 3 cheat and Cloud DMA products at borderlands3cheats.com.',
+        `Purchase, license, refund, and use terms for Arena Breakout Infinite cheat plans and Cloud DMA products at ${SITE_DOMAIN}.`,
       sections: [
         {
           heading: 'Terms: agreement and purchases',
           paragraphs: [
-            'Last updated: November 2026. By using borderlands3cheats.com or completing checkout for any product listed here, you agree to these Terms & Conditions and our Privacy Policy.',
+            `Last updated: November 2026. By using ${SITE_DOMAIN} or completing checkout for any product listed here, you agree to these Terms & Conditions and our Privacy Policy.`,
           ],
         },
         {
           heading: 'What you purchase',
           paragraphs: [
-            'We sell access to Borderlands 3 cheat software (monthly or lifetime plans) and a separate Cloud DMA infrastructure license, delivered through external checkout and license delivery flows for supported Windows PCs.',
+            'We sell access to Main product cheat software (monthly or lifetime plans) and a separate Cloud DMA infrastructure license, delivered through external checkout and license delivery flows for supported Windows PCs.',
             'Feature lists on pricing and product pages describe what is included at the time of purchase. Modules or requirements can change when the game or supported configuration updates.',
           ],
         },
         {
           heading: 'Checkout and delivery',
           paragraphs: [
-            'Payment and license delivery run on external checkout pages. borderlands3cheats.com does not process or store payment card numbers.',
-            'After purchase, follow instructions from your order email and the Cloud DMA setup guide before launching Borderlands 3.',
+            `Payment and license delivery run on external checkout pages. ${SITE_DOMAIN} does not process or store payment card numbers.`,
+            'After purchase, follow instructions from your order email and the Cloud DMA setup guide before launching Main product.',
           ],
         },
         {
@@ -706,7 +706,7 @@ export const en: Translations = {
         {
           heading: 'Availability and risk',
           paragraphs: [
-            'Third-party tools for Borderlands 3 can conflict with game updates and anti-cheat or publisher enforcement. You use this software at your own risk, including possible account action.',
+            'Third-party tools for the main product can conflict with game updates and anti-cheat or publisher enforcement. You use this software at your own risk, including possible account action.',
             'Review requirements and setup guides before every session, especially after game patches.',
           ],
         },
@@ -725,18 +725,18 @@ export const en: Translations = {
       ],
     },
     support: {
-      title: 'Borderlands 3 Cheats Support',
+      title: 'Your site Support',
       description:
-        'Get support for checkout, Cloud DMA setup, and license delivery at borderlands3cheats.com.',
+        `Get support for checkout, Cloud DMA setup, and license delivery at ${SITE_DOMAIN}.`,
     },
   },
   ui: {
     skipLink: 'Skip to main content',
     browseCheats: 'View plans',
     browseCheatsMobile: 'View plans',
-    homeAria: 'Borderlands 3 Cheats home',
+    homeAria: 'Your site home',
     checkoutAria: 'Start checkout',
-    discordAria: 'Join Borderlands 3 Cheats on Discord',
+    discordAria: 'Join Your site on Discord',
     menuOpen: 'Open menu',
     menuClose: 'Close menu',
   },

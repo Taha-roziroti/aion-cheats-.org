@@ -1,6 +1,5 @@
 /**
- * Central titles/descriptions for high-traffic routes.
- * After Search Console shows impressions, edit the matching path here and redeploy.
+ * Central titles/descriptions for high-traffic routes (mirrors content/pages frontmatter).
  */
 
 export interface PageSeoEntry {
@@ -10,83 +9,69 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Borderlands 3 – PC soft aim, ESP, loot radar & plans',
+    title: 'Arena Breakout Infinite Cheats | ESP & Aimbot',
     description:
-      'Borderlands 3 PC setup with soft aim, enemy and loot ESP, radar, and recoil options. Compare $35 monthly and $150 lifetime plans plus Cloud DMA.',
+      'Explore Arena Breakout Infinite cheats with player ESP, AI ESP, loot displays and configurable aimbot options. Review features and access plans.',
   },
-  '/pricing/': {
-    title: 'Cheats – monthly $35, lifetime $150 plans & features',
+  '/arena-breakout-infinite-esp/': {
+    title: 'Arena Breakout Infinite ESP | Player & Loot',
     description:
-      'Cheats pricing for monthly ($35) and lifetime ($150) access with soft aim, ESP, radar, and related features. Compare plans before checkout.',
+      'Explore Arena Breakout Infinite ESP, including player, AI, inventory and loot displays. See the available visual options and settings.',
   },
-  '/cloud-dma/': {
-    title: 'Cloud DMA – single-PC Hyper-V lifetime license $50',
+  '/arena-breakout-infinite-aimbot/': {
+    title: 'Arena Breakout Infinite Aimbot | ABI Features',
     description:
-      'Cloud DMA Hyper-V license for a single-PC setup: Windows 10/11, 8–16 GB RAM, $50 lifetime pricing, and how it fits the cheat stack.',
+      'Explore ABI aimbot settings, including FOV, smoothness, speed, target filters and custom keybinds. Review the available configuration.',
   },
-  '/hwid-spoofer/': {
-    title: 'HWID Spoofer – lifetime hardware ID reset utility $50',
+  '/arena-breakout-infinite-cheats-pricing/': {
+    title: 'Arena Breakout Infinite Cheats Price & Plans',
     description:
-      'HWID Spoofer for PC hardware ID resets after enforcement or PC swaps: Windows 10/11, $50 lifetime utility license, and when to use it.',
+      'Compare Arena Breakout Infinite monthly and lifetime plans, Cloud DMA pricing and setup requirements. Explore the available access options.',
   },
-  '/guides/cloud-dma-setup/': {
-    title: 'DMA setup guide – Hyper-V, RAM & CPU virtualization',
+  '/cloud-dma-for-arena-breakout-infinite/': {
+    title: 'Cloud DMA for Arena Breakout Infinite | Setup',
     description:
-      'DMA setup steps for Hyper-V, CPU virtualization, 8–16 GB RAM, and Windows 10/11 checks before you enable the single-PC environment.',
+      'Explore Cloud DMA for Arena Breakout Infinite, including Hyper-V setup, Windows requirements, pricing and additional services.',
   },
-  '/guides/borderlands-3-cheat-system-requirements/': {
-    title: 'System requirements – Windows RAM & client specs guide',
+  '/arena-breakout-infinite-hwid-spoofer/': {
+    title: 'Arena Breakout Infinite HWID Spoofer | ABI',
     description:
-      'System requirements for Windows 10/11, Steam or Official Client, RAM, and Cloud DMA prerequisites—review before Borderlands 3 cheat checkout.',
-  },
-  '/products/dota-2-cheats/': {
-    title: 'Dota 2 Elite Cheats & Utility Products',
-    description:
-      'Elite dota 2 cheats plus HWID spoofer, UGC tools, and Skin Changer utilities for Steam ranked on dotacheats.com.',
-  },
-  '/products/dota-2-cheats/elite/': {
-    title: 'Dota 2 Elite Cheats | Bots & Full Map Hack',
-    description:
-      'Elite tier: auto farm bot, kill steal, skin changer, full map hack suite, and priority patch delivery.',
-  },
-  '/products/dota-2-cheats/utilities/': {
-    title: 'Dota 2 Utilities | HWID, UGC & Skin Changer',
-    description:
-      'Choose HWID Spoofer, UGC, or Skin Changer—when each utility fits and links to full product pages.',
-  },
-  '/blog/': {
-    title: 'Dota 2 Cheats Guides & Patch Notes',
-    description:
-      'Setup guides, Lite vs Pro comparisons, VAC patch checklists, and ranked config tips for dota cheats.',
-  },
-  '/forum/': {
-    title: 'Dota 2 Community Forum | DotaCheats',
-    description: 'Join Dota players to discuss heroes, builds, patch changes, guides, and community moments.',
+      'Explore HWID spoofing features, Windows requirements and hardware identifier options. Review the listed compatibility before choosing a setup.',
   },
   '/faq/': {
-    title: 'FAQ – cheat plans, Cloud DMA, pricing & checkout help',
+    title: 'ABI FAQ – plans, Cloud DMA, Windows & checkout',
     description:
-      'FAQ: answers on $35/$150 cheat plans, $50 Cloud DMA license, Windows requirements, checkout delivery, and license moves.',
-  },
-  '/terms/': {
-    title: 'Terms – purchase, license, refund & policy details',
-    description:
-      'Terms for Borderlands 3 cheat and Cloud DMA purchases: license use, checkout delivery, refund rules, and acceptable use.',
-  },
-  '/privacy/': {
-    title: 'Privacy – Borderlands 3 Cheats analytics & cookies',
-    description:
-      'Privacy: how borderlands3cheats.com uses Google Analytics, cookies, and support email data when you browse the site or complete checkout.',
-  },
-  '/about/': {
-    title: 'Borderlands 3 Cheats – guides, pricing & Cloud DMA',
-    description:
-      'Borderlands 3 Cheats publishes PC ESP/soft aim guides, $35/$150 plans, $50 Cloud DMA license info, and independent site policies.',
+      'Frequently asked questions about Arena Breakout Infinite cheats, pricing, Cloud DMA, Windows requirements, and checkout.',
   },
   '/support/': {
-    title: 'Support – checkout help, Cloud DMA setup & licenses',
+    title: 'ABI Support – checkout, Cloud DMA & setup help',
     description:
-      'Support: help with cheat checkout, Cloud DMA Hyper-V setup, Windows requirements, and license delivery after purchase on this site.',
+      'Get help with Arena Breakout Infinite checkout, Cloud DMA Hyper-V setup, license delivery, and Windows compatibility before you buy or install.',
+  },
+  '/about/': {
+    title: 'About ABI Cheats – Arena Breakout Infinite guides',
+    description:
+      'Learn who publishes ABI Cheats, what Arena Breakout Infinite features we document, and how pricing, Cloud DMA, and setup guides fit together.',
+  },
+  '/guides/cloud-dma-setup/': {
+    title: 'Cloud DMA setup guide for Arena Breakout Infinite',
+    description:
+      'Step-by-step Cloud DMA setup for Arena Breakout Infinite on Windows 10 and 11, including Hyper-V, RAM sizing, and virtualization checks before cheat install.',
+  },
+  '/guides/system-requirements/': {
+    title: 'Arena Breakout Infinite system requirements',
+    description:
+      'Windows 10 and 11 requirements for Arena Breakout Infinite cheats, including RAM, CPU, client builds, and Cloud DMA virtualization prerequisites.',
+  },
+  '/privacy/': {
+    title: 'ABI Privacy Policy – analytics & support email',
+    description:
+      'Privacy policy for isle-hack.com: how we use analytics cookies, support email, and checkout partner data for Arena Breakout Infinite customers.',
+  },
+  '/terms/': {
+    title: 'ABI Terms – licenses, refunds & Cloud DMA',
+    description:
+      'Terms and conditions for Arena Breakout Infinite cheat plans, Cloud DMA licenses, refunds, and acceptable use on supported Windows PCs.',
   },
 };
 

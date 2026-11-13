@@ -1,28 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HomeLanding from '../components/HomeLanding.astro';
-import { resolvePageSeo } from '../config/seo';
 import { loadContentPage } from '../utils/loadContentPage';
 import { jsonLdForContentPage } from '../utils/contentPageJsonLd';
+import { MAIN_PRODUCT_CHECKOUT } from '../data/productCatalog';
+import { PRODUCT_ID } from '../data/site';
+import { productSchema } from '../utils/schema';
 
-const seo = resolvePageSeo('/');
-const entry = await loadContentPage('home');
-const data = entry.data;
-const jsonLd = jsonLdForContentPage({
-  route: data.route,
-  seoTitle: data.seoTitle,
-  metaDescription: data.metaDescription,
-  schemaTypes: data.schemaTypes,
-});
+const homeEntry = await loadContentPage('home');
+const home = homeEntry.data as { title: string; description: string; slug: string };
+
+const jsonLd = [
+  productSchema({
+    name: 'Arena Breakout Infinite Cheats',
+    description: home.description,
+    url: '/',
+    offerUrl: MAIN_PRODUCT_CHECKOUT,
+    sku: 'arena-breakout-infinite-cheats',
+    image: '/images/showcase/abi-esp-indoor-aimbot.webp',
+    productId: PRODUCT_ID,
+    offers: [
+      { name: 'Arena Breakout Infinite — Monthly', priceUsd: 35, url: MAIN_PRODUCT_CHECKOUT },
+      { name: 'Arena Breakout Infinite — Lifetime', priceUsd: 150, url: MAIN_PRODUCT_CHECKOUT },
+    ],
+  }),
+  ...jsonLdForContentPage({
+    route: '/',
+    seoTitle: home.title,
+    metaDescription: home.description,
+    schemaTypes: ['BreadcrumbList'],
+  }),
+];
 ---
 
 <BaseLayout
-  title={seo.title}
-  description={seo.description}
+  title={home.title}
+  description={home.description}
   jsonLd={jsonLd}
-  ogImage={data.ogImage}
-  ogImageAlt={data.heroImage?.alt ?? data.seoTitle}
-  logoAlt="Borderlands 3 – logo"
+  ogImage="/og/home.jpg"
+  ogImageAlt="Arena Breakout Infinite Cheats"
+  logoAlt="Arena Breakout Infinite Cheats – logo"
 >
   <HomeLanding />
 </BaseLayout>

@@ -4,14 +4,18 @@ import sharp from 'sharp';
 
 const root = process.cwd();
 const publicDir = path.join(root, 'public');
-const source = path.join(publicDir, 'brand', 'borderlands3-favicon-source.png');
+const source = path.join(publicDir, 'brand', 'abi-logo-source.webp');
 
-/** Matches site background / theme (see site.webmanifest). */
-const ICON_BG = { r: 10, g: 13, b: 16, alpha: 1 };
+/** Matches logo artwork (black field). */
+const ICON_BG = { r: 0, g: 0, b: 0, alpha: 1 };
+
+if (!fs.existsSync(source)) {
+  console.error('generate-brand-icons: missing source at', source);
+  process.exit(1);
+}
 
 function squarePng(size) {
   return sharp(source)
-    .trim({ threshold: 12 })
     .resize(size, size, {
       fit: 'contain',
       background: ICON_BG,
@@ -24,12 +28,13 @@ await squarePng(32).toFile(path.join(publicDir, 'favicon-32.png'));
 await squarePng(16).toFile(path.join(publicDir, 'favicon-16.png'));
 await squarePng(32).toFile(path.join(publicDir, 'favicon.ico'));
 
-const png32 = await squarePng(32).toBuffer();
-const base64 = png32.toString('base64');
-const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Borderlands 3 Cheats">
-  <image href="data:image/png;base64,${base64}" width="32" height="32"/>
+const png180 = await squarePng(180).toBuffer();
+const base64 = png180.toString('base64');
+const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="ABI Cheats">
+  <image href="data:image/png;base64,${base64}" width="180" height="180"/>
 </svg>
 `;
 fs.writeFileSync(path.join(publicDir, 'favicon.svg'), faviconSvg, 'utf8');
+fs.writeFileSync(path.join(publicDir, 'logo.svg'), faviconSvg, 'utf8');
 
-console.log('Brand icons generated from public/brand/borderlands3-favicon-source.png');
+console.log('Brand icons generated from public/brand/abi-logo-source.webp');
