@@ -8,12 +8,12 @@ function affiliateHrefForContentSlug(slug) {
 }
 
 const FILE_SLUG = [
-  ['home.md', '/'],
-  ['arena-breakout-infinite-esp.md', '/arena-breakout-infinite-esp/'],
-  ['arena-breakout-infinite-aimbot.md', '/arena-breakout-infinite-aimbot/'],
-  ['arena-breakout-infinite-cheats-pricing.md', '/arena-breakout-infinite-cheats-pricing/'],
-  ['cloud-dma-for-arena-breakout-infinite.md', '/cloud-dma-for-arena-breakout-infinite/'],
-  ['arena-breakout-infinite-hwid-spoofer.md', '/arena-breakout-infinite-hwid-spoofer/'],
+  ['index.md', '/'],
+  ['dota-2-maphack.md', '/dota-2-maphack/'],
+  ['dota-2-hero-esp.md', '/dota-2-hero-esp/'],
+  ['dota-2-cheats-review.md', '/dota-2-cheats-review/'],
+  ['dota-2-scripts.md', '/dota-2-scripts/'],
+  ['dota-2-vac-ban-risk.md', '/dota-2-vac-ban-risk/'],
 ];
 
 function slugFromFile(file) {

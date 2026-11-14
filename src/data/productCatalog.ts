@@ -33,14 +33,14 @@ export const mainProductOffers = [
 ] as const;
 
 export const cloudDmaOffer = {
-  name: 'Cloud DMA infrastructure license (lifetime)',
-  priceUsd: 50,
+  name: 'Add-on license (placeholder)',
+  priceUsd: 0,
   url: CLOUD_DMA_CHECKOUT,
 } as const;
 
 export const hwidSpooferOffer = {
-  name: 'HWID Spoofer (lifetime)',
-  priceUsd: 50,
+  name: 'Utility license (placeholder)',
+  priceUsd: 0,
   url: HWID_SPOOFER_CHECKOUT,
 } as const;
 

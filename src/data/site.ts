@@ -1,4 +1,4 @@
-/** Canonical SEO / site identity — host from config/site.mjs; copy and routes here. */
+/** Canonical SEO / site identity — host from config/site.mjs. */
 
 import { SITE_HOST as CANONICAL_HOST, SITE_URL as CANONICAL_URL, buildSitemapImages } from '../../config/site.mjs';
 import { PLACEHOLDER_COPY } from './placeholders';
@@ -11,53 +11,43 @@ export const SITE_BRAND = SITE_NAME;
 export const SUPPORT_EMAIL = `support@${SITE_HOST}`;
 
 export const PRODUCT_BASE = '/';
-export const TITLE_PREFIX = 'Arena Breakout Infinite Cheats';
+export const TITLE_PREFIX = PLACEHOLDER_COPY.title;
 
 export const PRODUCT_ID = `${SITE_URL}/#product`;
 
 export const SITE_PURPOSE =
-  'Arena Breakout Infinite PC cheat features including player ESP, AI ESP, loot displays, aimbot options, and Cloud DMA infrastructure for supported Windows builds.';
+  'Independent guides and checkout paths for Dota 2 cheat software on Windows PC, including map vision, hero ESP, and related modules listed on the vendor build.';
 
-export const SITE_ABOUT = [
-  'Arena Breakout Infinite cheats',
-  'Player ESP',
-  'Loot ESP',
-  'Aimbot',
-  'Cloud DMA',
-  'Hyper-V virtualization',
-] as const;
+export const SITE_ABOUT = ['Dota 2 cheats', 'Maphack', 'Hero ESP', 'Scripts', 'Windows PC'] as const;
 
 export const LISTED_PRICES = {
   monthlyUsd: 35,
   lifetimeUsd: 150,
-  cloudDmaLifetimeUsd: 50,
+  cloudDmaLifetimeUsd: 0,
 } as const;
 
 export const SEO_ROUTE_INTENTS: Record<string, string> = {
-  '/': 'arena breakout infinite cheats, ESP, aimbot, loot, PC',
-  '/arena-breakout-infinite-esp/': 'arena breakout infinite esp, player esp, loot esp',
-  '/arena-breakout-infinite-aimbot/': 'arena breakout infinite aimbot, fov, smoothness',
-  '/arena-breakout-infinite-cheats-pricing/': 'arena breakout infinite cheats price, monthly lifetime',
-  '/cloud-dma-for-arena-breakout-infinite/': 'cloud dma arena breakout infinite, hyper-v',
-  '/arena-breakout-infinite-hwid-spoofer/': 'hwid spoofer arena breakout',
-  '/guides/cloud-dma-setup/': 'cloud dma setup hyper-v',
-  '/guides/system-requirements/': 'arena breakout infinite system requirements windows',
-  '/faq/': 'abi cheats faq pricing cloud dma',
-  '/support/': 'abi checkout support',
+  '/': 'dota 2 cheats, buy dota 2 cheats, plans',
+  '/dota-2-maphack/': 'dota 2 maphack, map hack, fog of war',
+  '/dota-2-hero-esp/': 'dota 2 hero esp, player esp',
+  '/dota-2-cheats-review/': 'dota 2 cheats review, features',
+  '/dota-2-scripts/': 'dota 2 scripts, hero scripts',
+  '/dota-2-vac-ban-risk/': 'vac ban dota 2 cheats, valve policy',
+  '/faq/': 'dota 2 cheats faq',
+  '/support/': 'dota cheat support',
 };
 
 export { INDEXABLE_MONEY_ROUTES } from '../../config/site.mjs';
 
 export const OG_IMAGES: Record<string, string> = {
   '/': '/og/home.jpg',
-  '/arena-breakout-infinite-cheats-pricing/': '/og/pricing.jpg',
-  '/cloud-dma-for-arena-breakout-infinite/': '/og/cloud-dma.jpg',
-  '/arena-breakout-infinite-esp/': '/og/home.jpg',
-  '/arena-breakout-infinite-aimbot/': '/og/home.jpg',
-  '/arena-breakout-infinite-hwid-spoofer/': '/og/default.jpg',
-  '/guides/cloud-dma-setup/': '/og/cloud-dma-setup.jpg',
-  '/guides/system-requirements/': '/og/requirements.jpg',
+  '/dota-2-maphack/': '/og/home.jpg',
+  '/dota-2-hero-esp/': '/og/home.jpg',
+  '/dota-2-cheats-review/': '/og/pricing.jpg',
+  '/dota-2-scripts/': '/og/default.jpg',
+  '/dota-2-vac-ban-risk/': '/og/default.jpg',
   '/faq/': '/og/faq.jpg',
+  '/guides/system-requirements/': '/og/requirements.jpg',
   default: '/og/default.jpg',
 };
 
@@ -69,16 +59,15 @@ export function ogImageForPath(pathname: string): string {
 export const SITEMAP_IMAGES = buildSitemapImages(SITE_URL) as Record<string, { loc: string; title: string }[]>;
 
 export const KEYWORD_REDIRECTS: [string, string][] = [
-  ['/pricing', '/arena-breakout-infinite-cheats-pricing/'],
-  ['/pricing/', '/arena-breakout-infinite-cheats-pricing/'],
-  ['/cloud-dma', '/cloud-dma-for-arena-breakout-infinite/'],
-  ['/cloud-dma/', '/cloud-dma-for-arena-breakout-infinite/'],
-  ['/hwid-spoofer', '/arena-breakout-infinite-hwid-spoofer/'],
-  ['/hwid-spoofer/', '/arena-breakout-infinite-hwid-spoofer/'],
-  ['/guides/borderlands-3-cheat-system-requirements', '/guides/system-requirements/'],
-  ['/guides/borderlands-3-cheat-system-requirements/', '/guides/system-requirements/'],
-  ['/cloud-dma-setup', '/guides/cloud-dma-setup/'],
-  ['/cloud-dma-setup/', '/guides/cloud-dma-setup/'],
+  ['/pricing', '/#products'],
+  ['/pricing/', '/#products'],
+  ['/arena-breakout-infinite-esp/', '/dota-2-hero-esp/'],
+  ['/arena-breakout-infinite-aimbot/', '/dota-2-scripts/'],
+  ['/arena-breakout-infinite-cheats-pricing/', '/#products'],
+  ['/cloud-dma-for-arena-breakout-infinite/', '/'],
+  ['/arena-breakout-infinite-hwid-spoofer/', '/products/dota-2-cheats/hwid-spoofer/'],
+  ['/cloud-dma/', '/'],
+  ['/hwid-spoofer/', '/products/dota-2-cheats/hwid-spoofer/'],
   ['/sitemap-index.xml', '/sitemap.xml'],
   ['/sitemap-0.xml', '/sitemap.xml'],
 ];

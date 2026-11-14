@@ -4,7 +4,7 @@ import sharp from 'sharp';
 
 const root = process.cwd();
 const widths = [320, 400, 512, 640, 960];
-const dirs = ['public/images/gameplay', 'public/images/blog', 'public/images/showcase', 'public/images/hero'];
+const dirs = ['public/images/showcase', 'public/images/hero'];
 
 async function optimizeDir(relativeDir, { pngOnly = true } = {}) {
   const dir = path.join(root, relativeDir);

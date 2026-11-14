@@ -1,19 +1,12 @@
 {
-  "name": "ABI Cheats",
-  "short_name": "ABI",
-  "description": "Arena Breakout Infinite cheats, ESP, aimbot, Cloud DMA, and pricing at isle-hack.com.",
+  "name": "DotaCheat",
+  "short_name": "DotaCheat",
+  "description": "Dota 2 cheats guides and checkout paths for Windows PC.",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#7f3dee",
-  "lang": "en-US",
+  "background_color": "#0f0f14",
+  "theme_color": "#0f0f14",
   "icons": [
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
     {
       "src": "/favicon-32.png",
       "sizes": "32x32",

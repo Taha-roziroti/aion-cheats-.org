@@ -13,6 +13,10 @@ const dist = path.join(projectRoot, 'dist');
 
 const AUDIT_HTML_ROUTES = new Set([
   ...INDEXABLE_MONEY_ROUTES,
+  '/dota-2-scripts/',
+  '/dota-2-vac-ban-risk/',
+  '/guides/system-requirements/',
+  '/guides/cloud-dma-setup/',
   '/about/',
   '/support/',
   '/privacy/',
@@ -82,16 +86,30 @@ const REDIRECT_ONLY = new Set([
   '/hwid-spoofer/',
   '/cheats/',
   '/contact/',
+  '/arena-breakout-infinite-esp/',
+  '/arena-breakout-infinite-aimbot/',
+  '/arena-breakout-infinite-cheats-pricing/',
+  '/cloud-dma-for-arena-breakout-infinite/',
+  '/arena-breakout-infinite-hwid-spoofer/',
 ]);
 
+const TITLE_MIN = 35;
+const TITLE_MAX = 72;
+const DESC_MIN = 110;
+const DESC_MAX = 165;
+
+/** Legacy / wrong-domain copy — not product keywords on dotacheat.com. */
 const LEAK_PATTERNS = [
   /dotacheats\.com/i,
-  /\bDota\s*2\b/i,
+  /isle-hack/i,
+  /Arena Breakout/i,
   /Gearbox/i,
   /\b2K\b/,
   /placeholder\.svg/i,
   /AFFILIATE_LINK_PLACEHOLDER/,
   /lorem ipsum/i,
+  /Site template/i,
+  /\bABI\s+Cheats\b/i,
 ];
 
 function auditPage(route, html, file) {
@@ -126,8 +144,8 @@ function auditPage(route, html, file) {
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1] ?? '';
   const desc = html.match(/name="description" content="([^"]*)"/i)?.[1] ?? '';
   if (!title) fail('technical', `${route}: missing <title>`);
-  else if (indexable && !noindex && (title.length < 50 || title.length > 60)) {
-    fail('technical', `${route}: title length ${title.length} (target 50–60): ${title.slice(0, 50)}…`);
+  else if (indexable && !noindex && (title.length < TITLE_MIN || title.length > TITLE_MAX)) {
+    fail('technical', `${route}: title length ${title.length} (target ${TITLE_MIN}–${TITLE_MAX}): ${title.slice(0, 50)}…`);
   }
   if (indexable && noindex) {
     fail('technical', `${route}: indexable route has noindex`);
@@ -137,8 +155,8 @@ function auditPage(route, html, file) {
     fail('technical', `${route}: indexable route has nofollow`);
   }
   if (!desc) fail('technical', `${route}: missing meta description`);
-  else if (indexable && !noindex && (desc.length < 120 || desc.length > 165)) {
-    fail('technical', `${route}: meta description length ${desc.length} (target ~140–160)`);
+  else if (indexable && !noindex && (desc.length < DESC_MIN || desc.length > DESC_MAX)) {
+    fail('technical', `${route}: meta description length ${desc.length} (target ${DESC_MIN}–${DESC_MAX})`);
   }
 
   const h1Count = (html.match(/<h1[\s>]/gi) ?? []).length;
@@ -224,9 +242,8 @@ function runSubcommand(cmd, args, label) {
 
 function runCspell() {
   const globs = [
-    'content/pages/home.md',
-    'content/pages/arena-breakout-infinite-*.md',
-    'content/pages/cloud-dma-for-arena-breakout-infinite.md',
+    'content/pages/index.md',
+    'content/pages/dota-2-*.md',
     'src/data/faq.ts',
     'src/pages/404.astro',
   ];

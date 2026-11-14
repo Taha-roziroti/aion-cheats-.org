@@ -1,6 +1,5 @@
 /**
- * Central titles/descriptions for high-traffic routes (mirrors content/pages frontmatter).
- * Titles target 50–60 characters with the primary keyword near the front.
+ * Central titles/descriptions (mirrors content/pages frontmatter).
  */
 
 export interface PageSeoEntry {
@@ -10,69 +9,64 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Arena Breakout Infinite Cheats | ESP, Aimbot & Plans',
+    title: 'Dota 2 Cheats: Features & Pricing',
     description:
-      'Explore Arena Breakout Infinite cheats with player ESP, AI ESP, loot displays and configurable aimbot options. Review features and access plans.',
+      'See Dota 2 cheats features, Windows requirements and current plans. Compare the 31-day and lifetime options before choosing.',
   },
-  '/arena-breakout-infinite-esp/': {
-    title: 'Arena Breakout Infinite ESP Cheats | Player & Loot',
+  '/dota-2-maphack/': {
+    title: 'Dota 2 Maphack: Map Vision & Ward ESP',
     description:
-      'Explore Arena Breakout Infinite ESP, including player, AI, inventory and loot displays. See the available visual options and settings.',
+      'See what the Dota 2 maphack listing says about fog of war, ward placement ESP and map information. Check the feature details.',
   },
-  '/arena-breakout-infinite-aimbot/': {
-    title: 'Arena Breakout Infinite Aimbot | FOV & Smoothness',
+  '/dota-2-hero-esp/': {
+    title: 'Dota 2 Hero ESP: Player Information',
     description:
-      'Explore ABI aimbot settings, including FOV, smoothness, speed, target filters and custom keybinds. Review the available configuration.',
+      'Explore Dota 2 hero ESP features, including player levels, item information and enemy inventory visibility. See the listed functionality.',
   },
-  '/arena-breakout-infinite-cheats-pricing/': {
-    title: 'Arena Breakout Infinite Cheats Pricing | ABI Plans',
+  '/dota-2-cheats-review/': {
+    title: 'Dota 2 Cheats Review: Features & Price',
     description:
-      'Compare Arena Breakout Infinite monthly and lifetime plans, Cloud DMA pricing and setup requirements. Explore the available access options.',
+      'Read our Dota 2 cheats review covering listed features, Windows requirements, plans and pricing. Check the details before purchasing.',
   },
-  '/cloud-dma-for-arena-breakout-infinite/': {
-    title: 'Cloud DMA for Arena Breakout Infinite | Setup Guide',
+  '/dota-2-scripts/': {
+    title: 'Dota 2 Scripts: What to Know',
     description:
-      'Explore Cloud DMA for Arena Breakout Infinite, including Hyper-V setup, Windows requirements, pricing and additional services.',
+      'Understand Dota 2 scripts, last-hit assistance and auto-dodge features. See how individual functions compare with a full product package.',
   },
-  '/arena-breakout-infinite-hwid-spoofer/': {
-    title: 'Arena Breakout Infinite HWID Spoofer | Windows PCs',
+  '/dota-2-vac-ban-risk/': {
+    title: 'Can You Get VAC Banned for Dota 2 Cheats?',
     description:
-      'Explore HWID spoofing features, Windows requirements and hardware identifier options. Review the listed compatibility before choosing a setup.',
+      'Understand the account risks of Dota 2 cheat software and what the product listing does and does not establish about VAC detection.',
   },
   '/faq/': {
-    title: 'Arena Breakout Infinite FAQ | Plans, Cloud DMA Setup',
+    title: 'Dota 2 Cheats FAQ – Plans & Windows Requirements',
     description:
-      'Frequently asked questions about Arena Breakout Infinite cheats, pricing, Cloud DMA, Windows requirements, and checkout.',
+      'Frequently asked questions about Dota 2 cheat plans, Windows requirements, checkout, and how feature lists map to the current product build.',
   },
   '/support/': {
-    title: 'Arena Breakout Infinite Support | Checkout & Setup Help',
+    title: 'DotaCheat Support – Checkout & Setup Help',
     description:
-      'Get help with Arena Breakout Infinite checkout, Cloud DMA Hyper-V setup, license delivery, and Windows compatibility before you buy or install.',
+      'Get help with Dota 2 cheat checkout, license delivery, and Windows compatibility before you purchase or install supported modules.',
   },
   '/about/': {
-    title: 'About ABI Cheats | Arena Breakout Infinite PC Site',
+    title: 'About DotaCheat – Independent Dota 2 Product Guides',
     description:
-      'Learn who publishes ABI Cheats, what Arena Breakout Infinite features we document, and how pricing, Cloud DMA, and setup guides fit together.',
-  },
-  '/guides/cloud-dma-setup/': {
-    title: 'Cloud DMA Setup Guide for Arena Breakout Infinite PC',
-    description:
-      'Step-by-step Cloud DMA setup for Arena Breakout Infinite on Windows 10 and 11, including Hyper-V, RAM sizing, and virtualization checks before cheat install.',
+      'Learn how DotaCheat publishes feature guides, pricing, and setup notes for Windows players evaluating third-party Dota 2 software.',
   },
   '/guides/system-requirements/': {
-    title: 'Arena Breakout Infinite Requirements for Windows PC',
+    title: 'Dota 2 Cheat System Requirements for Windows PC',
     description:
-      'Windows 10 and 11 requirements for Arena Breakout Infinite cheats, including RAM, CPU, client builds, and Cloud DMA virtualization prerequisites.',
+      'Windows 10 and 11 requirements for Dota 2 cheat software, including RAM, CPU, Steam client builds, and security settings to verify first.',
   },
   '/privacy/': {
-    title: 'ABI Privacy Policy | Analytics & Support Email Use',
+    title: 'DotaCheat Privacy Policy – Analytics & Support Email',
     description:
-      'Privacy policy for isle-hack.com: how we use analytics cookies, support email, and checkout partner data for Arena Breakout Infinite customers.',
+      'Privacy policy for dotacheat.com: analytics cookies, support email, and checkout partner data when you contact us or complete an order.',
   },
   '/terms/': {
-    title: 'ABI Terms of Service | Licenses, Refunds & Cloud DMA',
+    title: 'DotaCheat Terms of Service – Licenses & Refunds',
     description:
-      'Terms and conditions for Arena Breakout Infinite cheat plans, Cloud DMA licenses, refunds, and acceptable use on supported Windows PCs.',
+      'Terms and conditions for Dota 2 cheat plans, refunds, and acceptable use on supported Windows PCs purchased through our checkout flow.',
   },
 };
 

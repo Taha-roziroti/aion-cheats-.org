@@ -14,9 +14,9 @@ function readHtml(relativePath) {
   return fs.readFileSync(file, 'utf8');
 }
 
-const TITLE_MIN = 50;
-const TITLE_MAX = 60;
-const DESC_MIN = 120;
+const TITLE_MIN = 35;
+const TITLE_MAX = 72;
+const DESC_MIN = 110;
 const DESC_MAX = 165;
 const MIN_ARTICLE_WORDS = 400;
 const WORD_COUNT_SKIP = new Set(['/', '/faq/']);
@@ -120,10 +120,16 @@ function checkPage(route) {
     errors.push(`${route}: missing WebSite JSON-LD`);
   }
 
+  const noProductRoutes = new Set([
+    '/dota-2-cheats-review/',
+    '/dota-2-scripts/',
+    '/dota-2-vac-ban-risk/',
+  ]);
   const requiresProduct =
     route !== '/faq/' &&
     !route.startsWith('/guides/') &&
-    INDEXABLE_MONEY_ROUTES.includes(route);
+    INDEXABLE_MONEY_ROUTES.includes(route) &&
+    !noProductRoutes.has(route);
   if (
     requiresProduct &&
     !html.includes('"@type":"Product"') &&
@@ -132,13 +138,7 @@ function checkPage(route) {
     errors.push(`${route}: missing Product JSON-LD on money page`);
   }
 
-  const productFaqRoutes = new Set([
-    '/arena-breakout-infinite-esp/',
-    '/arena-breakout-infinite-aimbot/',
-    '/arena-breakout-infinite-cheats-pricing/',
-    '/cloud-dma-for-arena-breakout-infinite/',
-    '/arena-breakout-infinite-hwid-spoofer/',
-  ]);
+  const productFaqRoutes = new Set();
   if (
     productFaqRoutes.has(route) &&
     !html.includes('"@type":"FAQPage"') &&

@@ -3,27 +3,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HomeLanding from '../components/HomeLanding.astro';
 import { loadContentPage } from '../utils/loadContentPage';
 import { jsonLdForContentPage } from '../utils/contentPageJsonLd';
-import { MAIN_PRODUCT_CHECKOUT } from '../data/productCatalog';
-import { PRODUCT_ID } from '../data/site';
-import { productSchema } from '../utils/schema';
+import { MAIN_PRODUCT_CHECKOUT, mainProductOffers } from '../data/productCatalog';
+import { PRODUCT_ID, ogImageForPath } from '../data/site';
+import { PLACEHOLDER_COPY } from '../data/placeholders';
+import { PRIMARY_SHOWCASE_IMAGE } from '../data/showcaseImages';
+import { faqPageSchemaFromPairs, productSchema } from '../utils/schema';
+import { faqItemsFromMarkdown } from '../utils/markdownFaq';
 import { HERO_SECTION_LCP_PRELOAD } from '../data/showcaseImages';
 
-const homeEntry = await loadContentPage('home');
+const homeEntry = await loadContentPage('index');
 const home = homeEntry.data as { title: string; description: string; slug: string };
+const homeFaqs = faqItemsFromMarkdown(homeEntry.body);
 
 const jsonLd = [
   productSchema({
-    name: 'Arena Breakout Infinite Cheats',
+    name: PLACEHOLDER_COPY.productName,
     description: home.description,
     url: '/',
     offerUrl: MAIN_PRODUCT_CHECKOUT,
-    sku: 'arena-breakout-infinite-cheats',
-    image: '/images/showcase/abi-esp-indoor-aimbot.webp',
+    sku: 'main-product',
+    image: PRIMARY_SHOWCASE_IMAGE,
     productId: PRODUCT_ID,
-    offers: [
-      { name: 'Arena Breakout Infinite — Monthly', priceUsd: 35, url: MAIN_PRODUCT_CHECKOUT },
-      { name: 'Arena Breakout Infinite — Lifetime', priceUsd: 150, url: MAIN_PRODUCT_CHECKOUT },
-    ],
+    offers: mainProductOffers.map((o) => ({
+      name: o.name,
+      priceUsd: o.priceUsd,
+      url: o.url,
+    })),
   }),
   ...jsonLdForContentPage({
     route: '/',
@@ -31,6 +36,7 @@ const jsonLd = [
     metaDescription: home.description,
     schemaTypes: ['BreadcrumbList'],
   }),
+  ...(homeFaqs.length >= 2 ? [faqPageSchemaFromPairs(homeFaqs)] : []),
 ];
 ---
 
@@ -38,9 +44,9 @@ const jsonLd = [
   title={home.title}
   description={home.description}
   jsonLd={jsonLd}
-  ogImage="/og/home.jpg"
-  ogImageAlt="Arena Breakout Infinite Cheats"
-  logoAlt="Arena Breakout Infinite Cheats – logo"
+  ogImage={ogImageForPath('/')}
+  ogImageAlt={PLACEHOLDER_COPY.title}
+  logoAlt={`${PLACEHOLDER_COPY.title} – logo`}
 >
   <link
     slot="head"

@@ -1,57 +1,47 @@
 /**
  * Canonical site host — imported by Astro, src/data/site.ts, and Node build scripts.
- * Update only here before launch.
  */
 
-export const SITE_HOST = 'isle-hack.com';
+export const SITE_HOST = 'dotacheat.com';
 export const SITE_URL = `https://${SITE_HOST}`;
 
+/** Indexable commercial and feature URLs (verify-seo audits these). */
 export const INDEXABLE_MONEY_ROUTES = [
   '/',
-  '/arena-breakout-infinite-esp/',
-  '/arena-breakout-infinite-aimbot/',
-  '/arena-breakout-infinite-cheats-pricing/',
-  '/cloud-dma-for-arena-breakout-infinite/',
-  '/arena-breakout-infinite-hwid-spoofer/',
-  '/guides/cloud-dma-setup/',
-  '/guides/system-requirements/',
-  '/faq/',
+  '/dota-2-maphack/',
+  '/dota-2-hero-esp/',
+  '/dota-2-cheats-review/',
 ];
+
+function showcaseImage(siteUrl, file, title) {
+  return { loc: `${siteUrl}/images/showcase/${file}`, title };
+}
 
 /** Google sitemap image namespace entries (keep in sync with src/data/site.ts). */
 export function buildSitemapImages(siteUrl = SITE_URL) {
-  const showcase = (file) => `${siteUrl}/images/showcase/${file}`;
-
   return {
     '/': [
-      { loc: showcase('abi-esp-indoor-aimbot.webp'), title: 'Arena Breakout Infinite cheats overview' },
-      { loc: showcase('abi-combat-showcase.webp'), title: 'ABI ESP and aimbot features' },
+      showcaseImage(siteUrl, 'dota-drow-teamfight.webp', 'Dota 2 cheats software interface'),
+      showcaseImage(siteUrl, 'dota-huskar-combat.webp', 'Dota 2 gameplay feature preview'),
     ],
-    '/arena-breakout-infinite-cheats-pricing/': [
-      { loc: showcase('abi-esp-menu.webp'), title: 'Arena Breakout Infinite pricing' },
+    '/dota-2-maphack/': [
+      showcaseImage(siteUrl, 'dota-invoker-river.webp', 'Dota 2 maphack map visibility preview'),
+      showcaseImage(siteUrl, 'dota-low-poly-map.webp', 'Dota 2 map information interface'),
     ],
-    '/cloud-dma-for-arena-breakout-infinite/': [
-      { loc: `${siteUrl}/og/cloud-dma.jpg`, title: 'Cloud DMA for Arena Breakout Infinite' },
-      { loc: showcase('abi-jungle-radar.webp'), title: 'Radar and ESP preview' },
+    '/dota-2-hero-esp/': [
+      showcaseImage(siteUrl, 'dota-axe-combat.webp', 'Dota 2 hero ESP player information overlay'),
+      showcaseImage(siteUrl, 'dota-magnus-overlay.webp', 'Dota 2 enemy hero ESP interface'),
     ],
-    '/arena-breakout-infinite-esp/': [
-      { loc: showcase('abi-grass-stealth.webp'), title: 'Arena Breakout Infinite ESP' },
-      { loc: showcase('abi-esp-distance-lines.webp'), title: 'ESP distance and snaplines' },
+    '/dota-2-cheats-review/': [
+      showcaseImage(siteUrl, 'dota-drow-teamfight.webp', 'Dota 2 cheats review product interface'),
+      showcaseImage(siteUrl, 'dota-feature-menu.webp', 'Dota 2 cheat software feature demonstration'),
     ],
-    '/arena-breakout-infinite-aimbot/': [
-      { loc: showcase('abi-esp-indoor-aimbot.webp'), title: 'Arena Breakout Infinite aimbot' },
-      { loc: showcase('abi-esp-menu.webp'), title: 'Aimbot and FOV menu' },
+    '/dota-2-scripts/': [
+      showcaseImage(siteUrl, 'dota-magnus-overlay.webp', 'Dota 2 scripts feature interface'),
     ],
-    '/guides/cloud-dma-setup/': [
-      { loc: `${siteUrl}/og/cloud-dma-setup.jpg`, title: 'Cloud DMA setup guide' },
-      { loc: showcase('abi-jungle-radar.webp'), title: 'ESP radar preview' },
+    '/dota-2-vac-ban-risk/': [
+      showcaseImage(siteUrl, 'dota-huskar-combat.webp', 'Dota 2 VAC anti-cheat information'),
     ],
-    '/guides/system-requirements/': [
-      { loc: showcase('abi-esp-menu.webp'), title: 'ABI system requirements' },
-    ],
-    '/faq/': [{ loc: `${siteUrl}/og/faq.jpg`, title: 'ABI FAQ' }],
-    '/arena-breakout-infinite-hwid-spoofer/': [
-      { loc: `${siteUrl}/og/default.jpg`, title: 'Arena Breakout Infinite HWID Spoofer' },
-    ],
+    '/faq/': [{ loc: `${siteUrl}/og/faq.jpg`, title: 'DotaCheat FAQ' }],
   };
 }

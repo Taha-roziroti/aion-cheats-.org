@@ -8,14 +8,15 @@ import {
 } from '../data/productCatalog';
 export type CheckoutProductKind = 'main-product' | 'cloud-dma' | 'hwid-spoofer';
 import { PRODUCT_ID, SITE_URL } from '../data/site';
+import { PLACEHOLDER_COPY } from '../data/placeholders';
 import { productSchema } from './schema';
 
+import { ABI_PAGE_PREVIEW } from '../data/abiImages';
+
 const ROUTE_PRODUCT_IMAGE: Record<string, string> = {
-  '/arena-breakout-infinite-esp/': '/images/showcase/abi-grass-stealth.webp',
-  '/arena-breakout-infinite-aimbot/': '/images/showcase/abi-esp-indoor-aimbot.webp',
-  '/arena-breakout-infinite-cheats-pricing/': '/images/showcase/abi-esp-menu.webp',
-  '/cloud-dma-for-arena-breakout-infinite/': '/og/cloud-dma.jpg',
-  '/arena-breakout-infinite-hwid-spoofer/': '/og/default.jpg',
+  '/dota-2-maphack/': ABI_PAGE_PREVIEW['/dota-2-maphack/']!,
+  '/dota-2-hero-esp/': ABI_PAGE_PREVIEW['/dota-2-hero-esp/']!,
+  '/dota-2-cheats-review/': ABI_PAGE_PREVIEW['/dota-2-cheats-review/']!,
 };
 
 export function productJsonLdForRoute(
@@ -29,7 +30,7 @@ export function productJsonLdForRoute(
 
   if (checkout === 'cloud-dma') {
     return productSchema({
-      name: 'Cloud DMA for Arena Breakout Infinite',
+      name: 'Add-on product (placeholder)',
       description,
       url: route,
       offerUrl: CLOUD_DMA_CHECKOUT,
@@ -48,7 +49,7 @@ export function productJsonLdForRoute(
 
   if (checkout === 'hwid-spoofer') {
     return productSchema({
-      name: 'Arena Breakout Infinite HWID Spoofer',
+      name: 'Utility product (placeholder)',
       description,
       url: route,
       offerUrl: HWID_SPOOFER_CHECKOUT,
@@ -66,13 +67,17 @@ export function productJsonLdForRoute(
   }
 
   return productSchema({
-    name,
+    name: name || PLACEHOLDER_COPY.productName,
     description,
     url: route,
     offerUrl: MAIN_PRODUCT_CHECKOUT,
-    sku: route.replace(/\//g, '-').replace(/^-|-$/g, '') || 'main-product',
+    sku: 'main-product',
     image,
-    productId: route === '/' ? PRODUCT_ID : `${SITE_URL}${route}#product`,
-    offers: [...mainProductOffers],
+    productId: PRODUCT_ID,
+    offers: mainProductOffers.map((o) => ({
+      name: o.name,
+      priceUsd: o.priceUsd,
+      url: o.url,
+    })),
   });
 }

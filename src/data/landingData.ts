@@ -1,9 +1,5 @@
 import type { ProductSlide } from './products';
-import {
-  CLOUD_DMA_CHECKOUT,
-  HWID_SPOOFER_CHECKOUT,
-  MAIN_PRODUCT_CHECKOUT,
-} from './productCatalog';
+import { MAIN_PRODUCT_CHECKOUT } from './productCatalog';
 import type { IconName } from '../components/icons/types';
 import { PLACEHOLDER_COPY } from './placeholders';
 import { HERO_SHOWCASE_SLIDES } from './showcaseImages';
@@ -26,59 +22,35 @@ export const heroSlides: ProductSlide[] = HERO_SHOWCASE_SLIDES;
 export const landingProducts: LandingCatalogProduct[] = [
   {
     slug: 'main-product',
-    label: 'Main plan',
-    title: 'Arena Breakout Infinite Cheats',
-    href: '/arena-breakout-infinite-cheats-pricing/',
+    label: 'Primary',
+    title: PLACEHOLDER_COPY.productName,
+    href: '/#products',
     buyUrl: MAIN_PRODUCT_CHECKOUT,
-    badge: 'Popular',
+    badge: 'Steam Dota 2',
     variant: 'popular',
     icon: 'coreProduct',
-    features: ['Player & AI ESP', 'Loot readouts', 'Aimbot menu', 'Config profiles'],
-    more: 2,
-  },
-  {
-    slug: 'hwid-spoofer',
-    label: 'Utility',
-    title: 'HWID Spoofer',
-    href: '/arena-breakout-infinite-hwid-spoofer/',
-    buyUrl: HWID_SPOOFER_CHECKOUT,
-    badge: 'Available',
-    variant: 'essential',
-    icon: 'shieldCheck',
-    features: ['HWID rotation', 'Windows 10/11', 'Post-ban recovery', 'One-time license'],
-    more: 0,
-  },
-  {
-    slug: 'cloud-dma',
-    label: 'Infrastructure',
-    title: 'Cloud DMA license',
-    href: '/cloud-dma-for-arena-breakout-infinite/',
-    buyUrl: CLOUD_DMA_CHECKOUT,
-    badge: 'Available',
-    variant: 'essential',
-    icon: 'reqCpu',
-    features: ['Hyper-V host', 'Lifetime license', 'Works with main plan', 'Setup guide linked'],
+    features: ['Map vision modules', 'Hero ESP overlays', 'Gameplay timers', 'Optional scripts'],
     more: 0,
   },
 ];
 
 export const guideCards = [
   {
-    title: 'Plan pricing',
-    desc: 'Monthly and lifetime listings with Cloud DMA called out separately.',
-    href: '/arena-breakout-infinite-cheats-pricing/',
-    readLabel: 'Open pricing sheet',
+    title: 'Dota 2 maphack guide',
+    desc: 'Map visibility, fog of war context, and ward ESP without overlapping the homepage keyword.',
+    href: '/dota-2-maphack/',
+    readLabel: 'Open maphack page',
   },
   {
-    title: 'Cloud DMA setup guide',
-    desc: 'Hyper-V, firmware virtualization, and pre-flight checks.',
-    href: '/guides/cloud-dma-setup/',
-    readLabel: 'Start Hyper-V walkthrough',
+    title: 'Dota 2 cheats review',
+    desc: 'Editorial look at listed features, pricing, and what we can verify independently.',
+    href: '/dota-2-cheats-review/',
+    readLabel: 'Read review',
   },
   {
-    title: 'PC system requirements',
-    desc: 'RAM, GPU, and Windows security settings in one checklist.',
-    href: '/guides/system-requirements/',
-    readLabel: 'Open requirements checklist',
+    title: 'VAC ban risk',
+    desc: 'Valve policy summary—no promises about detection or undetectable modules.',
+    href: '/dota-2-vac-ban-risk/',
+    readLabel: 'Read VAC guide',
   },
 ] as const;

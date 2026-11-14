@@ -28,29 +28,35 @@ const entry = await loadContentPage(id);
 const data = entry.data;
 const { Content: FullContent } = await render(entry);
 
-const pageSeo = getPageSeoEntry(data.route);
-const layoutTitle = pageSeo?.title ?? data.seoTitle;
-const layoutDescription = pageSeo?.description ?? data.metaDescription;
+const route = 'route' in data ? data.route : 'slug' in data ? data.slug : '/';
+const pageSeo = getPageSeoEntry(route);
+const layoutTitle = pageSeo?.title ?? ('seoTitle' in data ? data.seoTitle : data.title);
+const layoutDescription =
+  pageSeo?.description ?? ('metaDescription' in data ? data.metaDescription : data.description);
 
-const breadcrumbs = breadcrumbsForRoute(data.route);
+const schemaTypes = 'schemaTypes' in data ? data.schemaTypes : ['WebPage'];
+const breadcrumbs = breadcrumbsForRoute(route);
 const jsonLd = jsonLdForContentPage({
-  route: data.route,
+  route,
   seoTitle: layoutTitle,
   metaDescription: layoutDescription,
-  schemaTypes: data.schemaTypes,
-  articlePublished: data.articlePublished,
+  schemaTypes,
+  articlePublished: 'articlePublished' in data ? data.articlePublished : undefined,
 });
-const ctaHref = data.endCtaHref ?? defaultEndCtaHref(data.route, data.checkout);
+const ctaHref =
+  ('endCtaHref' in data ? data.endCtaHref : undefined) ??
+  defaultEndCtaHref(route, 'checkout' in data ? data.checkout : undefined);
 const sidebarDefaultProduct: CheckoutProductId =
-  data.checkout === 'cloud-dma'
+  'checkout' in data && data.checkout === 'cloud-dma'
     ? 'cloud-dma'
-    : data.checkout === 'hwid-spoofer'
+    : 'checkout' in data && data.checkout === 'hwid-spoofer'
       ? 'hwid-spoofer'
       : 'main-product';
-const useProductShell = data.layout === 'product' || data.layout === 'pricing';
-const ogType = data.layout === 'article' ? 'article' : 'website';
+const useProductShell =
+  'layout' in data && (data.layout === 'product' || data.layout === 'pricing');
+const ogType = 'layout' in data && data.layout === 'article' ? 'article' : 'website';
 const lcpPreload =
-  data.route === '/' && data.heroImage
+  route === '/' && 'heroImage' in data && data.heroImage
     ? defaultWebpSrc(data.heroImage.src, HERO_IMAGE_WIDTHS)
     : null;
 
@@ -62,8 +68,8 @@ const logoAltByRoute: Record<string, string> = {
   '/guides/cloud-dma-setup/': 'DMA setup – logo',
   '/guides/system-requirements/': 'System requirements – logo',
 };
-const logoAlt = logoAltByRoute[data.route];
-const pageFaqs = getContentPageFaqs(data.route);
+const logoAlt = logoAltByRoute[route];
+const pageFaqs = getContentPageFaqs(route);
 const pageFaqTopics = pageFaqs ? faqFilterTopicsForItems(pageFaqs) : [];
 ---
 
@@ -72,9 +78,12 @@ const pageFaqTopics = pageFaqs ? faqFilterTopicsForItems(pageFaqs) : [];
   description={layoutDescription}
   jsonLd={jsonLd}
   ogType={ogType}
-  ogImage={data.ogImage}
-  ogImageAlt={data.heroImage?.alt ?? data.seoTitle}
-  articlePublishedTime={data.articlePublished}
+  ogImage={'ogImage' in data ? data.ogImage : undefined}
+  ogImageAlt={
+    ('heroImage' in data ? data.heroImage?.alt : undefined) ??
+    layoutTitle
+  }
+  articlePublishedTime={'articlePublished' in data ? data.articlePublished : undefined}
   logoAlt={logoAlt}
 >
   {lcpPreload ? (

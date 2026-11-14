@@ -13,14 +13,25 @@ function pageMatchesId(page: { id: string; data: unknown }, id: string): boolean
   const data = page.data as PageData;
   const normalizedId = normalizeRoute(id.startsWith('/') ? id : `/${id}`);
 
-  if (data.slug && normalizeRoute(data.slug) === normalizedId) return true;
-  if (data.route && normalizeRoute(data.route) === normalizedId) return true;
+  const wantStem = id.replace(/^\//, '').replace(/\/$/, '');
+
+  if (data.slug) {
+    const slugNorm = normalizeRoute(data.slug);
+    if (slugNorm === normalizedId) return true;
+    const slugPath = slugNorm.replace(/^\//, '').replace(/\/$/, '');
+    if (slugPath === wantStem || slugPath.endsWith(`/${wantStem}`)) return true;
+  }
+  if (data.route) {
+    const routeNorm = normalizeRoute(data.route);
+    if (routeNorm === normalizedId) return true;
+    const routePath = routeNorm.replace(/^\//, '').replace(/\/$/, '');
+    if (routePath === wantStem || routePath.endsWith(`/${wantStem}`)) return true;
+  }
 
   const stem = page.id.replace(/^\//, '').replace(/\/$/, '').replace(/\.md$/, '');
-  const wantStem = id.replace(/^\//, '').replace(/\/$/, '');
-  if (stem === wantStem) return true;
+  if (stem === wantStem || stem.endsWith(`/${wantStem}`)) return true;
 
-  if (id === 'home' && data.slug === '/') return true;
+  if ((id === 'home' || id === 'index') && data.slug === '/') return true;
 
   return false;
 }

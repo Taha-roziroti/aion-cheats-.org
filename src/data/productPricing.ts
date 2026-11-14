@@ -24,7 +24,7 @@ const hwidSpooferPlans: ProductPlan[] = [
   {
     id: 'onetime',
     label: 'Lifetime access',
-    priceUsd: 50,
+    priceUsd: 0,
     priceNote: 'USD · one-time',
   },
 ];
@@ -33,7 +33,7 @@ const cloudDmaPlans: ProductPlan[] = [
   {
     id: 'lifetime',
     label: 'Lifetime license',
-    priceUsd: 50,
+    priceUsd: 0,
     priceNote: 'USD · license only (see add-ons)',
   },
 ];

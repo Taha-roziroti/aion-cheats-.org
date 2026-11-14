@@ -40,45 +40,44 @@ export function breadcrumbsForRoute(route: string): BreadcrumbItem[] {
   if (route === '/guides/cloud-dma-setup/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Cloud DMA', path: '/cloud-dma-for-arena-breakout-infinite/' },
       { name: 'Setup guide', path: '/guides/cloud-dma-setup/' },
     ];
   }
   if (route === '/guides/system-requirements/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Plans', path: '/arena-breakout-infinite-cheats-pricing/' },
+      { name: 'Plans', path: '/#products' },
       { name: 'System requirements', path: '/guides/system-requirements/' },
     ];
   }
-  if (route === '/arena-breakout-infinite-esp/') {
+  if (route === '/dota-2-maphack/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'ESP', path: '/arena-breakout-infinite-esp/' },
+      { name: 'Dota 2 maphack', path: '/dota-2-maphack/' },
     ];
   }
-  if (route === '/arena-breakout-infinite-aimbot/') {
+  if (route === '/dota-2-hero-esp/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Aimbot', path: '/arena-breakout-infinite-aimbot/' },
+      { name: 'Dota 2 hero ESP', path: '/dota-2-hero-esp/' },
     ];
   }
-  if (route === '/arena-breakout-infinite-cheats-pricing/') {
+  if (route === '/dota-2-cheats-review/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Pricing', path: '/arena-breakout-infinite-cheats-pricing/' },
+      { name: 'Review', path: '/dota-2-cheats-review/' },
     ];
   }
-  if (route === '/cloud-dma-for-arena-breakout-infinite/') {
+  if (route === '/dota-2-scripts/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Cloud DMA', path: '/cloud-dma-for-arena-breakout-infinite/' },
+      { name: 'Dota 2 scripts', path: '/dota-2-scripts/' },
     ];
   }
-  if (route === '/arena-breakout-infinite-hwid-spoofer/') {
+  if (route === '/dota-2-vac-ban-risk/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'HWID Spoofer', path: '/arena-breakout-infinite-hwid-spoofer/' },
+      { name: 'VAC ban risk', path: '/dota-2-vac-ban-risk/' },
     ];
   }
   return [{ name: 'Home', path: '/' }];

@@ -5,12 +5,12 @@ import { checkoutRedirectLines } from '../src/config/checkout-redirects.mjs';
 
 /** Keep in sync with src/data/site.ts KEYWORD_REDIRECTS */
 const KEYWORD_REDIRECTS = [
-  ['/pricing', '/arena-breakout-infinite-cheats-pricing/'],
-  ['/pricing/', '/arena-breakout-infinite-cheats-pricing/'],
-  ['/cloud-dma', '/cloud-dma-for-arena-breakout-infinite/'],
-  ['/cloud-dma/', '/cloud-dma-for-arena-breakout-infinite/'],
-  ['/hwid-spoofer', '/arena-breakout-infinite-hwid-spoofer/'],
-  ['/hwid-spoofer/', '/arena-breakout-infinite-hwid-spoofer/'],
+  ['/pricing', '/#products'],
+  ['/pricing/', '/#products'],
+  ['/cloud-dma', '/'],
+  ['/cloud-dma/', '/'],
+  ['/hwid-spoofer', '/products/dota-2-cheats/hwid-spoofer/'],
+  ['/hwid-spoofer/', '/products/dota-2-cheats/hwid-spoofer/'],
   ['/guides/borderlands-3-cheat-system-requirements', '/guides/system-requirements/'],
   ['/guides/borderlands-3-cheat-system-requirements/', '/guides/system-requirements/'],
   ['/cloud-dma-setup', '/guides/cloud-dma-setup/'],

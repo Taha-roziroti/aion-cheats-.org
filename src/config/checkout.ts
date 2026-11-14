@@ -89,11 +89,9 @@ export function resolveCheckoutHref(href: string): string {
     return checkoutPath('cloudDma');
   }
   if (
-    href.includes('the-isle-novaxware') ||
     href.includes('borderlands-3') ||
     href.includes('/products/borderlands-3') ||
-    (href.includes('/go/TAHA') &&
-      (href.includes('borderlands-3') || href.includes('the-isle-novaxware')))
+    (href.includes('/go/TAHA') && href.includes('borderlands-3'))
   ) {
     return checkoutPath('mainProduct');
   }

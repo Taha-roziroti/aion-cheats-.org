@@ -99,9 +99,9 @@ function startMotion() {
   if (started || prefersReducedMotion()) return;
   started = true;
 
-  const light = prefersLightMotion();
+  const useLenis = !prefersLightMotion();
 
-  if (!light) {
+  if (useLenis) {
     lenis = new Lenis();
     window.__lenis = lenis;
     lenis.on('scroll', ScrollTrigger.update);
@@ -110,17 +110,16 @@ function startMotion() {
   }
 
   ctx = gsap.context(() => {
-    if (!light) {
-      setupReveals();
-      setupStagger();
-      setupParallax();
-    }
+    setupReveals();
+    setupStagger();
+    setupParallax();
   });
 
-  if (!light) {
+  if (useLenis) {
     setupAnchorNavigation();
-    window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
   }
+
+  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
 }
 
 export function initMotion() {
@@ -135,9 +134,11 @@ export function initMotion() {
 export function destroyMotion() {
   ctx?.revert();
   ctx = null;
-  gsap.ticker.remove(tick);
-  lenis?.destroy();
-  lenis = null;
-  window.__lenis = undefined;
+  if (lenis) {
+    gsap.ticker.remove(tick);
+    lenis.destroy();
+    lenis = null;
+    window.__lenis = undefined;
+  }
   started = false;
 }
