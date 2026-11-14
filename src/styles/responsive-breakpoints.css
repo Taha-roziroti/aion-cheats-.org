@@ -1,0 +1,38 @@
+/**
+ * Explicit phone / tablet breakpoints for audited indexable templates.
+ */
+
+@media (max-width: 639px) {
+  .legal-page-shell {
+    padding-inline: 1rem;
+  }
+  .legal-page-shell h1 {
+    font-size: 1.75rem;
+  }
+  .guide-page-shell h1 {
+    font-size: 1.75rem;
+  }
+  .share-links {
+    padding-inline: 1rem;
+  }
+  .content-markdown :where(table) {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .legal-page-shell {
+    max-width: 42rem;
+    margin-inline: auto;
+  }
+  .guide-page-shell {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .legal-page-shell {
+    max-width: 48rem;
+  }
+}

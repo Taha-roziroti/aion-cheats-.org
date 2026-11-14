@@ -1,5 +1,5 @@
 ---
-title: "Dota 2 Scripts: What to Know"
+title: "Dota 2 Scripts Guide: Last-Hit Help & Auto-Dodge"
 description: "Understand Dota 2 scripts, last-hit assistance and auto-dodge features. See how individual functions compare with a full product package."
 slug: "/dota-2-scripts/"
 ---

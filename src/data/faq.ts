@@ -1,7 +1,7 @@
 import type { IconName } from '../components/icons/types';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import { SITE_DOMAIN } from '../config/site';
-import { normalizeInternalPath, ROUTES } from '../utils/path';
+import { normalizeInternalPath } from '../utils/path';
 
 export type FaqTopic =
   | 'all'
@@ -31,9 +31,44 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const reviewPage = link('Dota 2 cheats review', '/dota-2-cheats-review/');
-const checkout = link('checkout hub', PRIMARY_CHECKOUT_PATH);
-const reqGuide = link('system requirements guide', '/guides/system-requirements/');
+function checkoutLabel(route: string): string {
+  const labels: Record<string, string> = {
+    '/': 'site checkout hub',
+    '/faq/': 'checkout hub picker',
+    '/dota-2-maphack/': 'maphack checkout picker',
+    '/dota-2-hero-esp/': 'ESP checkout picker',
+    '/dota-2-cheats-review/': 'review checkout picker',
+    '/dota-2-scripts/': 'scripts checkout picker',
+  };
+  return labels[route] ?? 'checkout hub';
+}
+
+function vacRiskAnswer(route: string): string {
+  const labels: Record<string, string> = {
+    '/': 'long-form Dota 2 cheats review',
+    '/faq/': 'written Dota 2 cheats review',
+    '/dota-2-maphack/': 'review section on map modules',
+    '/dota-2-hero-esp/': 'review section on ESP overlays',
+    '/dota-2-cheats-review/': 'independent feature audit on this page',
+    '/dota-2-scripts/': 'review section on script tooling',
+  };
+  const review = link(labels[route] ?? 'Dota 2 cheats review', '/dota-2-cheats-review/');
+  return `Valve enforces VAC on supported clients. Read the ${review} for what the listing establishes, then check official Valve policy before you install anything.`;
+}
+
+function checkoutFlowAnswer(route: string): string {
+  const hub = link(checkoutLabel(route), PRIMARY_CHECKOUT_PATH);
+  return `Plans route through the ${hub}, then a brief on-site handoff before Zadeyo checkout.`;
+}
+
+function featurePagesAnswer(): string {
+  return (
+    `Use the ${link('editorial cheats review', '/dota-2-cheats-review/')}, plus the ` +
+    `${link('standalone maphack guide', '/dota-2-maphack/')}, ` +
+    `${link('hero ESP walkthrough', '/dota-2-hero-esp/')}, and ` +
+    `${link('scripts explainer', '/dota-2-scripts/')} pages for module-level summaries.`
+  );
+}
 
 export const siteFaqs: SiteFaqItem[] = [
   {
@@ -50,9 +85,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqAfterBuy',
     q: 'How does checkout work?',
-    a: a(
-      `Plans route through the ${checkout} picker, then a brief on-site handoff before Zadeyo checkout.`,
-    ),
+    a: checkoutFlowAnswer('/faq/'),
   },
   {
     id: 'pricing-listed',
@@ -68,25 +101,23 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqBanRisk',
     q: 'Can third-party software lead to a VAC ban?',
-    a: a(
-      `Valve enforces VAC on supported clients. Read the ${reviewPage} for what the listing establishes, then check official Valve policy before you install anything.`,
-    ),
+    a: vacRiskAnswer('/faq/'),
   },
   {
     id: 'windows-reqs',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'Which PC builds are supported?',
-    a: a(`Start with the ${reqGuide} for Windows 10 and 11 notes before purchase.`),
+    a: a(
+      `Start with the ${link('Windows 10 and 11 requirements guide', '/guides/system-requirements/')} for OS notes before purchase.`,
+    ),
   },
   {
     id: 'feature-pages',
     topic: 'products',
     icon: 'faqProductsPage',
     q: 'Where are features explained?',
-    a: a(
-      `Use the ${reviewPage}, plus the maphack, hero ESP, and scripts pages for module-level summaries.`,
-    ),
+    a: featurePagesAnswer(),
   },
 ];
 
@@ -142,11 +173,38 @@ export function getAllFaqs(): SiteFaqItem[] {
 }
 
 export function getLandingFaqs(): SiteFaqItem[] {
-  return siteFaqs.slice(0, 4);
+  return contextualizeFaqs('/', siteFaqs.slice(0, 4));
 }
 
-export function getContentPageFaqs(_route: string): SiteFaqItem[] {
-  return siteFaqs.slice(0, 4);
+function contextualizeFaqs(route: string, items: SiteFaqItem[]): SiteFaqItem[] {
+  return items.map((item) => {
+    if (item.id === 'vac-risk') {
+      return { ...item, a: vacRiskAnswer(route), aHtml: undefined };
+    }
+    if (item.id === 'checkout-flow') {
+      return { ...item, a: checkoutFlowAnswer(route), aHtml: undefined };
+    }
+    if (item.id === 'feature-pages' && route !== '/faq/') {
+      return {
+        ...item,
+        a: `Use the ${link('cheats review summary', '/dota-2-cheats-review/')} and the module pages linked from your current guide for feature lists.`,
+        aHtml: undefined,
+      };
+    }
+    if (item.id === 'windows-reqs' && route !== '/faq/') {
+      return {
+        ...item,
+        a: `Open the ${link('PC requirements checklist', '/guides/system-requirements/')} before you buy.`,
+        aHtml: undefined,
+      };
+    }
+    return item;
+  });
+}
+
+export function getContentPageFaqs(route: string): SiteFaqItem[] {
+  if (route.startsWith('/guides/')) return [];
+  return contextualizeFaqs(route, siteFaqs.slice(0, 4));
 }
 
 export function getBlogFaqs(_tag: string, _slug: string): SiteFaqItem[] {

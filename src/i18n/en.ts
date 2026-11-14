@@ -31,7 +31,7 @@ export const en: Translations = {
   site: {
     name: PLACEHOLDER_COPY.siteName,
     domain: SITE_DOMAIN,
-    title: 'Dota 2 Cheats: Features & Pricing',
+    title: 'Dota 2 Cheats: Features, Pricing & Windows PC Plans',
     description:
       'See Dota 2 cheats features, Windows requirements and current plans. Compare the 31-day and lifetime options before choosing.',
     discord: PRIMARY_CHECKOUT_PATH,
@@ -47,8 +47,8 @@ export const en: Translations = {
   hero: {
     status: 'Dota 2 on Steam · Windows 10 & 11',
     eyebrow: PLACEHOLDER_COPY.eyebrow,
-    titleLine1: 'Dota 2 Cheats',
-    titleLine2: 'Map vision, hero ESP & timers',
+    titleLine1: 'Dota 2 Cheats: Features',
+    titleLine2: 'Pricing, plans & Windows PC',
     subtitle: PLACEHOLDER_COPY.subtitle,
     ctaPrimary: PLACEHOLDER_COPY.cta,
     ctaDiscord: 'Read the review',
@@ -252,8 +252,8 @@ export const en: Translations = {
   },
   support: {
     eyebrow: 'Support',
-    title: 'Support page placeholder',
-    subtitle: 'Channel cards and ticket checklist await your operations copy.',
+    title: 'DotaCheat support: checkout and license help',
+    subtitle: 'Pick a channel for Dota 2 cheat orders, delivery questions, or Windows setup issues before you open a ticket.',
     channels: [
       {
         icon: 'users',
@@ -319,38 +319,86 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About DotaCheat',
-      description: `How ${SITE_DOMAIN} publishes Dota 2 software guides for Windows PC shoppers in the United States.`,
+      title: 'Independent Dota 2 Product Guides',
+      description: `How ${SITE_DOMAIN} publishes independent Dota 2 product guides, pricing summaries, and checkout paths for Windows PC shoppers in the United States.`,
       sections: [
         {
           heading: 'Who we are',
           paragraphs: [
-            'DotaCheat is an independent publisher of feature guides, pricing summaries, and checkout paths for third-party Dota 2 modules.',
-            'We are not affiliated with Valve Corporation or any game publisher.',
+            'DotaCheat is an independent publisher of Dota 2 product guides, pricing summaries, and checkout paths for third-party modules sold through our affiliate partner.',
+            'We are not affiliated with Valve Corporation or any game publisher. We do not operate the cheat software itself—we document what the vendor lists and link to licensed checkout when you are ready to buy.',
+            'Our editorial goal is clarity: separate maphack, hero ESP, and script-style features into pages that match how players search, then point each guide at the same underlying Windows build when features overlap.',
+          ],
+        },
+        {
+          heading: 'What each product guide covers',
+          paragraphs: [
+            'Feature guides explain listed modules such as fog-of-war context, ward ESP, hero overlays, timers, and script helpers without mixing unrelated keywords on one URL.',
+            'Pricing and plan copy mirrors the vendor checkout: a 31-day plan and a lifetime option in United States dollars, plus optional Cloud DMA or HWID utilities on separate product pages when you need them.',
+            'Setup notes cross-link to system requirements, optional DMA preparation, and the FAQ so you can self-qualify on Windows 10 or 11 before opening checkout.',
+          ],
+        },
+        {
+          heading: 'How we stay independent',
+          paragraphs: [
+            'We earn affiliate commissions when you purchase through our /go/ links, but feature lists are sourced from the current product listing—not from hypothetical menus.',
+            'When the vendor changes pricing or modules, we update guides and the cheats review page so titles, H1 headings, and body copy stay aligned with what checkout actually shows.',
+            'Questions about order delivery, license email, or loader errors should go to support with your receipt; we help route you to the right channel and document common fixes on the FAQ.',
           ],
         },
       ],
     },
     privacy: {
-      title: 'Privacy policy',
+      title: 'DotaCheat privacy policy for site visitors',
       description: `How ${SITE_DOMAIN} handles analytics, support email, and checkout partner data.`,
       sections: [
         {
           heading: 'Data collection',
           paragraphs: [
-            'We may log standard web analytics and store messages you send to support. Checkout partners handle payment data under their own policies.',
+            'We may log standard web analytics such as page views, referrers, and coarse device types to understand which Dota 2 guides visitors read before checkout.',
+            'If you email support, we store your message, address, and any order identifiers you include so we can reply and forward issues to the vendor when needed.',
+            'Checkout partners process payment card data under their own privacy policies when you complete a purchase through our /go/ links; we do not store full card numbers on dotacheat.com.',
+          ],
+        },
+        {
+          heading: 'Cookies and analytics',
+          paragraphs: [
+            'We may use privacy-minded analytics to measure traffic on money pages, FAQ answers, and setup guides. You can block cookies in your browser; core navigation still works.',
+            'Affiliate tracking parameters may appear on outbound checkout URLs so the vendor can attribute orders. Those partners set their own cookies once you leave this site.',
+          ],
+        },
+        {
+          heading: 'Your choices',
+          paragraphs: [
+            'You may request deletion of support threads that contain personal data by writing from the same email address you used to contact us.',
+            'For payment disputes or refund requests, contact the checkout vendor listed on your receipt; we can help locate the correct channel but cannot alter their ledgers.',
           ],
         },
       ],
     },
     terms: {
-      title: 'Terms of service',
+      title: 'DotaCheat terms of service and license rules',
       description: `License, refund, and acceptable-use notes for plans listed on ${SITE_DOMAIN}.`,
       sections: [
         {
           heading: 'Agreement',
           paragraphs: [
-            'By purchasing through our checkout links you accept the vendor terms and the summaries published on this site.',
+            'By purchasing through our checkout links you accept the vendor license terms in addition to the summaries published on this site.',
+            'Feature lists, pricing, and Windows requirements on dotacheat.com are informational. The checkout page you reach after /go/ is authoritative for what you pay and what you receive.',
+          ],
+        },
+        {
+          heading: 'Licenses and pricing',
+          paragraphs: [
+            'Plans such as the 31-day access tier and lifetime option are defined by the vendor listing. We describe those tiers in United States dollars for convenience; currency handling happens at checkout.',
+            'Optional add-ons including Cloud DMA or HWID utilities bill separately when you pick those products in the checkout hub.',
+          ],
+        },
+        {
+          heading: 'Refunds and acceptable use',
+          paragraphs: [
+            'Refund eligibility follows the vendor policy linked during purchase. Contact support with your order email if you need help opening a ticket.',
+            'You are responsible for complying with Valve’s Steam terms and local laws. We do not encourage account sharing or tournament abuse; guides exist so informed adults can evaluate risks before buying.',
           ],
         },
       ],

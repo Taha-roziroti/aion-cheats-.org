@@ -9,37 +9,37 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Dota 2 Cheats: Features & Pricing',
+    title: 'Dota 2 Cheats: Features, Pricing & Windows PC Plans',
     description:
       'See Dota 2 cheats features, Windows requirements and current plans. Compare the 31-day and lifetime options before choosing.',
   },
   '/dota-2-maphack/': {
-    title: 'Dota 2 Maphack: Map Vision & Ward ESP',
+    title: 'Dota 2 Maphack: Map Vision, Ward ESP & Fog Control',
     description:
       'See what the Dota 2 maphack listing says about fog of war, ward placement ESP and map information. Check the feature details.',
   },
   '/dota-2-hero-esp/': {
-    title: 'Dota 2 Hero ESP: Player Information',
+    title: 'Dota 2 Hero ESP: Player Levels, Items & ESP Overlays',
     description:
       'Explore Dota 2 hero ESP features, including player levels, item information and enemy inventory visibility. See the listed functionality.',
   },
   '/dota-2-cheats-review/': {
-    title: 'Dota 2 Cheats Review: Features & Price',
+    title: 'Dota 2 Cheats Review: Features, Pricing & Verdict',
     description:
       'Read our Dota 2 cheats review covering listed features, Windows requirements, plans and pricing. Check the details before purchasing.',
   },
   '/dota-2-scripts/': {
-    title: 'Dota 2 Scripts: What to Know',
+    title: 'Dota 2 Scripts Guide: Last-Hit Help & Auto-Dodge',
     description:
       'Understand Dota 2 scripts, last-hit assistance and auto-dodge features. See how individual functions compare with a full product package.',
   },
   '/faq/': {
-    title: 'Dota 2 Cheats FAQ – Plans & Windows Requirements',
+    title: 'Dota 2 Cheats FAQ: Plans, Pricing & Windows Setup',
     description:
       'Frequently asked questions about Dota 2 cheat plans, Windows requirements, checkout, and how feature lists map to the current product build.',
   },
   '/support/': {
-    title: 'DotaCheat Support – Checkout & Setup Help',
+    title: 'DotaCheat Support: Checkout Help & License Delivery',
     description:
       'Get help with Dota 2 cheat checkout, license delivery, and Windows compatibility before you purchase or install supported modules.',
   },
@@ -49,9 +49,14 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Learn how DotaCheat publishes feature guides, pricing, and setup notes for Windows players evaluating third-party Dota 2 software.',
   },
   '/guides/system-requirements/': {
-    title: 'Dota 2 Cheat System Requirements for Windows PC',
+    title: 'Dota 2 Cheat System Requirements: Windows 10 & 11 PC',
     description:
       'Windows 10 and 11 requirements for Dota 2 cheat software, including RAM, CPU, Steam client builds, and security settings to verify first.',
+  },
+  '/guides/cloud-dma-setup/': {
+    title: 'Cloud DMA Setup Guide for Dota 2 on Windows PC',
+    description:
+      'Prepare Hyper-V, firmware, and network settings before optional Cloud DMA add-ons. Step-by-step checklist for United States Windows builds.',
   },
   '/privacy/': {
     title: 'DotaCheat Privacy Policy – Analytics & Support Email',
@@ -59,7 +64,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Privacy policy for dotacheat.com: analytics cookies, support email, and checkout partner data when you contact us or complete an order.',
   },
   '/terms/': {
-    title: 'DotaCheat Terms of Service – Licenses & Refunds',
+    title: 'DotaCheat Terms of Service: Licenses, Pricing & Refunds',
     description:
       'Terms and conditions for Dota 2 cheat plans, refunds, and acceptable use on supported Windows PCs purchased through our checkout flow.',
   },

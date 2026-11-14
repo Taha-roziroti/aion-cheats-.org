@@ -8,23 +8,27 @@ const errors = [];
 
 const AUDIT_ROUTES = new Set([
   ...INDEXABLE_MONEY_ROUTES,
+  '/dota-2-scripts/',
+  '/guides/system-requirements/',
+  '/guides/cloud-dma-setup/',
   '/about/',
   '/support/',
   '/privacy/',
   '/terms/',
+  '/faq/',
 ]);
 
-/** Skip global chrome: nav, footer, checkout widgets repeat labels by design. */
-function contentHtml(html) {
-  const article = html.match(/<article[^>]*class="[^"]*content-markdown[\s\S]*?<\/article>/i)?.[0];
-  if (article) return article;
-  const overview = html.match(/id="abi-overview"[\s\S]*?<\/section>/i)?.[0];
-  return overview ?? '';
+/** Main content only; chrome nav/footer sit outside `<main>`. */
+function mainBody(html) {
+  let main = html.match(/<main[^>]*>([\s\S]*)<\/main>/i)?.[1] ?? '';
+  main = main.replace(/<nav[^>]*aria-label=["']Breadcrumb["'][\s\S]*?<\/nav>/gi, '');
+  return main;
 }
 
 function normalizeHref(href) {
   if (!href || href.startsWith('mailto:') || href.startsWith('javascript:')) return null;
   let p = href.split('#')[0].trim();
+  if (!p) return '/';
   if (!p.startsWith('/')) return null;
   if (!p.endsWith('/') && !p.includes('.')) p = `${p}/`;
   return p;
@@ -40,6 +44,23 @@ function anchorTextFromHtml(inner) {
 function normalizeAnchor(text) {
   return text.toLowerCase().replace(/\s+/g, ' ').trim();
 }
+
+const GENERIC = new Set([
+  'click here',
+  'here',
+  'read more',
+  'learn more',
+  'more',
+  'view',
+  'see more',
+  'details',
+  'continue',
+  'this page',
+  'link',
+  'faq',
+  'support',
+  'home',
+]);
 
 function extractLinks(htmlChunk) {
   const links = [];
@@ -64,35 +85,46 @@ function readHtml(route) {
   return fs.readFileSync(file, 'utf8');
 }
 
-/** Site-wide: one anchor phrase must not target multiple internal URLs (outside nav). */
+const globalAnchorSeen = new Map();
 const globalAnchorToHrefs = new Map();
 
 for (const route of AUDIT_ROUTES) {
   const html = readHtml(route);
   if (!html) continue;
 
-  const chunk = contentHtml(html);
-  if (!chunk) continue;
+  const chunk = mainBody(html);
+  if (!chunk.trim()) continue;
 
   const links = extractLinks(chunk);
   const byNorm = new Map();
 
   for (const link of links) {
+    if (GENERIC.has(link.norm)) {
+      errors.push(`${route}: generic anchor "${link.text}" → ${link.href}`);
+    }
+
     const hits = byNorm.get(link.norm) ?? [];
     hits.push(link);
     byNorm.set(link.norm, hits);
 
-    const global = globalAnchorToHrefs.get(link.norm) ?? new Set();
-    global.add(link.href);
-    globalAnchorToHrefs.set(link.norm, global);
+    const globalHrefSet = globalAnchorToHrefs.get(link.norm) ?? new Set();
+    globalHrefSet.add(link.href);
+    globalAnchorToHrefs.set(link.norm, globalHrefSet);
+
+    const prior = globalAnchorSeen.get(link.norm);
+    if (prior) {
+      errors.push(
+        `Global duplicate anchor "${link.text}" on ${route} and ${prior.route} (→ ${link.href})`,
+      );
+    } else {
+      globalAnchorSeen.set(link.norm, { route, text: link.text, href: link.href });
+    }
   }
 
   for (const [norm, hits] of byNorm) {
     const hrefs = new Set(hits.map((h) => h.href));
     if (hrefs.size > 1) {
-      errors.push(
-        `${route}: anchor "${hits[0].text}" points to ${[...hrefs].join(' and ')}`,
-      );
+      errors.push(`${route}: anchor "${hits[0].text}" points to ${[...hrefs].join(' and ')}`);
     }
     if (hits.length > 1 && hrefs.size === 1) {
       errors.push(
@@ -104,12 +136,12 @@ for (const route of AUDIT_ROUTES) {
 
 for (const [norm, hrefs] of globalAnchorToHrefs) {
   if (hrefs.size > 1 && norm.length >= 3) {
-    const sample = [...hrefs].join(', ');
-    errors.push(`Global anchor conflict "${norm}" → ${sample}`);
+    errors.push(`Global anchor conflict "${norm}" → ${[...hrefs].join(', ')}`);
   }
 }
 
-/** Markdown money pages: unique link labels per file. */
+/** Markdown: unique labels per file + site-wide (internal links only). */
+const mdGlobal = new Map();
 const mdDir = path.join(projectRoot, 'content', 'pages');
 for (const file of fs.readdirSync(mdDir).filter((f) => f.endsWith('.md'))) {
   const text = fs.readFileSync(path.join(mdDir, file), 'utf8');
@@ -124,11 +156,23 @@ for (const file of fs.readdirSync(mdDir).filter((f) => f.endsWith('.md'))) {
     const hits = byNorm.get(link.norm) ?? [];
     hits.push(link);
     byNorm.set(link.norm, hits);
+
+    const prior = mdGlobal.get(link.norm);
+    if (prior) {
+      errors.push(`Markdown global duplicate "${link.text}" in ${file} and ${prior.file}`);
+    } else {
+      mdGlobal.set(link.norm, { file, text: link.text });
+    }
   }
   for (const [norm, hits] of byNorm) {
     const hrefs = new Set(hits.map((h) => h.href));
     if (hrefs.size > 1) {
       errors.push(`content/pages/${file}: "${hits[0].text}" → ${[...hrefs].join(' and ')}`);
+    }
+    if (hits.length > 1 && hrefs.size === 1) {
+      errors.push(
+        `content/pages/${file}: repeated "${hits[0].text}" (${hits.length}×) → ${[...hrefs][0]}`,
+      );
     }
   }
 }

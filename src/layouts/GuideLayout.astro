@@ -36,7 +36,7 @@ const {
   articlePublishedTime={articlePublishedTime}
   articleModifiedTime={articleModifiedTime}
 >
-  <article class="border-b border-border bg-muted/20 py-10 md:py-14">
+  <article class="guide-page-shell border-b border-border bg-muted/20 py-10 md:py-14">
     <div class="mx-auto max-w-6xl px-5">
       <Breadcrumbs items={breadcrumbs} class="mb-6 md:mb-8" />
       <header class="max-w-3xl space-y-4">
@@ -51,6 +51,16 @@ const {
 </BaseLayout>
 
 <style>
+  @media (max-width: 639px) {
+    .guide-page-shell :global(header) {
+      padding-inline: 0.25rem;
+    }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .prose-bl3 {
+      max-width: 40rem;
+    }
+  }
   .prose-bl3 :global(p + p) {
     margin-top: 1rem;
   }

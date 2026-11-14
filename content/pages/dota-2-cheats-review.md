@@ -1,10 +1,10 @@
 ---
-title: "Dota 2 Cheats Review: Features & Price"
+title: "Dota 2 Cheats Review: Features, Pricing & Verdict"
 description: "Read our Dota 2 cheats review covering listed features, Windows requirements, plans and pricing. Check the details before purchasing."
 slug: "/dota-2-cheats-review/"
 ---
 
-# Dota 2 Cheats Review
+# Dota 2 Cheats Review: Features & Pricing
 
 Buying software from a feature list alone is a pretty easy way to end up with something you didn't fully understand.
 

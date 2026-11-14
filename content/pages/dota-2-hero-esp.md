@@ -1,5 +1,5 @@
 ---
-title: "Dota 2 Hero ESP: Player Information"
+title: "Dota 2 Hero ESP: Player Levels, Items & ESP Overlays"
 description: "Explore Dota 2 hero ESP features, including player levels, item information and enemy inventory visibility. See the listed functionality."
 slug: "/dota-2-hero-esp/"
 ---

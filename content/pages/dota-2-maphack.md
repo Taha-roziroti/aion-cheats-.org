@@ -1,5 +1,5 @@
 ---
-title: "Dota 2 Maphack: Map Vision & Ward ESP"
+title: "Dota 2 Maphack: Map Vision, Ward ESP & Fog Control"
 description: "See what the Dota 2 maphack listing says about fog of war, ward placement ESP and map information. Check the feature details."
 slug: "/dota-2-maphack/"
 ---

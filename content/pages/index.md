@@ -1,10 +1,10 @@
 ---
-title: "Dota 2 Cheats: Features & Pricing"
+title: "Dota 2 Cheats: Features, Pricing & Windows PC Plans"
 description: "See Dota 2 cheats features, Windows requirements and current plans. Compare the 31-day and lifetime options before choosing."
 slug: "/"
 ---
 
-# Dota 2 Cheats
+## Overview: features, pricing, and plans
 
 Dota 2 can turn a perfectly normal evening into three hours of wondering how the enemy carry always seems to know exactly where you are. One minute you're farming, the next you're getting caught out again, and your teammates are already typing essays in chat.
 
@@ -106,7 +106,7 @@ Also, be realistic about claims surrounding detection. The product listing uses 
 
 You should make your own decision with that in mind.
 
-For a closer product breakdown, read the [Dota 2 cheats review](/dota-2-cheats-review/).
+For a closer product breakdown, read the [long-form Dota 2 cheats review](/dota-2-cheats-review/).
 
 ## Dota 2 cheats FAQ
 

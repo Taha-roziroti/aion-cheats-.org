@@ -1,5 +1,6 @@
 ---
 import "@/styles/starwind.css";
+import "@/styles/responsive-breakpoints.css";
 import { t } from '../i18n';
 import {
   RSS_FEED_PATH,
@@ -48,10 +49,7 @@ const {
 const pathname = Astro.url.pathname;
 const routeOgImage = ogImageForPath(pathname);
 const ogImage = ogImageProp ?? routeOgImage;
-const legacyNoindex =
-  pathname.startsWith('/blog') ||
-  pathname.startsWith('/forum') ||
-  pathname.startsWith('/products/dota-2-cheats');
+const legacyNoindex = pathname.startsWith('/products/dota-2-cheats');
 const resolvedNoindex = noindex || legacyNoindex;
 const robotsContent = resolvedNoindex
   ? 'noindex, follow'
@@ -66,10 +64,14 @@ const mergedJsonLd = jsonLd
 
 const sharePaths = new Set<string>([
   ...INDEXABLE_MONEY_ROUTES,
+  '/dota-2-scripts/',
   '/about/',
   '/privacy/',
   '/terms/',
   '/support/',
+  '/faq/',
+  '/guides/system-requirements/',
+  '/guides/cloud-dma-setup/',
 ]);
 const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pathname}/`);
 ---
