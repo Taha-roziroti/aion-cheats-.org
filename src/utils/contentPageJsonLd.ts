@@ -74,12 +74,6 @@ export function breadcrumbsForRoute(route: string): BreadcrumbItem[] {
       { name: 'Dota 2 scripts', path: '/dota-2-scripts/' },
     ];
   }
-  if (route === '/dota-2-vac-ban-risk/') {
-    return [
-      { name: 'Home', path: '/' },
-      { name: 'VAC ban risk', path: '/dota-2-vac-ban-risk/' },
-    ];
-  }
   return [{ name: 'Home', path: '/' }];
 }
 

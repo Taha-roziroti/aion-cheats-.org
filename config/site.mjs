@@ -39,9 +39,6 @@ export function buildSitemapImages(siteUrl = SITE_URL) {
     '/dota-2-scripts/': [
       showcaseImage(siteUrl, 'dota-magnus-overlay.webp', 'Dota 2 scripts feature interface'),
     ],
-    '/dota-2-vac-ban-risk/': [
-      showcaseImage(siteUrl, 'dota-huskar-combat.webp', 'Dota 2 VAC anti-cheat information'),
-    ],
     '/faq/': [{ loc: `${siteUrl}/og/faq.jpg`, title: 'DotaCheat FAQ' }],
   };
 }

@@ -33,7 +33,6 @@ function link(text: string, href: string): string {
 
 const reviewPage = link('Dota 2 cheats review', '/dota-2-cheats-review/');
 const checkout = link('checkout hub', PRIMARY_CHECKOUT_PATH);
-const vacPage = link('VAC ban risk page', '/dota-2-vac-ban-risk/');
 const reqGuide = link('system requirements guide', '/guides/system-requirements/');
 
 export const siteFaqs: SiteFaqItem[] = [
@@ -52,7 +51,7 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: 'faqAfterBuy',
     q: 'How does checkout work?',
     a: a(
-      `Plans route through the internal /go/ bridge (${checkout}). Replace support URLs in checkout-redirects.mjs when your affiliate links are ready.`,
+      `Plans route through the ${checkout} picker, then a brief on-site handoff before Zadeyo checkout.`,
     ),
   },
   {
@@ -70,7 +69,7 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: 'faqBanRisk',
     q: 'Can third-party software lead to a VAC ban?',
     a: a(
-      `Valve enforces VAC on supported clients. Read the ${vacPage} and official Valve policy before you install anything.`,
+      `Valve enforces VAC on supported clients. Read the ${reviewPage} for what the listing establishes, then check official Valve policy before you install anything.`,
     ),
   },
   {

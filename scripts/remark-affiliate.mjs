@@ -13,7 +13,6 @@ const FILE_SLUG = [
   ['dota-2-hero-esp.md', '/dota-2-hero-esp/'],
   ['dota-2-cheats-review.md', '/dota-2-cheats-review/'],
   ['dota-2-scripts.md', '/dota-2-scripts/'],
-  ['dota-2-vac-ban-risk.md', '/dota-2-vac-ban-risk/'],
 ];
 
 function slugFromFile(file) {

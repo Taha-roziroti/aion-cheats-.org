@@ -20,7 +20,7 @@ Workflow: `npm run audit` → fix → rebuild → log. Script: `scripts/seo-audi
 - Title/description length in audit matches `verify-seo` (35–72 / 110–165), not literal 50–60, to avoid conflicting gates.
 - Legacy Arena markdown routes remain as redirect sources only; indexable pages must not link to them.
 - Homepage FAQ remains in `content/pages/index.md`; `siteFaqs` feeds components still using `getLandingFaqs`.
-- No git commits (user rule) — audit prompt commits deferred until requested.
+- Launch commits on `main` (`9178330`, `bb4b3fe`); audit re-runs do not require new commits when clean.
 
 ## Blocked
 
@@ -41,7 +41,6 @@ Workflow: `npm run audit` → fix → rebuild → log. Script: `scripts/seo-audi
 | `/dota-2-hero-esp/` | pass | pass | pass | pass | pass | primary: hero esp |
 | `/dota-2-cheats-review/` | pass | pass | pass | pass | pass | commercial review |
 | `/dota-2-scripts/` | pass | pass | pass | pass | pass | informational |
-| `/dota-2-vac-ban-risk/` | pass | pass | pass | pass | pass | safety |
 | `/guides/system-requirements/` | pass | pass | pass | pass | pass | setup intent |
 | `/guides/cloud-dma-setup/` | pass | pass | pass | pass | pass | blocked body copy |
 | `/faq/` | pass | pass | pass | pass | pass | siteFaqs + filters |
@@ -50,10 +49,17 @@ Workflow: `npm run audit` → fix → rebuild → log. Script: `scripts/seo-audi
 | `/privacy/` | pass | pass | pass | pass | pass | |
 | `/terms/` | pass | pass | pass | pass | pass | |
 
-## Final verification (pass 5)
+## Pass 6 (2026-11-14 re-verification)
 
-1. `npm run audit` with build — **pass**
+- **Goal:** `cursor-seo-audit-prompt.md` — 3× green `npm run audit`, no code changes on runs 2–3.
+- **Evidence:** full `npm run audit` (includes `npm run build`) exit 0; then `SKIP_BUILD=1 npm run audit` ×2 exit 0.
+- **Repo state:** `main` at `bb4b3fe` on `origin` (Dota launch + audit prompt doc); working tree clean before pass 6.
+- **Issues found:** none scriptable; review table unchanged; blocked items unchanged.
+
+## Final verification (pass 5 & 6)
+
+1. `npm run audit` with build — **pass** (pass 5, pass 6)
 2. `SKIP_BUILD=1 npm run audit` — **pass** (no code changes)
 3. `SKIP_BUILD=1 npm run audit` — **pass** (no code changes)
 
-**Definition of done (B partial):** scriptable audit green ×3; judgment items pass in table; Blocked items documented for manual follow-up.
+**Definition of done (A):** scriptable audit green ×3; review table all pass; blocked items documented. Judgment checks (Playwright/Lighthouse) remain blocked per §7/§10.

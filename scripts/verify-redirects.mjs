@@ -17,6 +17,8 @@ const KEYWORD_REDIRECTS = [
   ['/cloud-dma-setup/', '/guides/cloud-dma-setup/'],
   ['/sitemap-index.xml', '/sitemap.xml'],
   ['/sitemap-0.xml', '/sitemap.xml'],
+  ['/dota-2-vac-ban-risk', '/dota-2-cheats-review/'],
+  ['/dota-2-vac-ban-risk/', '/dota-2-cheats-review/'],
 ];
 
 const errors = [];

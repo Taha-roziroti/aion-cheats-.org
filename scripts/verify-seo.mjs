@@ -123,7 +123,6 @@ function checkPage(route) {
   const noProductRoutes = new Set([
     '/dota-2-cheats-review/',
     '/dota-2-scripts/',
-    '/dota-2-vac-ban-risk/',
   ]);
   const requiresProduct =
     route !== '/faq/' &&

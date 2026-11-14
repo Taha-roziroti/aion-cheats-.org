@@ -1,5 +1,5 @@
 import type { ProductSlide } from './products';
-import { MAIN_PRODUCT_CHECKOUT } from './productCatalog';
+import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import type { IconName } from '../components/icons/types';
 import { PLACEHOLDER_COPY } from './placeholders';
 import { HERO_SHOWCASE_SLIDES } from './showcaseImages';
@@ -25,7 +25,7 @@ export const landingProducts: LandingCatalogProduct[] = [
     label: 'Primary',
     title: PLACEHOLDER_COPY.productName,
     href: '/#products',
-    buyUrl: MAIN_PRODUCT_CHECKOUT,
+    buyUrl: PRIMARY_CHECKOUT_PATH,
     badge: 'Steam Dota 2',
     variant: 'popular',
     icon: 'coreProduct',
@@ -48,9 +48,9 @@ export const guideCards = [
     readLabel: 'Read review',
   },
   {
-    title: 'VAC ban risk',
-    desc: 'Valve policy summary—no promises about detection or undetectable modules.',
-    href: '/dota-2-vac-ban-risk/',
-    readLabel: 'Read VAC guide',
+    title: 'Dota 2 scripts',
+    desc: 'Cooldown tracking, timers, and gameplay assistance modules from the listing.',
+    href: '/dota-2-scripts/',
+    readLabel: 'Open scripts page',
   },
 ] as const;

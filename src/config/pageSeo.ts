@@ -33,11 +33,6 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description:
       'Understand Dota 2 scripts, last-hit assistance and auto-dodge features. See how individual functions compare with a full product package.',
   },
-  '/dota-2-vac-ban-risk/': {
-    title: 'Can You Get VAC Banned for Dota 2 Cheats?',
-    description:
-      'Understand the account risks of Dota 2 cheat software and what the product listing does and does not establish about VAC detection.',
-  },
   '/faq/': {
     title: 'Dota 2 Cheats FAQ – Plans & Windows Requirements',
     description:

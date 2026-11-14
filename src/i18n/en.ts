@@ -42,7 +42,6 @@ export const en: Translations = {
     { href: '/dota-2-hero-esp/', label: 'Hero ESP' },
     { href: '/dota-2-cheats-review/', label: 'Review' },
     { href: '/dota-2-scripts/', label: 'Scripts' },
-    { href: '/dota-2-vac-ban-risk/', label: 'VAC risk' },
     { href: '/faq/', label: 'FAQ' },
   ],
   hero: {

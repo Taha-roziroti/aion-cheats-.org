@@ -35,6 +35,8 @@ export const PATH_REDIRECTS = new Map([
   ['/cloud-dma-setup/', '/guides/cloud-dma-setup/'],
   ['/sitemap-index.xml', '/sitemap.xml'],
   ['/sitemap-0.xml', '/sitemap.xml'],
+  ['/dota-2-vac-ban-risk', '/dota-2-cheats-review/'],
+  ['/dota-2-vac-ban-risk/', '/dota-2-cheats-review/'],
 ]);
 
 /** Paths that should not receive a forced trailing slash. */

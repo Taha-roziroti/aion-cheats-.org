@@ -32,7 +32,6 @@ export const SEO_ROUTE_INTENTS: Record<string, string> = {
   '/dota-2-hero-esp/': 'dota 2 hero esp, player esp',
   '/dota-2-cheats-review/': 'dota 2 cheats review, features',
   '/dota-2-scripts/': 'dota 2 scripts, hero scripts',
-  '/dota-2-vac-ban-risk/': 'vac ban dota 2 cheats, valve policy',
   '/faq/': 'dota 2 cheats faq',
   '/support/': 'dota cheat support',
 };
@@ -45,7 +44,6 @@ export const OG_IMAGES: Record<string, string> = {
   '/dota-2-hero-esp/': '/og/home.jpg',
   '/dota-2-cheats-review/': '/og/pricing.jpg',
   '/dota-2-scripts/': '/og/default.jpg',
-  '/dota-2-vac-ban-risk/': '/og/default.jpg',
   '/faq/': '/og/faq.jpg',
   '/guides/system-requirements/': '/og/requirements.jpg',
   default: '/og/default.jpg',
@@ -70,4 +68,6 @@ export const KEYWORD_REDIRECTS: [string, string][] = [
   ['/hwid-spoofer/', '/products/dota-2-cheats/hwid-spoofer/'],
   ['/sitemap-index.xml', '/sitemap.xml'],
   ['/sitemap-0.xml', '/sitemap.xml'],
+  ['/dota-2-vac-ban-risk', '/dota-2-cheats-review/'],
+  ['/dota-2-vac-ban-risk/', '/dota-2-cheats-review/'],
 ];

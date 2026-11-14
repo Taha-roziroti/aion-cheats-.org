@@ -14,7 +14,6 @@ const dist = path.join(projectRoot, 'dist');
 const AUDIT_HTML_ROUTES = new Set([
   ...INDEXABLE_MONEY_ROUTES,
   '/dota-2-scripts/',
-  '/dota-2-vac-ban-risk/',
   '/guides/system-requirements/',
   '/guides/cloud-dma-setup/',
   '/about/',

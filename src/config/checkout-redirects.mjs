@@ -1,15 +1,16 @@
-/** External checkout destinations — replace with live partner URLs before launch. */
-import { SITE_URL } from '../../config/site.mjs';
+/** External checkout destinations (Zadeyo affiliate bridge). */
+const ZADEYO_BASE = 'https://zadeyo.com/go/TAHA';
 
-const checkoutPlaceholder = `${SITE_URL}/support/`;
+const zadeyoProduct = (path) =>
+  `${ZADEYO_BASE}?to=${encodeURIComponent(path)}`;
 
 export const CHECKOUT_URLS = {
-  mainProduct: checkoutPlaceholder,
-  cloudDma: checkoutPlaceholder,
-  hwidSpoofer: checkoutPlaceholder,
-  dota2: checkoutPlaceholder,
-  skinChanger: checkoutPlaceholder,
-  ugc: checkoutPlaceholder,
+  mainProduct: zadeyoProduct('/products/dota-2'),
+  cloudDma: zadeyoProduct('/products/cloud-dma'),
+  hwidSpoofer: zadeyoProduct('/products/hwid-spoofer'),
+  dota2: zadeyoProduct('/products/dota-2'),
+  skinChanger: zadeyoProduct('/products/dota-2'),
+  ugc: zadeyoProduct('/products/dota-2'),
 };
 
 /** Slugs served by `src/pages/go/[slug].astro` (instant client redirect — no edge 302). */

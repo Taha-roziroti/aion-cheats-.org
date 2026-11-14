@@ -1,5 +1,5 @@
 import { t } from '../i18n';
-import { checkoutForSlug, checkoutPath } from '../config/checkout';
+import { checkoutForSlug, checkoutPath, PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import type { IconName } from '../components/icons/types';
 import { SHOWCASE_SHOTS } from './showcaseImages';
 
@@ -190,5 +190,5 @@ export const productHub = {
   title: t.products.title,
   subtitle: t.products.subtitle,
   description: 'Product hub placeholder — replace with your catalog summary.',
-  buyUrl: checkoutPath('mainProduct'),
+  buyUrl: PRIMARY_CHECKOUT_PATH,
 };

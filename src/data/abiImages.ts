@@ -17,5 +17,4 @@ export const ABI_PAGE_PREVIEW: Record<string, string> = {
   '/dota-2-hero-esp/': `${SHOWCASE_SHOTS[4]!.src}`,
   '/dota-2-cheats-review/': `${SHOWCASE_SHOTS[1]!.src}`,
   '/dota-2-scripts/': `${SHOWCASE_SHOTS[2]!.src}`,
-  '/dota-2-vac-ban-risk/': `${SHOWCASE_SHOTS[0]!.src}`,
 };

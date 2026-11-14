@@ -26,6 +26,7 @@ export default defineConfig({
     '/cheats/elite/': '/',
     '/cheats/compare/': '/blog/dota-2-lite-vs-pro/',
     '/contact/': '/support/',
+    '/dota-2-vac-ban-risk/': '/dota-2-cheats-review/',
   },
   compressHTML: true,
   prefetch: {
