@@ -55,6 +55,6 @@ Optional Cloud DMA add-ons require **virtualization features** enabled in firmwa
 
 ## Network and checkout
 
-A stable wired or low-latency Wi-Fi connection is enough for license retrieval. Complete purchases only through our [affiliate checkout bridge](/go/) so attribution and vendor receipts stay aligned.
+A stable wired or low-latency Wi-Fi connection is enough for license retrieval. Complete purchases only through our [secure checkout bridge](/go/) so vendor receipts stay aligned with your order.
 
 If you meet the checklist above, move on to feature-specific pages such as [Dota 2 maphack modules](/dota-2-maphack/) or the [hero ESP module guide](/dota-2-hero-esp/), compare [31-day and lifetime plan cards](/#products), and [open a support ticket](/support/) if a requirement is unclear before you pay.

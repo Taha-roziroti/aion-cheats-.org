@@ -237,7 +237,7 @@ export const en: Translations = {
     items: [
       { num: '01', phase: 'Step', title: 'Review features', desc: 'Read the maphack, hero ESP, and scripts pages for modules listed on the build.' },
       { num: '02', phase: 'Step', title: 'Pick a plan', desc: 'Choose monthly or lifetime pricing on the homepage product cards.' },
-      { num: '03', phase: 'Step', title: 'Checkout', desc: 'Complete purchase through the /go/ bridge when your affiliate URL is configured.' },
+      { num: '03', phase: 'Step', title: 'Checkout', desc: 'Complete purchase through the /go/ bridge to reach vendor checkout.' },
       { num: '04', phase: 'Step', title: 'Install on PC', desc: 'Follow vendor instructions on Windows 10 or 11 after delivery.' },
     ],
   },
@@ -325,7 +325,7 @@ export const en: Translations = {
         {
           heading: 'Who we are',
           paragraphs: [
-            'DotaCheat is an independent publisher of Dota 2 product guides, pricing summaries, and checkout paths for third-party modules sold through our affiliate partner.',
+            'DotaCheat is an independent publisher of Dota 2 product guides, pricing summaries, and checkout paths for third-party modules sold through licensed checkout.',
             'We are not affiliated with Valve Corporation or any game publisher. We do not operate the cheat software itself—we document what the vendor lists and link to licensed checkout when you are ready to buy.',
             'Our editorial goal is clarity: separate maphack, hero ESP, and script-style features into pages that match how players search, then point each guide at the same underlying Windows build when features overlap.',
           ],
@@ -341,8 +341,8 @@ export const en: Translations = {
         {
           heading: 'How we stay independent',
           paragraphs: [
-            'We earn affiliate commissions when you purchase through our /go/ links, but feature lists are sourced from the current product listing—not from hypothetical menus.',
-            'When the vendor changes pricing or modules, we update guides and the cheats review page so titles, H1 headings, and body copy stay aligned with what checkout actually shows.',
+            'Feature lists are sourced from the current product listing—not from hypothetical menus—so each guide reflects what checkout actually shows today.',
+            'When the vendor changes pricing or modules, we update guides and the cheats review page so titles, H1 headings, and body copy stay aligned with the live build.',
             'Questions about order delivery, license email, or loader errors should go to support with your receipt; we help route you to the right channel and document common fixes on the FAQ.',
           ],
         },
@@ -364,7 +364,7 @@ export const en: Translations = {
           heading: 'Cookies and analytics',
           paragraphs: [
             'We may use privacy-minded analytics to measure traffic on money pages, FAQ answers, and setup guides. You can block cookies in your browser; core navigation still works.',
-            'Affiliate tracking parameters may appear on outbound checkout URLs so the vendor can attribute orders. Those partners set their own cookies once you leave this site.',
+            'Checkout URLs may pass order metadata to the vendor. Partner sites set their own cookies once you leave this site.',
           ],
         },
         {
