@@ -47,8 +47,8 @@ export const en: Translations = {
   hero: {
     status: 'Listed partner pricing · Verify at checkout',
     eyebrow: PLACEHOLDER_COPY.eyebrow,
-    titleLine1: 'Aion Classic ESP',
-    titleLine2: '& Aimbot Main Plan',
+    titleLine1: 'Aion Classic Cheats',
+    titleLine2: '',
     subtitle: PLACEHOLDER_COPY.subtitle,
     ctaPrimary: PLACEHOLDER_COPY.cta,
     ctaDiscord: 'View pricing',
