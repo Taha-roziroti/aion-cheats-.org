@@ -161,7 +161,7 @@ const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pat
   <body class="min-h-screen bg-background text-foreground">
     <button type="button" class="skip-link" data-skip-to-main>{t.ui.skipLink}</button>
     <Header />
-    <main id="main-content">
+    <main id="main-content" class="audited-responsive-shell">
       <slot />
     </main>
     {showShareLinks ? <ShareLinks path={pathname} shareTitle={title} /> : null}

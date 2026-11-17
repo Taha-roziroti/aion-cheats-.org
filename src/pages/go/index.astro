@@ -2,12 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CheckoutProductChooser from '../../components/checkout/CheckoutProductChooser.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { resolvePageSeo } from '../../config/seo';
+
+const seo = resolvePageSeo('/go/');
 ---
 
 <BaseLayout
-  title="Choose a product — checkout"
-  description="Pick the main license, Cloud DMA add-on, or HWID Spoofer, then continue to secure checkout."
-  noindex={true}
+  title={seo.title}
+  description={seo.description}
 >
   <article class="py-10 md:py-14">
     <div class="mx-auto max-w-3xl px-5">

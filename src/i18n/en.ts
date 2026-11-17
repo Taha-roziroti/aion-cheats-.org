@@ -430,6 +430,13 @@ export const en: Translations = {
             'Loader setup, bans, and refunds are handled by the vendor. This site does not operate support tickets for product activation.',
           ],
         },
+        {
+          heading: 'Published offers mirrored on this site',
+          paragraphs: [
+            'Main plan ESP and aimbot: $35 monthly (30 days) or $150 lifetime. Cloud DMA: $50 lifetime license plus separate GREENWARD, Static Server, and AWS purchases. HWID Spoofer: separate utility when listed by the partner.',
+            'Each figure is a summary for research—not a quote at payment. Your receipt from the partner listing is the proof of what you bought.',
+          ],
+        },
       ],
     },
     privacy: {
@@ -458,6 +465,13 @@ export const en: Translations = {
             'Payment disputes and refunds must go through the vendor named on your receipt.',
           ],
         },
+        {
+          heading: 'What we do not store',
+          paragraphs: [
+            'We do not process card numbers on aioncheats.org. Checkout fields live on the partner domain linked from /go/ bridges.',
+            'Analytics, if enabled, should report traffic in aggregate without tying page views to payment identifiers.',
+          ],
+        },
       ],
     },
     terms: {
@@ -483,6 +497,13 @@ export const en: Translations = {
           paragraphs: [
             'Refunds follow the vendor policy attached to your order. We do not process payments on this domain.',
             'You are responsible for complying with game terms of service and local law when using third-party software.',
+          ],
+        },
+        {
+          heading: 'Proof when prices disagree',
+          paragraphs: [
+            'If our summary shows $35 monthly, $150 lifetime ESP access, or $50 Cloud DMA but checkout shows a different amount, stop and refresh the live listing. Screenshot both pages and email us if our copy is outdated.',
+            'Affiliate links may append tracking parameters; they must still land on the same partner SKU described on the ESP, pricing, and Cloud DMA guides.',
           ],
         },
       ],

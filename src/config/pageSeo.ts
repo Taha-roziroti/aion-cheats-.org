@@ -25,7 +25,7 @@ export const PAGE_SEO_OVERRIDES: Record<string, PageSeoEntry> = {
   '/aion-classic-system-requirements/': {
     title: 'Aion Classic System Requirements | ESP, DMA, Windows',
     description:
-      'Windows, GPU, and security requirements for the main plan plus Cloud DMA and HWID Spoofer supporting products.',
+      'Windows 10/11, HVCI, TPM, Secure Boot, and GPU checks for ESP and aimbot, plus Hyper-V notes when you add Cloud DMA or HWID Spoofer separately.',
   },
   '/faq/': {
     title: 'Aion Classic FAQ | ESP Pricing & Cloud DMA Answers',
@@ -45,17 +45,32 @@ export const PAGE_SEO_OVERRIDES: Record<string, PageSeoEntry> = {
   '/privacy/': {
     title: 'AionCheats Privacy Policy | Analytics & Cookie Notice',
     description:
-      'How this domain uses analytics cookies, handles contact email, and links out to partner checkout for payments.',
+      'How aioncheats.org uses analytics cookies, stores support email, and sends you to partner checkout where payment data is handled off-site.',
   },
   '/terms/': {
-    title: 'AionCheats Terms of Service | Purchases & Refunds',
+    title: 'AionCheats Terms | Purchase, Refund & Affiliate Rules',
     description:
-      'Affiliate disclosure, refund routing to the checkout partner, and acceptable use for Aion Classic guide pages.',
+      'Affiliate disclosure for Aion Classic guides, listed prices ($35 / $150 / $50), refund routing to the vendor receipt, and acceptable use.',
   },
   '/guides/cloud-dma-setup/': {
     title: 'Cloud DMA Setup Guide | Aion Classic Hyper-V Checklist',
     description:
-      'Hyper-V prep, security settings, and separate GREENWARD, Static Server, and AWS purchases before Cloud DMA checkout.',
+      'Hyper-V prep checklist: firmware virtualization, TPM, Core Isolation, and budgeting GREENWARD, Static Server, and AWS before the $50 license.',
+  },
+  '/blog/': {
+    title: 'Aion Classic Guides Blog | ESP, Pricing & Cloud DMA',
+    description:
+      'Editorial notes on ESP modules, plan pricing, and Cloud DMA prep—supporting the main money pages, not a replacement for vendor support.',
+  },
+  '/forum/': {
+    title: 'Aion Classic Community Forum | Guides & Discussions',
+    description:
+      'Placeholder forum threads summarizing site guides on ESP, pricing, and setup. Read money pages for canonical checkout and requirement details.',
+  },
+  '/go/': {
+    title: 'Aion Classic Checkout Hub | ESP, DMA & HWID Plans',
+    description:
+      'Pick the main ESP and aimbot plan, Cloud DMA license, or HWID utility, then continue to the partner listing with the live price shown at checkout.',
   },
 };
 

@@ -4,7 +4,7 @@ description: "Aion Classic player ESP and aimbot on the main plan. Compare month
 slug: "/"
 ---
 
-# Aion Classic ESP, aimbot, and pricing for Windows players
+# Aion Classic esp and aimbot pricing for Windows players
 
 Shoppers searching for **Aion Classic ESP and aimbot** usually want a straight answer about what the **main plan** includes—and what it does not.
 

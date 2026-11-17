@@ -124,13 +124,14 @@ The additional GREENWARD, Static Server, and AWS purchases are separate too.
 
 For the complete comparison, see the monthly and lifetime breakdown in the callout above.
 
-And before purchasing, check that your PC meets the Hyper-V and virtualization requirements. That's a much better thing to figure out before checkout than after it.
+And before purchasing, check that your PC meets the Hyper-V and virtualization requirements. That is easier to verify on the [Windows requirement tables](/aion-classic-system-requirements/) before checkout than after payment.
 
+## FAQ with proof you can keep on file
 
-### Cloud DMA Page Image Alt Text Suggestions
+| Question | Proof to save |
+|---|---|
+| Is the $50 quote complete? | Screenshot checkout showing GREENWARD/Static/AWS as extra line items |
+| Do I need a second PC? | Vendor copy stating single-PC Hyper-V—keep the listing PDF |
+| Will ESP monthly work without DMA? | Main plan receipt without Cloud DMA SKU on the same order |
 
-- Cloud DMA single-PC Hyper-V setup illustration.
-- Cloud DMA for Aion Classic system requirements.
-- Cloud DMA Windows virtualization setup.
-- Cloud DMA lifetime product listing.
-- Aion Classic Cloud DMA additional purchase requirements.
+These notes help vendor support recognize whether you bought infrastructure only or confused it with the ESP and aimbot license.

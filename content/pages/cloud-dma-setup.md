@@ -44,6 +44,32 @@ Hyper-V cannot install, do not assume the $50 Cloud DMA license will activate on
 
 Re-read the Hyper-V overview and PC requirements links at the top of this guide and confirm both checklists pass on your build before you open vendor checkout.
 
+## Offer snapshot (verify at checkout)
+
+| Item | Listed role | Typical price on this site |
+|---|---|---|
+| Cloud DMA license | Hyper-V infrastructure for supported builds | $50 lifetime at publish time |
+| GREENWARD | Activation routing service | Partner listing (not bundled) |
+| Static Server | Hosted component required by vendor | Partner listing (not bundled) |
+| AWS | Cloud usage during activation | Billed by AWS, not in $50 license |
+| Main ESP & aimbot plan | Separate product stack | $35 / 30 days or $150 lifetime |
+
+The main-plan prices never include Cloud DMA. Treat the table as a budgeting worksheet, not a contract.
+
+## FAQ before you enable Hyper-V
+
+### Will Cloud DMA work on Windows Home?
+
+Windows Pro, Enterprise, or Education is recommended in vendor notes because Hyper-V is easier to enable. Confirm your edition before you pay for the license.
+
+### Does this guide replace vendor email steps?
+
+No. After purchase, follow the PDF or ticket instructions from the partner. This page only lists prerequisites you can check locally.
+
+### What should I screenshot for support?
+
+Firmware virtualization enabled, Hyper-V optional feature present, Core isolation on, and TPM/Secure Boot status. Attach those images to vendor tickets.
+
 ## Checkout
 
 [Open Cloud DMA partner listing](AFFILIATE_LINK_PLACEHOLDER)
