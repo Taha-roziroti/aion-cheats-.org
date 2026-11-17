@@ -328,12 +328,36 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
   mask-image: linear-gradient(to right, transparent, black 3rem, black calc(100% - 3rem), transparent);
 }
 
-.hero-status-marquee-track {
-  animation: hero-status-marquee 55s linear infinite;
+@media (max-width: 1023px) {
+  .hero-status-marquee-track {
+    animation: hero-status-marquee 55s linear infinite;
+  }
+
+  .hero-status-marquee:hover .hero-status-marquee-track {
+    animation-play-state: paused;
+  }
 }
 
-.hero-status-marquee:hover .hero-status-marquee-track {
-  animation-play-state: paused;
+@media (min-width: 1024px) {
+  .hero-status-marquee {
+    mask-image: none;
+    overflow: visible;
+  }
+
+  .hero-status-marquee-track {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hero-status-marquee-track__clone {
+    display: none !important;
+  }
+
+  .hero-status-marquee .pointer-events-none {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

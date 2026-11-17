@@ -124,7 +124,7 @@ The additional GREENWARD, Static Server, and AWS purchases are separate too.
 
 For the complete comparison, see the monthly and lifetime breakdown in the callout above.
 
-And before purchasing, check that your PC meets the Hyper-V and virtualization requirements. That is easier to verify on the [Windows requirement tables](/aion-classic-system-requirements/) before checkout than after payment.
+And before purchasing, check that your PC meets the Hyper-V and virtualization requirements. Use the requirements page linked earlier in this guide to confirm Windows and virtualization settings before checkout rather than after payment.
 
 ## FAQ with proof you can keep on file
 

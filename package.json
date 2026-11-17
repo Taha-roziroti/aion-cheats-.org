@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
+    "@fontsource/barlow": "5.2.5",
+    "@fontsource/bebas-neue": "5.2.5",
     "@lucide/astro": "^1.48.0",
     "@starwind-ui/astro": "^1.2.1",
     "@tabler/icons": "^3.48.0",
