@@ -29,9 +29,13 @@ const legalLinks = [
   <div class="mx-auto max-w-6xl px-5">
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
-        <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-semibold">
-          <img src="/logo.svg" alt="" width="32" height="32" class="rounded-md" aria-hidden="true" />
-          <span>{t.site.name}</span>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-semibold"
+          aria-label={`Return to ${t.site.name} homepage`}
+        >
+          <img src="/logo.svg" alt={footerLogoAlt} width="32" height="32" class="rounded-md" />
+          <span>Site homepage</span>
         </a>
         <p class="text-sm text-muted-foreground">{t.footer.tagline}</p>
       </div>

@@ -31,7 +31,7 @@ export const en: Translations = {
   site: {
     name: PLACEHOLDER_COPY.siteName,
     domain: SITE_DOMAIN,
-    title: 'Aion Classic ESP & Aimbot | Pricing',
+    title: 'Aion Classic ESP and Aimbot Pricing | US Players Hub',
     description:
       'Main plan: player ESP and aimbot. Cloud DMA and HWID Spoofer are separate supporting products—not bundled with monthly or lifetime access.',
     discord: PRIMARY_CHECKOUT_PATH,
@@ -324,7 +324,7 @@ export const en: Translations = {
   },
   support: {
     eyebrow: 'Support',
-    title: 'Before you open a ticket',
+    title: 'AionCheats support: site help vs vendor tickets',
     subtitle: 'Seller support handles loaders and Cloud DMA. This site publishes guides and routes checkout only.',
     channels: [
       {
@@ -389,11 +389,11 @@ export const en: Translations = {
     explore: 'Explore',
     tagline: 'ESP & aimbot main plan guides, plus Cloud DMA and HWID Spoofer supporting products for US Windows players.',
     exploreLinks: [
-      { href: '/#features', label: 'Features', ariaLabel: 'Features' },
+      { href: '/#features', label: 'Home feature section', ariaLabel: 'Home feature section' },
       { href: '/aion-classic-esp/', label: 'ESP features', ariaLabel: 'ESP features' },
-      { href: '/aion-classic-pricing/', label: 'Pricing', ariaLabel: 'Pricing' },
-      { href: '/cloud-dma-for-aion-classic/', label: 'Cloud DMA', ariaLabel: 'Cloud DMA' },
-      { href: '/faq/', label: 'FAQ', ariaLabel: 'FAQ' },
+      { href: '/aion-classic-pricing/', label: 'Compare plan costs', ariaLabel: 'Compare plan costs' },
+      { href: '/cloud-dma-for-aion-classic/', label: 'Cloud DMA overview', ariaLabel: 'Cloud DMA overview' },
+      { href: '/faq/', label: 'Help and answers', ariaLabel: 'Help and answers' },
     ],
     support: 'Support',
     legal: 'Legal',

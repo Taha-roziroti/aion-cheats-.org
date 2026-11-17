@@ -19,8 +19,8 @@ const breadcrumbs = [
   logoAlt="Support – site logo"
   jsonLd={[
     webPageSchema({
-      name: t.support.title,
-      description: t.support.subtitle,
+      name: seo.title,
+      description: seo.description,
       url: '/support/',
     }),
     breadcrumbSchema(breadcrumbs),
@@ -36,35 +36,50 @@ const breadcrumbs = [
 
   <article class="content-markdown border-t border-border bg-muted/10 py-10 md:py-12">
     <div class="mx-auto max-w-3xl px-5">
-      <h2 class="text-lg font-semibold text-foreground">Before you contact support</h2>
+      <h2>What this site can and cannot fix</h2>
       <p>
-        Support body copy placeholder. Describe what visitors should verify before opening a ticket, which
-        products use separate checkout flows, and where self-serve answers live.
+        {t.site.domain} publishes pricing summaries, ESP module overviews, and PC requirement checklists. We route
+        checkout through partner <a href="/go/">product checkout bridges</a> but do not issue license keys, reset HWID
+        bans, or walk through loader injection steps.
       </p>
       <p>
-        Link visitors to the <a href="/faq/">FAQ template</a> for common pre-purchase questions and to feature
-        guides such as the <a href="/dota-2-maphack/">first feature template</a> when modules need context.
+        When your question is about activation errors, payment disputes on the partner receipt, or Cloud DMA guest
+        setup, open a ticket with the vendor named on your order confirmation—not with this domain unless the issue is
+        a broken guide link or affiliate disclosure.
       </p>
-      <h2>Information to include in every ticket</h2>
+
+      <h2>Self-serve answers before you email</h2>
       <p>
-        Ticket checklist placeholder — order email, product name, OS build, and error text. Replace with fields your
-        vendor or internal team requires.
-      </p>
-      <p>
-        Reference guides like the <a href="/guides/system-requirements/">requirements template</a> or
-        <a href="/guides/cloud-dma-setup/">setup template</a> when troubleshooting install steps.
-      </p>
-      <h2>Response expectations</h2>
-      <p>
-        Response-time placeholder. Document business hours, weekend delays, and spam-folder reminders for license email.
+        Filter the <a href="/faq/">Aion Classic pre-checkout FAQ</a> for plan, ESP, and Cloud DMA topics. Compare
+        listed $35 monthly and $150 lifetime figures on the
+        <a href="/aion-classic-pricing/">ESP and aimbot price breakdown</a>, then read the
+        <a href="/aion-classic-esp/">main-plan feature summary</a> if you are unsure which modules ship together.
       </p>
       <p>
-        Refund placeholder — clarify that payment disputes stay with the checkout partner on the customer receipt.
+        Cloud DMA buyers should read the <a href="/cloud-dma-for-aion-classic/">Cloud DMA listing summary</a> and the
+        <a href="/guides/cloud-dma-setup/">step-zero setup checklist</a> before opening vendor tickets about GREENWARD,
+        Static Server, or AWS billing.
       </p>
-      <h2>Feature and pricing questions</h2>
+
+      <h2>Information to paste into vendor tickets</h2>
       <p>
-        Point buyers to the <a href="/dota-2-cheats-review/">review template</a> and module pages for feature lists.
-        Checkout runs through the <a href="/go/">checkout hub placeholder</a> once affiliate URLs are configured.
+        Vendors typically need your order ID, whether you bought monthly or lifetime ESP access, Windows edition (Home vs
+        Pro), and whether HVCI, TPM, Secure Boot, and firmware virtualization are enabled. Capture the exact error text
+        from the loader or Hyper-V guest instead of paraphrasing.
+      </p>
+      <p>
+        For hardware checklist language you can copy, use the
+        <a href="/aion-classic-system-requirements/">Windows and Cloud DMA requirement tables</a>.
+      </p>
+
+      <h2>Response times and refunds</h2>
+      <p>
+        Vendor Discord or ticket queues may be slower on patch days. License email can land in spam folders—search for
+        the partner domain before requesting a resend.
+      </p>
+      <p>
+        Chargebacks and refund windows follow the checkout partner policy printed on your receipt. This site cannot
+        override those terms.
       </p>
     </div>
   </article>

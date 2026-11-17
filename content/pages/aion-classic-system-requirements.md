@@ -1,5 +1,5 @@
 ---
-title: "Aion Classic ESP & Aimbot System Requirements"
+title: "Aion Classic System Requirements | ESP, DMA, Windows"
 description: "System requirements for the Aion Classic ESP and aimbot main plan, plus Cloud DMA and HWID Spoofer supporting products on Windows 10 and 11."
 slug: "/aion-classic-system-requirements/"
 ---
@@ -39,14 +39,29 @@ HWID Spoofer is a **separate utility**, not bundled with the main ESP and aimbot
 
 Confirm Windows version, driver state, and any vendor notes on the partner listing before checkout. We do not publish a separate feature menu here—verify the live product page.
 
-## Compare plans and add-ons
-
-- [Main plan pricing](/aion-classic-pricing/)
-- [ESP feature overview](/aion-classic-esp/)
-
 ## Quick checklist
 
 - Windows 10 or Windows 11 64-bit for the main plan.
 - Security settings enabled per the partner listing.
 - Hyper-V and virtualization documented if you buy Cloud DMA.
 - HWID Spoofer purchased only when you need that utility—never assumed in the main plan price.
+
+## Security settings snapshot
+
+Take dated screenshots of:
+
+- Windows Security → Device security → Core isolation (Memory integrity on).
+- Firmware pages showing TPM 2.0 and Secure Boot enabled.
+- Optional features showing Hyper-V when you plan to buy Cloud DMA.
+
+Support tickets move faster when you attach those images instead of describing settings from memory on tickets.
+
+## Offer comparison
+
+| Stack | Windows | Extra purchases |
+|---|---|---|
+| ESP & aimbot main plan | 10/11, 8 GB RAM, dGPU | None beyond license |
+| Cloud DMA add-on | Hyper-V capable edition | GREENWARD, Static Server, AWS |
+| HWID Spoofer utility | Per partner listing | Separate SKU only |
+
+When every row passes, return to the [ESP and aimbot price table](/aion-classic-pricing/) or jump to the [feature module list](/aion-classic-esp/) if you still need feature context.

@@ -263,7 +263,7 @@ a[data-slot='button'].bg-primary:focus-visible {
   top: 1rem;
 }
 
-/* Navbar (desktop + mobile sheet): primary on hover only — not when .is-active */
+/* Navbar (desktop + mobile panel): primary on hover only — not when .is-active */
 a.nav-link[data-nav-link].is-active {
   color: var(--muted-foreground);
 }

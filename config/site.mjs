@@ -6,7 +6,13 @@ export const SITE_HOST = 'aioncheats.org';
 export const SITE_URL = `https://${SITE_HOST}`;
 
 /** Indexable commercial and feature URLs (verify-seo audits these). */
-export const INDEXABLE_MONEY_ROUTES = ['/', '/cloud-dma-for-aion-classic/'];
+export const INDEXABLE_MONEY_ROUTES = [
+  '/',
+  '/aion-classic-esp/',
+  '/aion-classic-pricing/',
+  '/cloud-dma-for-aion-classic/',
+  '/aion-classic-system-requirements/',
+];
 
 const showcaseImage = (siteUrl, path, title) => ({
   loc: `${siteUrl}${path}`,

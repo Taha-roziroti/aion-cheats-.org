@@ -2,15 +2,8 @@
 import { t } from '../i18n';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import { Button } from '@/components/starwind/button';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTrigger,
-} from '@/components/starwind/sheet';
 import Icon from './icons/Icon.astro';
 import { SITE_LOGO_ALT } from '../utils/imageAlt';
-import { sheetTitle } from '@/components/starwind/sheet/variants';
 
 import type { IconName } from './icons/types';
 
@@ -34,81 +27,120 @@ const purchaseUrl = PRIMARY_CHECKOUT_PATH;
     <div
       class="pointer-events-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-xl border border-border bg-card/95 px-4 text-foreground shadow-sm sm:px-5 xl:grid xl:h-[4.25rem] xl:max-w-[84rem] xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:items-center xl:gap-4 xl:px-6"
     >
-    <a href="/" class="inline-flex min-w-0 max-w-[46%] shrink-0 items-center gap-2 font-[family-name:var(--font-heading)] text-base font-semibold tracking-tight sm:max-w-none xl:justify-self-start xl:text-lg">
-      <img src="/apple-touch-icon.png" alt="" width="32" height="32" class="size-8 shrink-0 rounded-md" aria-hidden="true" />
-      <span class="truncate">{t.site.name}</span>
-    </a>
+      <a
+        href="/"
+        class="inline-flex min-w-0 max-w-[46%] shrink-0 items-center gap-2 font-[family-name:var(--font-heading)] text-base font-semibold tracking-tight sm:max-w-none xl:justify-self-start xl:text-lg"
+        aria-label={`${t.site.name} homepage`}
+      >
+        <img src="/apple-touch-icon.png" alt={SITE_LOGO_ALT} width="32" height="32" class="size-8 shrink-0 rounded-md" />
+        <span class="truncate">{t.site.name}</span>
+      </a>
 
-    <nav
-      class="hidden min-w-0 justify-self-center xl:flex xl:flex-nowrap xl:items-center xl:justify-center xl:gap-1"
-      aria-label="Primary"
-    >
-      {t.nav.map((link) => (
-        <a
-          href={link.href}
-          class="nav-link inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-lg px-2.5 py-2 text-sm font-medium leading-none text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
-          data-nav-link
-          {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
+      <div
+        class="primary-nav-panel fixed inset-y-0 right-0 z-[70] hidden w-[min(calc(100vw-2rem),18.75rem)] max-w-[18.75rem] flex-col border-l border-border bg-card shadow-lg data-[open=true]:flex xl:static xl:z-auto xl:min-w-0 xl:flex xl:w-auto xl:max-w-none xl:flex-row xl:items-center xl:justify-center xl:justify-self-center xl:border-0 xl:bg-transparent xl:shadow-none"
+        data-primary-nav-panel
+      >
+        <div class="flex items-center border-b border-border px-4 py-3 xl:hidden">
+          <p class="font-[family-name:var(--font-heading)] text-base font-semibold">{t.site.name}</p>
+        </div>
+        <nav
+          class="flex min-h-0 min-w-0 flex-1 flex-col gap-0.5 overflow-y-auto px-2 py-2 xl:flex-row xl:flex-nowrap xl:items-center xl:justify-center xl:gap-1 xl:overflow-visible xl:px-0 xl:py-0"
+          aria-label="Primary"
+          data-primary-nav
         >
-          <Icon name={navIcons[link.href] ?? 'navFeatures'} size={16} class="shrink-0 opacity-90" />
-          {link.label}
-          <span class="sr-only"> primary nav</span>
-        </a>
-      ))}
-    </nav>
-
-    <div class="flex shrink-0 items-center gap-2 xl:justify-self-end">
-      <div class="hidden items-center xl:flex">
-        <Button as="a" href={purchaseUrl} variant="primary" size="sm" class="shrink-0 rounded-lg">
-          {t.ui.browseCheats}
-        </Button>
+          {t.nav.map((link) => (
+            <a
+              href={link.href}
+              class="nav-link inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-medium leading-none text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground xl:px-2.5 xl:py-2"
+              data-nav-link
+              {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
+            >
+              <Icon name={navIcons[link.href] ?? 'navFeatures'} size={16} class="shrink-0 opacity-90" />
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <div class="shrink-0 border-t border-border p-4 xl:hidden">
+          <Button as="a" href={purchaseUrl} variant="primary" size="sm" class="box-border w-full max-w-full justify-center">
+            {t.ui.browseCheatsMobile}
+          </Button>
+        </div>
       </div>
 
-      <Sheet class="xl:hidden">
-        <SheetTrigger
+      <div class="flex shrink-0 items-center gap-2 xl:justify-self-end">
+        <div class="hidden items-center xl:flex">
+          <Button as="a" href={purchaseUrl} variant="primary" size="sm" class="shrink-0 rounded-lg">
+            {t.ui.browseCheats}
+          </Button>
+        </div>
+
+        <button
+          type="button"
           class="inline-flex size-9 items-center justify-center rounded-lg border border-border/80 bg-background/50 text-foreground transition-colors hover:bg-muted xl:hidden"
           aria-label={t.ui.menuOpen}
+          aria-expanded="false"
+          aria-controls="site-primary-nav"
+          data-mobile-nav-toggle
         >
           <Icon name="menu" size={20} />
-        </SheetTrigger>
-        <SheetContent
-          side="right"
-          class="!flex !w-[min(calc(100vw-2rem),18.75rem)] !max-w-[min(calc(100vw-2rem),18.75rem)] flex-col overflow-x-hidden p-0 sm:!max-w-[18.75rem]"
-        >
-          <SheetHeader class="border-b border-border px-4 py-3">
-            <p class={sheetTitle()}>{t.site.name}</p>
-          </SheetHeader>
-          <div class="flex min-h-0 flex-1 flex-col overflow-y-auto px-2 py-2">
-            <nav class="flex flex-col gap-0.5" aria-label="Mobile">
-              {t.nav.map((link) => (
-                <a
-                  href={link.href}
-                  class="nav-link flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                  data-nav-link
-                  {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
-                >
-                  <Icon name={navIcons[link.href] ?? 'navFeatures'} size={16} />
-                  {link.label}
-                  <span class="sr-only"> mobile menu</span>
-                </a>
-              ))}
-            </nav>
-          </div>
-          <div class="shrink-0 border-t border-border p-4">
-            <Button
-              as="a"
-              href={purchaseUrl}
-              variant="primary"
-              size="sm"
-              class="box-border w-full max-w-full justify-center"
-            
-            >
-              {t.ui.browseCheatsMobile}
-            </Button>
-          </div>
-        </SheetContent>
-      </Sheet>
-    </div>
+        </button>
+      </div>
     </div>
   </div>
+  <div
+    class="pointer-events-auto fixed inset-0 z-[60] hidden bg-black/40 xl:hidden"
+    data-mobile-nav-backdrop
+    aria-hidden="true"
+  >
+  </div>
 </header>
+
+<script>
+  function initMobileNav() {
+    const panel = document.querySelector<HTMLElement>('[data-primary-nav-panel]');
+    const toggle = document.querySelector<HTMLButtonElement>('[data-mobile-nav-toggle]');
+    const backdrop = document.querySelector<HTMLElement>('[data-mobile-nav-backdrop]');
+    const nav = document.querySelector<HTMLElement>('[data-primary-nav]');
+    if (!panel || !toggle || !nav) return;
+
+    nav.id = 'site-primary-nav';
+    const mq = window.matchMedia('(min-width: 1280px)');
+
+    const setOpen = (open: boolean) => {
+      if (mq.matches) {
+        panel.removeAttribute('data-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        backdrop?.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+        return;
+      }
+      if (open) {
+        panel.setAttribute('data-open', 'true');
+        toggle.setAttribute('aria-expanded', 'true');
+        backdrop?.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      } else {
+        panel.removeAttribute('data-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        backdrop?.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = panel.getAttribute('data-open') === 'true';
+      setOpen(!isOpen);
+    });
+    backdrop?.addEventListener('click', () => setOpen(false));
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+    mq.addEventListener('change', () => setOpen(false));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNav);
+  } else {
+    initMobileNav();
+  }
+</script>

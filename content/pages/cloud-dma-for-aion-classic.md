@@ -1,5 +1,5 @@
 ---
-title: "Cloud DMA for Aion Classic | Setup & Requirements"
+title: "Cloud DMA for Aion Classic | Hyper-V Setup & Pricing"
 description: "Understand Cloud DMA for Aion Classic, its single-PC Hyper-V setup, lifetime price and separately purchased components."
 slug: "/cloud-dma-for-aion-classic/"
 ---

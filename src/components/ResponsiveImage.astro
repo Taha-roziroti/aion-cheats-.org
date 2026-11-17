@@ -33,7 +33,6 @@ const {
   decorative = false,
 } = Astro.props;
 
-const resolvedAlt = decorative ? '' : alt;
 const ariaHidden = decorative ? 'true' : undefined;
 
 const isRaster = /\.(png|jpe?g|webp)$/i.test(src);
@@ -52,7 +51,7 @@ const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
       <img
         src={imgSrc}
         srcset={desktopOnly ? undefined : srcSet}
-        alt={resolvedAlt}
+        alt={alt}
         width={width}
         height={height}
         loading={loading}
@@ -66,7 +65,7 @@ const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
   ) : (
     <img
       src={src}
-      alt={resolvedAlt}
+      alt={alt}
       width={width}
       height={height}
       loading={loading}

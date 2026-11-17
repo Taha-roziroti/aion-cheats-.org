@@ -5,6 +5,7 @@ import { heroSlides } from '../data/landingData';
 import { heroStatIcons, heroStatusPills } from '../data/sectionIcons';
 import ResponsiveImage from './ResponsiveImage.astro';
 import { HERO_SECTION_BACKGROUND } from '../data/showcaseImages';
+import { HERO_BACKGROUND_ALT } from '../utils/imageAlt';
 import { HERO_IMAGE_SIZES, HERO_IMAGE_WIDTHS } from '../utils/responsiveImage';
 import Icon from './icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
@@ -25,7 +26,7 @@ const primaryHeroSlide = heroSlides[0];
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <ResponsiveImage
       src={HERO_SECTION_BACKGROUND}
-      alt=""
+      alt={HERO_BACKGROUND_ALT}
       decorative
       width={1024}
       height={640}

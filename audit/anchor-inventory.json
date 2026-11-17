@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-17T14:42:51.047Z",
-  "count": 501,
+  "generatedAt": "2026-11-17T17:10:28.314Z",
+  "count": 406,
   "anchors": [
     {
       "page": "/404/",
@@ -14,8 +14,8 @@
     {
       "page": "/404/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -23,8 +23,8 @@
     {
       "page": "/404/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -32,8 +32,8 @@
     {
       "page": "/404/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -41,8 +41,8 @@
     {
       "page": "/404/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -50,8 +50,8 @@
     {
       "page": "/404/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -59,62 +59,8 @@
     {
       "page": "/404/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/404/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/404/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/404/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/404/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/404/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/404/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -122,8 +68,8 @@
     {
       "page": "/404/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -131,8 +77,8 @@
     {
       "page": "/404/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -149,8 +95,8 @@
     {
       "page": "/404/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -158,8 +104,8 @@
     {
       "page": "/404/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -167,8 +113,8 @@
     {
       "page": "/404/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -257,8 +203,8 @@
     {
       "page": "/about/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -266,8 +212,8 @@
     {
       "page": "/about/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -275,8 +221,8 @@
     {
       "page": "/about/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -284,8 +230,8 @@
     {
       "page": "/about/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -293,8 +239,8 @@
     {
       "page": "/about/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -302,62 +248,8 @@
     {
       "page": "/about/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/about/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/about/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/about/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/about/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/about/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/about/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -365,8 +257,8 @@
     {
       "page": "/about/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -374,8 +266,8 @@
     {
       "page": "/about/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -392,8 +284,8 @@
     {
       "page": "/about/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -401,8 +293,8 @@
     {
       "page": "/about/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -410,8 +302,8 @@
     {
       "page": "/about/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -509,8 +401,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -518,8 +410,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -527,8 +419,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -536,8 +428,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -545,8 +437,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -554,62 +446,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-esp/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-esp/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-esp/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-esp/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-esp/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-esp/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -617,8 +455,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -626,8 +464,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -644,8 +482,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -653,8 +491,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -662,8 +500,8 @@
     {
       "page": "/aion-classic-esp/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -797,8 +635,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -806,8 +644,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -815,8 +653,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -824,8 +662,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -833,8 +671,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -842,62 +680,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-pricing/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-pricing/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-pricing/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-pricing/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-pricing/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-pricing/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -905,8 +689,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -914,8 +698,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -932,8 +716,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -941,8 +725,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -950,8 +734,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -1040,8 +824,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "body",
-      "text": "Check the current monthly plan",
-      "normalized": "check the current monthly plan",
+      "text": "Open monthly ESP plan checkout",
+      "normalized": "open monthly esp plan checkout",
       "href": "/go/main-product/",
       "rel": "",
       "generic": false
@@ -1049,8 +833,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "body",
-      "text": "Check the current lifetime option",
-      "normalized": "check the current lifetime option",
+      "text": "Open lifetime ESP plan checkout",
+      "normalized": "open lifetime esp plan checkout",
       "href": "/go/main-product/",
       "rel": "",
       "generic": false
@@ -1058,8 +842,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "body",
-      "text": "Cloud DMA setup guide",
-      "normalized": "cloud dma setup guide",
+      "text": "Cloud DMA product overview",
+      "normalized": "cloud dma product overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -1067,8 +851,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "body",
-      "text": "requirements checklist",
-      "normalized": "requirements checklist",
+      "text": "PC and security requirement tables",
+      "normalized": "pc and security requirement tables",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -1076,8 +860,8 @@
     {
       "page": "/aion-classic-pricing/",
       "region": "body",
-      "text": "View main plan checkout",
-      "normalized": "view main plan checkout",
+      "text": "Confirm main plan on partner listing",
+      "normalized": "confirm main plan on partner listing",
       "href": "/go/main-product/",
       "rel": "",
       "generic": false
@@ -1094,125 +878,71 @@
     {
       "page": "/aion-classic-system-requirements/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
-      "href": "/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/aion-classic-system-requirements/",
-      "region": "footer",
       "text": "Features",
       "normalized": "features",
+      "href": "/#features",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "header",
+      "text": "ESP",
+      "normalized": "esp",
+      "href": "/aion-classic-esp/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "header",
+      "text": "Pricing",
+      "normalized": "pricing",
+      "href": "/aion-classic-pricing/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "header",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
+      "href": "/cloud-dma-for-aion-classic/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "header",
+      "text": "Requirements",
+      "normalized": "requirements",
+      "href": "/aion-classic-system-requirements/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "header",
+      "text": "FAQ",
+      "normalized": "faq",
+      "href": "/faq/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "footer",
+      "text": "Site homepage",
+      "normalized": "site homepage",
+      "href": "/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/aion-classic-system-requirements/",
+      "region": "footer",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -1229,8 +959,8 @@
     {
       "page": "/aion-classic-system-requirements/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -1238,8 +968,8 @@
     {
       "page": "/aion-classic-system-requirements/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -1247,8 +977,8 @@
     {
       "page": "/aion-classic-system-requirements/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -1346,8 +1076,8 @@
     {
       "page": "/aion-classic-system-requirements/",
       "region": "body",
-      "text": "Main plan pricing",
-      "normalized": "main plan pricing",
+      "text": "ESP and aimbot price table",
+      "normalized": "esp and aimbot price table",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -1355,8 +1085,8 @@
     {
       "page": "/aion-classic-system-requirements/",
       "region": "body",
-      "text": "ESP feature overview",
-      "normalized": "esp feature overview",
+      "text": "feature module list",
+      "normalized": "feature module list",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -1373,125 +1103,71 @@
     {
       "page": "/blog/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
-      "href": "/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/blog/",
-      "region": "footer",
       "text": "Features",
       "normalized": "features",
+      "href": "/#features",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "header",
+      "text": "ESP",
+      "normalized": "esp",
+      "href": "/aion-classic-esp/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "header",
+      "text": "Pricing",
+      "normalized": "pricing",
+      "href": "/aion-classic-pricing/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "header",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
+      "href": "/cloud-dma-for-aion-classic/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "header",
+      "text": "Requirements",
+      "normalized": "requirements",
+      "href": "/aion-classic-system-requirements/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "header",
+      "text": "FAQ",
+      "normalized": "faq",
+      "href": "/faq/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "footer",
+      "text": "Site homepage",
+      "normalized": "site homepage",
+      "href": "/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/blog/",
+      "region": "footer",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -1508,8 +1184,8 @@
     {
       "page": "/blog/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -1517,8 +1193,8 @@
     {
       "page": "/blog/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -1526,8 +1202,8 @@
     {
       "page": "/blog/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -1625,8 +1301,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -1634,8 +1310,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -1643,8 +1319,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -1652,8 +1328,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -1661,8 +1337,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -1670,62 +1346,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/cloud-dma-for-aion-classic/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/cloud-dma-for-aion-classic/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/cloud-dma-for-aion-classic/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/cloud-dma-for-aion-classic/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/cloud-dma-for-aion-classic/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/cloud-dma-for-aion-classic/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -1733,8 +1355,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -1742,8 +1364,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -1760,8 +1382,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -1769,8 +1391,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -1778,8 +1400,8 @@
     {
       "page": "/cloud-dma-for-aion-classic/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -1913,8 +1535,8 @@
     {
       "page": "/faq/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -1922,8 +1544,8 @@
     {
       "page": "/faq/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -1931,8 +1553,8 @@
     {
       "page": "/faq/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -1940,8 +1562,8 @@
     {
       "page": "/faq/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -1949,8 +1571,8 @@
     {
       "page": "/faq/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -1958,62 +1580,8 @@
     {
       "page": "/faq/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/faq/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/faq/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/faq/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/faq/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/faq/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/faq/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2021,8 +1589,8 @@
     {
       "page": "/faq/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -2030,8 +1598,8 @@
     {
       "page": "/faq/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -2048,8 +1616,8 @@
     {
       "page": "/faq/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -2057,8 +1625,8 @@
     {
       "page": "/faq/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -2066,8 +1634,8 @@
     {
       "page": "/faq/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2201,8 +1769,8 @@
     {
       "page": "/forum/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -2210,8 +1778,8 @@
     {
       "page": "/forum/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -2219,8 +1787,8 @@
     {
       "page": "/forum/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -2228,8 +1796,8 @@
     {
       "page": "/forum/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -2237,8 +1805,8 @@
     {
       "page": "/forum/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -2246,62 +1814,8 @@
     {
       "page": "/forum/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2309,8 +1823,8 @@
     {
       "page": "/forum/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -2318,8 +1832,8 @@
     {
       "page": "/forum/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -2336,8 +1850,8 @@
     {
       "page": "/forum/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -2345,8 +1859,8 @@
     {
       "page": "/forum/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -2354,8 +1868,8 @@
     {
       "page": "/forum/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2561,8 +2075,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -2570,8 +2084,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -2579,8 +2093,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -2588,8 +2102,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -2597,8 +2111,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -2606,62 +2120,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/welcome-placeholder/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/welcome-placeholder/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/welcome-placeholder/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/welcome-placeholder/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/welcome-placeholder/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/forum/welcome-placeholder/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2669,8 +2129,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -2678,8 +2138,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -2696,8 +2156,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -2705,8 +2165,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -2714,8 +2174,8 @@
     {
       "page": "/forum/welcome-placeholder/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2867,8 +2327,8 @@
     {
       "page": "/go/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -2876,8 +2336,8 @@
     {
       "page": "/go/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -2885,8 +2345,8 @@
     {
       "page": "/go/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -2894,8 +2354,8 @@
     {
       "page": "/go/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -2903,8 +2363,8 @@
     {
       "page": "/go/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -2912,62 +2372,8 @@
     {
       "page": "/go/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/go/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/go/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/go/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/go/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/go/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/go/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -2975,8 +2381,8 @@
     {
       "page": "/go/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -2984,8 +2390,8 @@
     {
       "page": "/go/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3002,8 +2408,8 @@
     {
       "page": "/go/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3011,8 +2417,8 @@
     {
       "page": "/go/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3020,8 +2426,8 @@
     {
       "page": "/go/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -3119,8 +2525,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3128,8 +2534,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -3137,8 +2543,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3146,8 +2552,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3155,8 +2561,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -3164,62 +2570,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/guides/cloud-dma-setup/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/guides/cloud-dma-setup/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/guides/cloud-dma-setup/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/guides/cloud-dma-setup/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/guides/cloud-dma-setup/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/guides/cloud-dma-setup/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -3227,8 +2579,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -3236,8 +2588,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3254,8 +2606,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3263,8 +2615,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3272,8 +2624,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -3371,8 +2723,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "body",
-      "text": "Cloud DMA product page",
-      "normalized": "cloud dma product page",
+      "text": "Cloud DMA Hyper-V overview",
+      "normalized": "cloud dma hyper-v overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3389,8 +2741,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "body",
-      "text": "Monthly and lifetime main plan costs",
-      "normalized": "monthly and lifetime main plan costs",
+      "text": "main-plan monthly and lifetime pricing",
+      "normalized": "main-plan monthly and lifetime pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3398,8 +2750,8 @@
     {
       "page": "/guides/cloud-dma-setup/",
       "region": "body",
-      "text": "Check Cloud DMA listing",
-      "normalized": "check cloud dma listing",
+      "text": "Open Cloud DMA partner listing",
+      "normalized": "open cloud dma partner listing",
       "href": "/go/main-product/",
       "rel": "",
       "generic": false
@@ -3416,8 +2768,8 @@
     {
       "page": "/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3425,8 +2777,8 @@
     {
       "page": "/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -3434,8 +2786,8 @@
     {
       "page": "/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3443,8 +2795,8 @@
     {
       "page": "/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3452,8 +2804,8 @@
     {
       "page": "/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -3461,62 +2813,8 @@
     {
       "page": "/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -3524,8 +2822,8 @@
     {
       "page": "/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -3533,8 +2831,8 @@
     {
       "page": "/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3551,8 +2849,8 @@
     {
       "page": "/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3560,8 +2858,8 @@
     {
       "page": "/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3569,8 +2867,8 @@
     {
       "page": "/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -3650,8 +2948,8 @@
     {
       "page": "/",
       "region": "body",
-      "text": "Aion Classic ESP guide",
-      "normalized": "aion classic esp guide",
+      "text": "player ESP module guide",
+      "normalized": "player esp module guide",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -3677,8 +2975,8 @@
     {
       "page": "/",
       "region": "body",
-      "text": "View current main plan options",
-      "normalized": "view current main plan options",
+      "text": "Compare main plan checkout options",
+      "normalized": "compare main plan checkout options",
       "href": "/go/main-product/",
       "rel": "",
       "generic": false
@@ -3686,8 +2984,8 @@
     {
       "page": "/",
       "region": "body",
-      "text": "Windows compatibility checklist",
-      "normalized": "windows compatibility checklist",
+      "text": "Windows and RAM requirement list",
+      "normalized": "windows and ram requirement list",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -3695,8 +2993,8 @@
     {
       "page": "/",
       "region": "body",
-      "text": "Open partner checkout",
-      "normalized": "open partner checkout",
+      "text": "Start partner checkout from the hub",
+      "normalized": "start partner checkout from the hub",
       "href": "/go/main-product/",
       "rel": "",
       "generic": false
@@ -3713,125 +3011,71 @@
     {
       "page": "/privacy/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
-      "href": "/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/privacy/",
-      "region": "footer",
       "text": "Features",
       "normalized": "features",
+      "href": "/#features",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "header",
+      "text": "ESP",
+      "normalized": "esp",
+      "href": "/aion-classic-esp/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "header",
+      "text": "Pricing",
+      "normalized": "pricing",
+      "href": "/aion-classic-pricing/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "header",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
+      "href": "/cloud-dma-for-aion-classic/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "header",
+      "text": "Requirements",
+      "normalized": "requirements",
+      "href": "/aion-classic-system-requirements/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "header",
+      "text": "FAQ",
+      "normalized": "faq",
+      "href": "/faq/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "footer",
+      "text": "Site homepage",
+      "normalized": "site homepage",
+      "href": "/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/privacy/",
+      "region": "footer",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3848,8 +3092,8 @@
     {
       "page": "/privacy/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3857,8 +3101,8 @@
     {
       "page": "/privacy/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -3866,8 +3110,8 @@
     {
       "page": "/privacy/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -3965,8 +3209,8 @@
     {
       "page": "/support/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
+      "text": "Features",
+      "normalized": "features",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -3974,8 +3218,8 @@
     {
       "page": "/support/",
       "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
+      "text": "ESP",
+      "normalized": "esp",
       "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
@@ -3983,8 +3227,8 @@
     {
       "page": "/support/",
       "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
+      "text": "Pricing",
+      "normalized": "pricing",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -3992,8 +3236,8 @@
     {
       "page": "/support/",
       "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -4001,8 +3245,8 @@
     {
       "page": "/support/",
       "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
+      "text": "Requirements",
+      "normalized": "requirements",
       "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
@@ -4010,62 +3254,8 @@
     {
       "page": "/support/",
       "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
+      "text": "FAQ",
+      "normalized": "faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -4073,8 +3263,8 @@
     {
       "page": "/support/",
       "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
+      "text": "Site homepage",
+      "normalized": "site homepage",
       "href": "/",
       "rel": "",
       "generic": false
@@ -4082,8 +3272,8 @@
     {
       "page": "/support/",
       "region": "footer",
-      "text": "Features",
-      "normalized": "features",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -4100,8 +3290,8 @@
     {
       "page": "/support/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -4109,8 +3299,8 @@
     {
       "page": "/support/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -4118,8 +3308,8 @@
     {
       "page": "/support/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -4208,8 +3398,17 @@
     {
       "page": "/support/",
       "region": "body",
-      "text": "FAQ template",
-      "normalized": "faq template",
+      "text": "product checkout bridges",
+      "normalized": "product checkout bridges",
+      "href": "/go/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/support/",
+      "region": "body",
+      "text": "Aion Classic pre-checkout FAQ",
+      "normalized": "aion classic pre-checkout faq",
       "href": "/faq/",
       "rel": "",
       "generic": false
@@ -4217,26 +3416,35 @@
     {
       "page": "/support/",
       "region": "body",
-      "text": "first feature template",
-      "normalized": "first feature template",
-      "href": "/dota-2-maphack/",
+      "text": "ESP and aimbot price breakdown",
+      "normalized": "esp and aimbot price breakdown",
+      "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
     },
     {
       "page": "/support/",
       "region": "body",
-      "text": "requirements template",
-      "normalized": "requirements template",
-      "href": "/guides/system-requirements/",
+      "text": "main-plan feature summary",
+      "normalized": "main-plan feature summary",
+      "href": "/aion-classic-esp/",
       "rel": "",
       "generic": false
     },
     {
       "page": "/support/",
       "region": "body",
-      "text": "setup template",
-      "normalized": "setup template",
+      "text": "Cloud DMA listing summary",
+      "normalized": "cloud dma listing summary",
+      "href": "/cloud-dma-for-aion-classic/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/support/",
+      "region": "body",
+      "text": "step-zero setup checklist",
+      "normalized": "step-zero setup checklist",
       "href": "/guides/cloud-dma-setup/",
       "rel": "",
       "generic": false
@@ -4244,18 +3452,9 @@
     {
       "page": "/support/",
       "region": "body",
-      "text": "review template",
-      "normalized": "review template",
-      "href": "/dota-2-cheats-review/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/support/",
-      "region": "body",
-      "text": "checkout hub placeholder",
-      "normalized": "checkout hub placeholder",
-      "href": "/go/",
+      "text": "Windows and Cloud DMA requirement tables",
+      "normalized": "windows and cloud dma requirement tables",
+      "href": "/aion-classic-system-requirements/",
       "rel": "",
       "generic": false
     },
@@ -4271,125 +3470,71 @@
     {
       "page": "/terms/",
       "region": "header",
-      "text": "Features primary nav",
-      "normalized": "features primary nav",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "ESP primary nav",
-      "normalized": "esp primary nav",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Pricing primary nav",
-      "normalized": "pricing primary nav",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Cloud DMA primary nav",
-      "normalized": "cloud dma primary nav",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Requirements primary nav",
-      "normalized": "requirements primary nav",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "FAQ primary nav",
-      "normalized": "faq primary nav",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Features mobile menu",
-      "normalized": "features mobile menu",
-      "href": "/#features",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "ESP mobile menu",
-      "normalized": "esp mobile menu",
-      "href": "/aion-classic-esp/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Pricing mobile menu",
-      "normalized": "pricing mobile menu",
-      "href": "/aion-classic-pricing/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Cloud DMA mobile menu",
-      "normalized": "cloud dma mobile menu",
-      "href": "/cloud-dma-for-aion-classic/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "Requirements mobile menu",
-      "normalized": "requirements mobile menu",
-      "href": "/aion-classic-system-requirements/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "header",
-      "text": "FAQ mobile menu",
-      "normalized": "faq mobile menu",
-      "href": "/faq/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "footer",
-      "text": "AionCheats",
-      "normalized": "aioncheats",
-      "href": "/",
-      "rel": "",
-      "generic": false
-    },
-    {
-      "page": "/terms/",
-      "region": "footer",
       "text": "Features",
       "normalized": "features",
+      "href": "/#features",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "header",
+      "text": "ESP",
+      "normalized": "esp",
+      "href": "/aion-classic-esp/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "header",
+      "text": "Pricing",
+      "normalized": "pricing",
+      "href": "/aion-classic-pricing/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "header",
+      "text": "Cloud DMA",
+      "normalized": "cloud dma",
+      "href": "/cloud-dma-for-aion-classic/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "header",
+      "text": "Requirements",
+      "normalized": "requirements",
+      "href": "/aion-classic-system-requirements/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "header",
+      "text": "FAQ",
+      "normalized": "faq",
+      "href": "/faq/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "footer",
+      "text": "Site homepage",
+      "normalized": "site homepage",
+      "href": "/",
+      "rel": "",
+      "generic": false
+    },
+    {
+      "page": "/terms/",
+      "region": "footer",
+      "text": "Home feature section",
+      "normalized": "home feature section",
       "href": "/#features",
       "rel": "",
       "generic": false
@@ -4406,8 +3551,8 @@
     {
       "page": "/terms/",
       "region": "footer",
-      "text": "Pricing",
-      "normalized": "pricing",
+      "text": "Compare plan costs",
+      "normalized": "compare plan costs",
       "href": "/aion-classic-pricing/",
       "rel": "",
       "generic": false
@@ -4415,8 +3560,8 @@
     {
       "page": "/terms/",
       "region": "footer",
-      "text": "Cloud DMA",
-      "normalized": "cloud dma",
+      "text": "Cloud DMA overview",
+      "normalized": "cloud dma overview",
       "href": "/cloud-dma-for-aion-classic/",
       "rel": "",
       "generic": false
@@ -4424,8 +3569,8 @@
     {
       "page": "/terms/",
       "region": "footer",
-      "text": "FAQ",
-      "normalized": "faq",
+      "text": "Help and answers",
+      "normalized": "help and answers",
       "href": "/faq/",
       "rel": "",
       "generic": false

@@ -89,12 +89,15 @@ for (const route of AUDIT_ROUTES) {
     const tag = match[0];
     const pos = match.index;
     const imgDecorative = /\baria-hidden\s*=\s*["']true["']/i.test(tag);
-    const hasAlt = /\balt\s*=/i.test(tag);
-    if (!hasAlt && !imgDecorative) {
-      errors.push(`${route}: <img #${imgIndex}> missing alt attribute`);
+    const altMatch = tag.match(/\balt\s*=\s*["']([^"']*)["']/i);
+    const hasQuotedAlt = Boolean(altMatch);
+    if (!hasQuotedAlt && !imgDecorative) {
+      errors.push(
+        `${route}: <img #${imgIndex}> missing quoted alt attribute (empty boolean alt fails SEO crawlers)`,
+      );
       continue;
     }
-    const alt = tag.match(/\balt\s*=\s*["']([^"']*)["']/i)?.[1] ?? '';
+    const alt = altMatch?.[1] ?? '';
     const decorative = imgDecorative || isInsideAriaHidden(html, pos);
     if (!alt.trim() && !decorative) {
       errors.push(`${route}: <img #${imgIndex}> has empty alt (not decorative)`);

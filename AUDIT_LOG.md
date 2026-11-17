@@ -2,6 +2,14 @@
 
 Workflow: `npm run audit` → fix → rebuild → log. Companion: `npm run audit:perf` (Lighthouse on `astro preview`).
 
+## Pass 11 (Aion — 2026-11-17)
+
+- **Titles:** unique `pageSeo.ts` entries ~50–60 chars for money + support URLs; build enforces 50–60.
+- **Anchors / share:** single mobile nav; distinct footer labels; share links on all five money routes; body duplicate links trimmed on requirements + DMA setup guide.
+- **Content:** support page rewritten; FAQ H1 updated; keyword placement in home intro; Product JSON-LD on spoke money pages.
+- **Evidence:** `npm run build` **pass**; `npm run audit` **pass** (×2 `SKIP_BUILD=1` after build).
+- **User scope:** desktop Lighthouse **95+** explicitly out of scope this pass (no `audit:perf` pursuit).
+
 ## Pass 10 (Aion — 2026-11-17)
 
 - **Copy repositioning:** site-wide removal of generic “cheats” copy; **main plan = ESP + aimbot**; **Cloud DMA + HWID Spoofer** as separate supporting products (homepage product carousel, i18n, `productCatalog`, money markdown).
@@ -35,7 +43,7 @@ Workflow: `npm run audit` → fix → rebuild → log. Companion: `npm run audit
 
 - **Anchor regions:** `generate-anchor-inventory.mjs`; body rules scoped to Aion money + support URLs until forum/blog legacy is removed or noindexed.
 - **Affiliate bridges:** `/go/*` out of sitemap; `rel="sponsored noopener"`.
-- **Metadata gates:** title/description 35–72 / 110–165 (aligned with `verify-seo`).
+- **Metadata gates:** title 50–60 / description 110–165 (`verify-seo`, `seo-audit`).
 - **Homepage headings:** verbatim brief allows three H1–H2 primary mentions on `/`.
 - **404 Lighthouse SEO:** scored separately from indexable templates (`noindex` by design).
 - **Desktop perf vs mobile:** home is a large hub (~190KB HTML with full money-page copy on-page); mobile lab meets 95; desktop lab remains blocked until HTML/paint budget is reduced without removing required SEO copy.

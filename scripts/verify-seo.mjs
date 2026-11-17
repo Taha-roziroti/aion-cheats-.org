@@ -14,8 +14,8 @@ function readHtml(relativePath) {
   return fs.readFileSync(file, 'utf8');
 }
 
-const TITLE_MIN = 35;
-const TITLE_MAX = 72;
+const TITLE_MIN = 50;
+const TITLE_MAX = 60;
 const DESC_MIN = 110;
 const DESC_MAX = 165;
 const MIN_ARTICLE_WORDS = 400;

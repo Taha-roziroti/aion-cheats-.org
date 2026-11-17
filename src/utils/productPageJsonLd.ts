@@ -13,10 +13,7 @@ import { productSchema } from './schema';
 
 import { ABI_PAGE_PREVIEW } from '../data/abiImages';
 
-const ROUTE_PRODUCT_IMAGE: Record<string, string> = {
-  '/': ABI_PAGE_PREVIEW['/']!,
-  '/cloud-dma-for-aion-classic/': ABI_PAGE_PREVIEW['/cloud-dma-for-aion-classic/']!,
-};
+const ROUTE_PRODUCT_IMAGE: Record<string, string> = { ...ABI_PAGE_PREVIEW };
 
 export function productJsonLdForRoute(
   route: string,

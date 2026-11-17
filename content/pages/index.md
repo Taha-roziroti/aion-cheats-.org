@@ -1,12 +1,12 @@
 ---
-title: "Aion Classic ESP & Aimbot | Pricing"
+title: "Aion Classic ESP and Aimbot Pricing | US Players Hub"
 description: "Aion Classic player ESP and aimbot on the main plan. Compare monthly and lifetime access; Cloud DMA and HWID Spoofer sold separately."
 slug: "/"
 ---
 
-# Aion Classic ESP and Aimbot for Open World Play
+# Aion Classic ESP, aimbot, and pricing for Windows players
 
-If you are comparing overlay tools for Aion Classic, you probably want a straight answer about what the **main plan** includes—and what it does not.
+Shoppers searching for **Aion Classic ESP and aimbot** usually want a straight answer about what the **main plan** includes—and what it does not.
 
 The main plan listed through this site covers **ESP and aimbot** modules published by the partner. It does not bundle Cloud DMA or HWID Spoofer. Those are supporting products with separate checkout.
 
@@ -18,7 +18,7 @@ The partner menu groups world and player awareness under ESP, with aimbot listed
 
 ESP covers overlay information such as player nameplates, distance readouts, and related world markers described on the partner storefront.
 
-Read the dedicated [Aion Classic ESP guide](/aion-classic-esp/) for how we summarize those modules without inventing menu items.
+Read the dedicated [player ESP module guide](/aion-classic-esp/) for how we summarize those modules without inventing menu items.
 
 ### Aimbot
 
@@ -45,7 +45,7 @@ Both include the same ESP and aimbot modules. Supporting products are optional a
 
 Full tables and checkout notes live on the [pricing page](/aion-classic-pricing/).
 
-[View current main plan options](AFFILIATE_LINK_PLACEHOLDER)
+[Compare main plan checkout options](AFFILIATE_LINK_PLACEHOLDER)
 
 ## System requirements
 
@@ -53,7 +53,7 @@ The main plan requires Windows 10 or 11, 8 GB RAM, a dedicated GPU, and the secu
 
 Cloud DMA adds virtualization requirements. HWID Spoofer follows its own listing.
 
-See the [Windows compatibility checklist](/aion-classic-system-requirements/) before checkout.
+See the [Windows and RAM requirement list](/aion-classic-system-requirements/) before checkout.
 
 ## FAQ snapshot
 
@@ -77,4 +77,4 @@ Vendor ticket and Discord support handle loaders after purchase. This site publi
 
 Review ESP and aimbot screenshots, budget any supporting products you need, and confirm Windows settings on the requirements page.
 
-[Open partner checkout](AFFILIATE_LINK_PLACEHOLDER)
+[Start partner checkout from the hub](AFFILIATE_LINK_PLACEHOLDER)

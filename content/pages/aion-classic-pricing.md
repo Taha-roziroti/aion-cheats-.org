@@ -1,10 +1,10 @@
 ---
-title: "Aion Classic ESP & Aimbot Pricing"
+title: "Aion Classic Pricing | ESP & Aimbot Monthly Plans US"
 description: "Compare Aion Classic ESP and aimbot pricing: $35 monthly access, $150 lifetime access. Cloud DMA and HWID Spoofer are separate supporting products."
 slug: "/aion-classic-pricing/"
 ---
 
-# Aion Classic ESP & Aimbot Price: Monthly vs Lifetime
+# Aion Classic ESP and aimbot pricing: monthly vs lifetime
 
 **Aion Classic ESP aimbot pricing** is the first thing most buyers compare before checkout.
 
@@ -29,7 +29,7 @@ Listed main-plan features:
 
 Active subscribers receive compatibility updates after major game changes without an additional update charge according to the supplier.
 
-[Check the current monthly plan](AFFILIATE_LINK_PLACEHOLDER)
+[Open monthly ESP plan checkout](AFFILIATE_LINK_PLACEHOLDER)
 
 ## Lifetime plan ($150)
 
@@ -39,7 +39,7 @@ The supplier states the same ESP and aimbot feature set as monthly access.
 
 Four monthly periods would cost $140; five would cost $175, so lifetime is worth comparing if you expect long-term use.
 
-[Check the current lifetime option](AFFILIATE_LINK_PLACEHOLDER)
+[Open lifetime ESP plan checkout](AFFILIATE_LINK_PLACEHOLDER)
 
 ## Supporting products (not in the main plan)
 
@@ -50,7 +50,7 @@ Four monthly periods would cost $140; five would cost $175, so lifetime is worth
 | HWID Spoofer | See partner listing | No |
 | GREENWARD / Static Server / AWS | Vendor-listed | No |
 
-Read the [Cloud DMA setup guide](/cloud-dma-for-aion-classic/) for infrastructure purchases.
+Read the [Cloud DMA product overview](/cloud-dma-for-aion-classic/) for infrastructure purchases.
 
 ## Monthly vs lifetime
 
@@ -62,7 +62,7 @@ Read the [Cloud DMA setup guide](/cloud-dma-for-aion-classic/) for infrastructur
 | ESP & aimbot features | Same set | Same set |
 | Cloud DMA / HWID | Separate checkout | Separate checkout |
 
-For technical details, visit our [requirements checklist](/aion-classic-system-requirements/) page.
+For technical details, visit our [PC and security requirement tables](/aion-classic-system-requirements/) page.
 
 ## Before checkout
 
@@ -70,4 +70,10 @@ For technical details, visit our [requirements checklist](/aion-classic-system-r
 - Budget Cloud DMA and HWID Spoofer separately if you need them.
 - Account for GREENWARD, Static Server, and AWS when using Cloud DMA.
 
-[View main plan checkout](AFFILIATE_LINK_PLACEHOLDER)
+## Proof you can verify at checkout
+
+- The partner receipt should list **ESP** and **aimbot** line items for the main plan—not Cloud DMA.
+- Monthly renewals should show a 30-day term; lifetime should show a one-time $150 charge without auto-renew.
+- If GREENWARD or Static Server appear on the same receipt, that usually means you added Cloud DMA extras—confirm before paying.
+
+[Confirm main plan on partner listing](AFFILIATE_LINK_PLACEHOLDER)

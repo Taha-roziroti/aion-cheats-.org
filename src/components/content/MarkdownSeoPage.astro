@@ -13,6 +13,7 @@ import { breadcrumbSchema, faqPageSchemaFromPairs, guideArticleSchema, webPageSc
 import { SITE_NAME, ogImageForPath } from '../../data/site';
 import { faqItemsFromMarkdown } from '../../utils/markdownFaq';
 import { productJsonLdForRoute } from '../../utils/productPageJsonLd';
+import { getPageSeoEntry } from '../../config/pageSeo';
 import { ABI_PAGE_PREVIEW } from '../../data/abiImages';
 import { SHOWCASE_SHOTS } from '../../data/showcaseImages';
 import ContentHeroImage from './ContentHeroImage.astro';
@@ -47,6 +48,9 @@ if (!('slug' in data) || !('title' in data) || !('description' in data)) {
 }
 
 const slug = data.slug.endsWith('/') || data.slug === '/' ? data.slug : `${data.slug}/`;
+const pageSeo = getPageSeoEntry(slug);
+const layoutTitle = pageSeo?.title ?? data.title;
+const layoutDescription = pageSeo?.description ?? data.description;
 const checkoutProduct: CheckoutProductId =
   checkoutProductProp ??
   dedicatedCheckoutProduct(slug) ??
@@ -71,11 +75,9 @@ const ARTICLE_SEO_ROUTES = new Set([
 ]);
 
 const productName = data.title.replace(/\s*\|.*$/, '').trim();
-const productLd = ARTICLE_SEO_ROUTES.has(slug)
-  ? null
-  : productJsonLdForRoute(slug, productName, data.description, checkoutProduct);
+const productLd = productJsonLdForRoute(slug, productName, layoutDescription, checkoutProduct);
 const jsonLd = [
-  webPageSchema({ name: data.title, description: data.description, url: slug }),
+  webPageSchema({ name: layoutTitle, description: layoutDescription, url: slug }),
   breadcrumbSchema(breadcrumbs),
   ...(productLd ? [productLd] : []),
   ...(ARTICLE_SEO_ROUTES.has(slug)
@@ -96,13 +98,13 @@ const previewShot = previewSrc ? SHOWCASE_SHOTS.find((s) => s.src === previewSrc
 ---
 
 <BaseLayout
-  title={data.title}
-  description={data.description}
+  title={layoutTitle}
+  description={layoutDescription}
   ogImage={routeOg}
-  ogImageAlt={data.title}
+  ogImageAlt={layoutTitle}
   noindex={noindex}
   jsonLd={jsonLd}
-  logoAlt={`${data.title} – ${SITE_NAME}`}
+  logoAlt={`${layoutTitle} – ${SITE_NAME}`}
 >
   {
     useProductShell ? (
@@ -138,7 +140,7 @@ const previewShot = previewSrc ? SHOWCASE_SHOTS.find((s) => s.src === previewSrc
         </div>
       </section>
     ) : (
-      <article class="border-b border-border bg-muted/20 py-10 md:py-14">
+      <article class="guide-page-shell border-b border-border bg-muted/20 py-10 md:py-14">
         <div class="mx-auto max-w-6xl px-5">
           <Breadcrumbs items={breadcrumbs} class="mb-6 md:mb-8" />
           <div class="content-markdown mt-2 max-w-3xl">

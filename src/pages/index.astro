@@ -5,6 +5,7 @@ import { loadContentPage } from '../utils/loadContentPage';
 import { jsonLdForContentPage } from '../utils/contentPageJsonLd';
 import { MAIN_PRODUCT_CHECKOUT, mainProductOffers } from '../data/productCatalog';
 import { PRODUCT_ID, ogImageForPath } from '../data/site';
+import { getPageSeoEntry } from '../config/pageSeo';
 import { PLACEHOLDER_COPY } from '../data/placeholders';
 import { PRIMARY_SHOWCASE_IMAGE } from '../data/showcaseImages';
 import { faqPageSchemaFromPairs, productSchema } from '../utils/schema';
@@ -13,6 +14,7 @@ import { HERO_SHOWCASE_SLIDES } from '../data/showcaseImages';
 
 const homeEntry = await loadContentPage('index');
 const home = homeEntry.data as { title: string; description: string; slug: string };
+const homeSeo = getPageSeoEntry('/') ?? { title: home.title, description: home.description };
 const homeFaqs = faqItemsFromMarkdown(homeEntry.body);
 
 const jsonLd = [
@@ -32,8 +34,8 @@ const jsonLd = [
   }),
   ...jsonLdForContentPage({
     route: '/',
-    seoTitle: home.title,
-    metaDescription: home.description,
+    seoTitle: homeSeo.title,
+    metaDescription: homeSeo.description,
     schemaTypes: ['BreadcrumbList'],
   }),
   ...(homeFaqs.length >= 2 ? [faqPageSchemaFromPairs(homeFaqs)] : []),
@@ -41,8 +43,8 @@ const jsonLd = [
 ---
 
 <BaseLayout
-  title={home.title}
-  description={home.description}
+  title={homeSeo.title}
+  description={homeSeo.description}
   jsonLd={jsonLd}
   ogImage={ogImageForPath('/')}
   ogImageAlt={PLACEHOLDER_COPY.title}
