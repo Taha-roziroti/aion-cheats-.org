@@ -1,79 +1,65 @@
 ---
-title: "Dota 2 Scripts Guide: Last-Hit Help & Auto-Dodge"
-description: "Understand Dota 2 scripts, last-hit assistance and auto-dodge features. See how individual functions compare with a full product package."
+title: "Feature Page Template Three: Guides and FAQ Placeholders"
+description: "Informational route template for script-style or automation modules. Content is placeholder prose until your documentation is written."
 slug: "/dota-2-scripts/"
 ---
 
-# Dota 2 Scripts: What They Do
+## Feature page three body placeholder
 
-Search for **Dota 2 scripts** and you'll run into a lot of different explanations.
+Introduction (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-Some people use the term when talking about individual hero functions. Others mean automated gameplay assistance or a collection of separate tools bundled into one application.
+## Overview placeholder
 
-That distinction matters, especially when you're looking at a paid product. A full package and a single script aren't necessarily the same thing.
+Overview (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Overview detail (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-Let's break down what the term means and what the supplied Dota 2 product actually lists.
+- /dota-2-scripts/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-## What people mean when they search for Dota 2 scripts
+## Feature list placeholder
 
-A script generally refers to software functionality designed to perform or assist with a particular task.
+Feature list (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Feature list detail (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-In Dota 2 discussions, that can mean features related to individual heroes, timing, ability usage or other gameplay functions.
+- /dota-2-scripts/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-However, the word gets used pretty loosely. A page advertising Dota 2 scripts doesn't automatically mean it includes every hero-specific function or every type of automation.
+## Pricing notes placeholder
 
-Always check the actual feature list.
+Pricing notes (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Pricing notes detail (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-## Dota 2 hero scripts and individual functions
+- /dota-2-scripts/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-People searching for Dota 2 hero scripts are often looking for something tied to a specific ability or hero.
+## Setup pointers placeholder
 
-The supplied Zadeyo product page doesn't provide a complete catalogue of individual hero scripts. It lists package-level features instead.
+Setup pointers (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Setup pointers detail (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-Those features include an ability cooldown tracker, last-hit prediction helper and auto-dodge skillshots.
+- /dota-2-scripts/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-So there's a difference between what's explicitly advertised and what someone might assume the package contains.
+## Support and FAQ placeholder
 
-The exact list of supported hero-specific scripts is [NEEDS INFO]. Don't publish a list of heroes or abilities without confirmation.
+Support and FAQ (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Support and FAQ detail (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-## Last hit script and prediction assistance
+- /dota-2-scripts/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-Last hitting is one of those things that looks easy until you're trying to time it with multiple creeps around.
+## Next steps placeholder
 
-The product listing includes a last-hit prediction helper.
+Next steps (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Next steps detail (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-That establishes that a prediction feature is advertised, but the listing doesn't explain its internal mechanics or provide a detailed description of how the interface works.
+- /dota-2-scripts/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-If you're specifically looking for a last hit script, check the product showcase and ask whether the listed helper matches the functionality you expect.
-
-## Auto dodge script functionality
-
-Auto-dodge skillshots is another feature named on the product page.
-
-The wording is straightforward, but the available information doesn't explain supported abilities, configuration options or any limitations.
-
-That's worth clarifying rather than assuming it handles every ability in the game.
-
-For other information-related features, see the separate [Dota 2 hero ESP explanation](/dota-2-hero-esp/).
-
-## Individual scripts versus a complete package
-
-This is where people can end up talking past each other.
-
-An individual function is one specific tool. A complete package can include multiple functions that serve different purposes.
-
-The supplied Dota 2 listing is presented as a complete package. It includes map visibility, ESP, timers, cooldown tracking and the other listed helpers.
-
-You can see the [full Dota 2 package and current subscription options](/) for the complete advertised feature list.
-
-## What to check before choosing
-
-Don't base a purchase on a generic description of scripts.
-
-Check the actual supported functionality, the current product build and the system requirements. The supplied page lists Windows 10 and Windows 11, along with HVCI, Core Isolation, TPM and Secure Boot requirements.
-
-Cloud DMA is also required for full functionality on supported builds.
-
-[See the current Dota 2 product details](AFFILIATE_LINK_PLACEHOLDER)
-
-The more specific you are about the function you're looking for, the easier it is to work out whether the advertised package actually matches it.
+Closing (/dota-2-scripts/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.

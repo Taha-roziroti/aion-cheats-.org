@@ -3,23 +3,23 @@ import { MONTHLY_ACCESS_DAYS } from './productPricing';
 import { PLACEHOLDER_COPY } from './placeholders';
 
 export const PUBLISHER_DISCLAIMER =
-  'This site is independent and is not affiliated with, endorsed by, or sponsored by any game publisher. Game names are descriptive references only.';
+  'AionCheats.org is independent and is not affiliated with, endorsed by, or sponsored by NCSOFT or any game publisher. Aion® is a registered trademark of NCSOFT Corporation.';
 
 export const FEATURE_TOOL_DISCLAIMER =
-  'Replace this disclaimer with accurate product positioning before launch.';
+  'Features described here match the partner listing at checkout. Menu options may change between builds; confirm the live product before purchase.';
 
 export const CLOUD_DMA_ADDITIONAL_SERVICES = [
   {
-    name: 'Service A',
-    summary: 'Placeholder — describe required add-on or third-party service.',
+    name: 'GREENWARD',
+    summary: 'Required activation and routing service purchased outside this site.',
   },
   {
-    name: 'Service B',
-    summary: 'Placeholder — pricing and purchase path for this component.',
+    name: 'Static Server',
+    summary: 'Dedicated server component with a separate fee.',
   },
   {
-    name: 'Service C',
-    summary: 'Placeholder — ongoing fees or setup notes not included in the base license.',
+    name: 'AWS',
+    summary: 'Cloud resources billed independently; not included in the Cloud DMA license.',
   },
 ] as const;
 
@@ -33,50 +33,48 @@ export const mainProductOffers = [
 ] as const;
 
 export const cloudDmaOffer = {
-  name: 'Add-on license (placeholder)',
-  priceUsd: 0,
+  name: 'Cloud DMA lifetime license',
+  priceUsd: 50,
   url: CLOUD_DMA_CHECKOUT,
 } as const;
 
 export const hwidSpooferOffer = {
-  name: 'Utility license (placeholder)',
+  name: 'HWID Spoofer utility',
   priceUsd: 0,
   url: HWID_SPOOFER_CHECKOUT,
 } as const;
 
 export const mainProductFeatures = [
-  'Feature one — placeholder',
-  'Feature two — placeholder',
-  'Feature three — placeholder',
-  'Feature four — placeholder',
-  'Feature five — placeholder',
-  'Feature six — placeholder',
+  'Player and world ESP overlays (partner-listed modules)',
+  'Aimbot modules (partner-listed; not included in Cloud DMA or HWID Spoofer)',
+  'Windows 10 and Windows 11 64-bit support',
+  'Monthly ($35 / 30 days) or lifetime ($150) main-plan access',
 ] as const;
 
 export const mainProductRequirements = [
-  'Client: placeholder platform / store',
-  'OS: placeholder operating system requirements',
-  'Hardware: placeholder RAM and GPU notes',
-  'Security: placeholder firmware / isolation settings',
-  'Infrastructure: placeholder environment prerequisites',
+  'Windows 10 or Windows 11 64-bit',
+  'Minimum 8 GB RAM and a dedicated GPU',
+  'HVCI, Core Isolation, TPM, and Secure Boot as listed',
+  'Stable internet connection',
+  'See Cloud DMA page for Hyper-V and virtualization requirements',
 ] as const;
 
 export const cloudDmaRequirements = [
   'Windows 10 or Windows 11 64-bit with Hyper-V capable edition',
-  'CPU virtualization enabled in firmware and Windows',
+  'Intel VT-x or AMD-V enabled in firmware and Windows',
   'Minimum 8 GB RAM; 16 GB recommended for the Hyper-V guest',
-  'Stable wired or wireless internet connection',
-  'Secure Boot and Core Isolation settings compatible with Hyper-V setup',
+  'Stable broadband internet',
+  'Secure Boot and Core Isolation compatible with Hyper-V setup',
 ] as const;
 
 export const monthlyPlanCopy = {
   priceUsd: 35,
   durationLabel: `${MONTHLY_ACCESS_DAYS}-day access`,
-  renewal: 'Placeholder renewal terms — replace before launch.',
+  renewal: 'Renews when you purchase another 30-day term from the partner store.',
 } as const;
 
 export const lifetimePlanCopy = {
   priceUsd: 150,
   durationLabel: 'Lifetime access',
-  renewal: 'Placeholder lifetime terms — replace before launch.',
+  renewal: 'One-time payment per vendor lifetime license terms.',
 } as const;

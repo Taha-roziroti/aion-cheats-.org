@@ -8,7 +8,8 @@ import type { CheckoutProductId } from '../checkout/CheckoutProductPicker.astro'
 import AdditionalCostsCallout from '../checkout/AdditionalCostsCallout.astro';
 import { loadContentPage } from '../../utils/loadContentPage';
 import { injectAffiliateLinks, checkoutProductForSlug } from '../../utils/affiliateLinks';
-import { breadcrumbSchema, faqPageSchemaFromPairs, webPageSchema } from '../../utils/schema';
+import { dedicatedCheckoutProduct } from '../../config/checkout';
+import { breadcrumbSchema, faqPageSchemaFromPairs, guideArticleSchema, webPageSchema } from '../../utils/schema';
 import { SITE_NAME, ogImageForPath } from '../../data/site';
 import { faqItemsFromMarkdown } from '../../utils/markdownFaq';
 import { productJsonLdForRoute } from '../../utils/productPageJsonLd';
@@ -21,6 +22,8 @@ interface Props {
   breadcrumbs: { name: string; path: string }[];
   checkoutProduct?: CheckoutProductId;
   showAdditionalCosts?: boolean;
+  additionalCostsPricingLabel?: string;
+  additionalCostsSetupLabel?: string;
   noindex?: boolean;
   useProductShell?: boolean;
 }
@@ -30,6 +33,8 @@ const {
   breadcrumbs,
   checkoutProduct: checkoutProductProp,
   showAdditionalCosts = false,
+  additionalCostsPricingLabel,
+  additionalCostsSetupLabel,
   noindex = false,
   useProductShell = true,
 } = Astro.props;
@@ -44,6 +49,7 @@ if (!('slug' in data) || !('title' in data) || !('description' in data)) {
 const slug = data.slug.endsWith('/') || data.slug === '/' ? data.slug : `${data.slug}/`;
 const checkoutProduct: CheckoutProductId =
   checkoutProductProp ??
+  dedicatedCheckoutProduct(slug) ??
   (checkoutProductForSlug(slug) === 'cloudDma'
     ? 'cloud-dma'
     : checkoutProductForSlug(slug) === 'hwidSpoofer'
@@ -58,15 +64,30 @@ const patchedEntry = {
 const { Content } = await render(patchedEntry);
 
 const pageFaqs = faqItemsFromMarkdown(entry.body);
-const productName =
-  slug === '/arena-breakout-infinite-cheats-pricing/'
-    ? 'Pricing plans (placeholder)'
-    : data.title.replace(/\s*\|.*$/, '').trim();
-const productLd = productJsonLdForRoute(slug, productName, data.description, checkoutProduct);
+const ARTICLE_SEO_ROUTES = new Set([
+  '/aion-classic-esp/',
+  '/aion-classic-pricing/',
+  '/aion-classic-system-requirements/',
+]);
+
+const productName = data.title.replace(/\s*\|.*$/, '').trim();
+const productLd = ARTICLE_SEO_ROUTES.has(slug)
+  ? null
+  : productJsonLdForRoute(slug, productName, data.description, checkoutProduct);
 const jsonLd = [
   webPageSchema({ name: data.title, description: data.description, url: slug }),
   breadcrumbSchema(breadcrumbs),
   ...(productLd ? [productLd] : []),
+  ...(ARTICLE_SEO_ROUTES.has(slug)
+    ? [
+        guideArticleSchema({
+          name: productName,
+          description: data.description,
+          url: slug,
+          datePublished: '2026-03-01',
+        }),
+      ]
+    : []),
   ...(pageFaqs.length >= 2 ? [faqPageSchemaFromPairs(pageFaqs)] : []),
 ];
 const routeOg = ogImageForPath(slug);
@@ -99,12 +120,19 @@ const previewShot = previewSrc ? SHOWCASE_SHOTS.find((s) => s.src === previewSrc
               />
             ) : null}
             <Content />
-            {showAdditionalCosts ? <AdditionalCostsCallout class="not-prose mt-8" /> : null}
+            {showAdditionalCosts ? (
+              <div class="not-prose mt-8" data-reveal="up">
+                <AdditionalCostsCallout
+                  pricingLinkLabel={additionalCostsPricingLabel}
+                  setupLinkLabel={additionalCostsSetupLabel}
+                />
+              </div>
+            ) : null}
             <div class="not-prose mt-8 lg:hidden">
               <CheckoutDirectPanel product={checkoutProduct} />
             </div>
           </article>
-          <div class="hidden lg:block">
+          <div class="hidden lg:block" data-reveal="left">
             <CheckoutDirectPanel product={checkoutProduct} />
           </div>
         </div>

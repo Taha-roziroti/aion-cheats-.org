@@ -31,106 +31,100 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-function checkoutLabel(route: string): string {
-  const labels: Record<string, string> = {
-    '/': 'site checkout hub',
-    '/faq/': 'checkout hub picker',
-    '/dota-2-maphack/': 'maphack checkout picker',
-    '/dota-2-hero-esp/': 'ESP checkout picker',
-    '/dota-2-cheats-review/': 'review checkout picker',
-    '/dota-2-scripts/': 'scripts checkout picker',
-  };
-  return labels[route] ?? 'checkout hub';
-}
-
-function vacRiskAnswer(route: string): string {
-  const labels: Record<string, string> = {
-    '/': 'long-form Dota 2 cheats review',
-    '/faq/': 'written Dota 2 cheats review',
-    '/dota-2-maphack/': 'review section on map modules',
-    '/dota-2-hero-esp/': 'review section on ESP overlays',
-    '/dota-2-cheats-review/': 'independent feature audit on this page',
-    '/dota-2-scripts/': 'review section on script tooling',
-  };
-  const review = link(labels[route] ?? 'Dota 2 cheats review', '/dota-2-cheats-review/');
-  return `Valve enforces VAC on supported clients. Read the ${review} for what the listing establishes, then check official Valve policy before you install anything.`;
-}
-
-function checkoutFlowAnswer(route: string): string {
-  const hub = link(checkoutLabel(route), PRIMARY_CHECKOUT_PATH);
-  return `Plans route through the ${hub}, then a brief on-site handoff before Zadeyo checkout.`;
-}
-
-function featurePagesAnswer(): string {
-  return (
-    `Use the ${link('editorial cheats review', '/dota-2-cheats-review/')}, plus the ` +
-    `${link('standalone maphack guide', '/dota-2-maphack/')}, ` +
-    `${link('hero ESP walkthrough', '/dota-2-hero-esp/')}, and ` +
-    `${link('scripts explainer', '/dota-2-scripts/')} pages for module-level summaries.`
-  );
-}
-
 export const siteFaqs: SiteFaqItem[] = [
   {
-    id: 'what-is-dotacheat',
+    id: 'windows-support',
+    topic: 'setup',
+    icon: 'faqDiscordHelp',
+    q: 'Does Aion Classic work on Windows 11?',
+    a: a(
+      'The published listing supports Windows 10 and Windows 11 (64-bit). Enable HVCI, Core Isolation, TPM, and Secure Boot as described on the requirements page.',
+    ),
+  },
+  {
+    id: 'cloud-dma-required',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'What is DotaCheat?',
+    q: 'Is Cloud DMA required?',
     a: a(
-      `${SITE_DOMAIN} publishes independent guides for Dota 2 map vision, hero ESP, and related modules on supported Windows builds.`,
+      `Yes for full functionality on supported builds. Read the ${link('Cloud DMA guide', '/cloud-dma-for-aion-classic/')} for Hyper-V and separate purchases.`,
+    ),
+  },
+  {
+    id: 'plans-features',
+    topic: 'plans',
+    icon: 'faqComparePlans',
+    q: 'Do monthly and lifetime plans include different features?',
+    a: a(
+      `The listing states both plans include the same ESP and aimbot set. Compare payment structure on the ${link('monthly vs lifetime table', '/aion-classic-pricing/')}.`,
     ),
   },
   {
     id: 'checkout-flow',
     topic: 'plans',
     icon: 'faqAfterBuy',
-    q: 'How does checkout work?',
-    a: checkoutFlowAnswer('/faq/'),
-  },
-  {
-    id: 'pricing-listed',
-    topic: 'plans',
-    icon: 'faqComparePlans',
-    q: 'What do the listed prices mean?',
+    q: 'How do I buy through this site?',
     a: a(
-      `The homepage shows $35 for 31 days and $150 lifetime as listed on this site. Confirm the live vendor checkout before you pay.`,
+      `Use the ${link('checkout hub', PRIMARY_CHECKOUT_PATH)} or product-specific /go/ links. Amounts must match the live partner listing at checkout.`,
     ),
   },
   {
-    id: 'vac-risk',
-    topic: 'safety',
-    icon: 'faqBanRisk',
-    q: 'Can third-party software lead to a VAC ban?',
-    a: vacRiskAnswer('/faq/'),
-  },
-  {
-    id: 'windows-reqs',
-    topic: 'setup',
-    icon: 'faqDiscordHelp',
-    q: 'Which PC builds are supported?',
-    a: a(
-      `Start with the ${link('Windows 10 and 11 requirements guide', '/guides/system-requirements/')} for OS notes before purchase.`,
-    ),
-  },
-  {
-    id: 'feature-pages',
+    id: 'esp-modules',
     topic: 'products',
     icon: 'faqProductsPage',
-    q: 'Where are features explained?',
-    a: featurePagesAnswer(),
+    q: 'What does the ESP overlay include?',
+    a: a(
+      `Player nameplate ESP, gathering, rare spawns, chests, minimap, distance, and stream-proof overlay are listed. Details sit on the ${link('ESP guide', '/aion-classic-esp/')}.`,
+    ),
+  },
+  {
+    id: 'extra-purchases',
+    topic: 'plans',
+    icon: 'faqAfterBuy',
+    q: 'Are GREENWARD, Static Server, and AWS included in Cloud DMA?',
+    a: a(
+      'No. The vendor lists them as separate purchases with their own billing. Cloud DMA’s $50 lifetime fee covers the DMA license only.',
+    ),
+  },
+  {
+    id: 'stream-proof',
+    topic: 'products',
+    icon: 'faqStatus',
+    q: 'Does stream-proof mode work with OBS?',
+    a: a(
+      'The supplier states that stream-proof mode hides ESP and menus from OBS, Streamlabs, and most capture tools. Test your own broadcast setup before going live.',
+    ),
+  },
+  {
+    id: 'vendor-support',
+    topic: 'safety',
+    icon: 'faqBanRisk',
+    q: 'Who helps with loader setup?',
+    a: a(
+      'Ticket support and Discord are listed on the vendor product page. Include your order ID when asking about activation or configuration.',
+    ),
+  },
+  {
+    id: 'site-role',
+    topic: 'safety',
+    icon: 'faqBanRisk',
+    q: `What is ${SITE_DOMAIN}?`,
+    a: a(
+      'An affiliate information site for Aion Classic overlays, pricing, Cloud DMA requirements, and setup checklists. We do not operate game servers or sell licenses directly.',
+    ),
   },
 ];
 
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'FAQ',
   title: 'Questions before checkout',
-  subtitle: 'Plans, compatibility, and policy pointers for United States shoppers on Windows PC.',
+  subtitle: 'Filters by topic. Answers reference published listing details, not vendor ticket status.',
 } as const;
 
 export const CONTEXTUAL_FAQ_SECTION_COPY = {
   eyebrow: 'FAQ',
   title: 'Related questions',
-  subtitle: 'Quick answers tied to this product area.',
+  subtitle: 'Short answers for this page. Open the full FAQ for filters and more topics.',
 } as const;
 
 export const SITE_FAQ_FILTER_TOPICS = [
@@ -178,23 +172,10 @@ export function getLandingFaqs(): SiteFaqItem[] {
 
 function contextualizeFaqs(route: string, items: SiteFaqItem[]): SiteFaqItem[] {
   return items.map((item) => {
-    if (item.id === 'vac-risk') {
-      return { ...item, a: vacRiskAnswer(route), aHtml: undefined };
-    }
-    if (item.id === 'checkout-flow') {
-      return { ...item, a: checkoutFlowAnswer(route), aHtml: undefined };
-    }
-    if (item.id === 'feature-pages' && route !== '/faq/') {
+    if (item.id === 'checkout-flow' && route === '/aion-classic-pricing/') {
       return {
         ...item,
-        a: `Use the ${link('cheats review summary', '/dota-2-cheats-review/')} and the module pages linked from your current guide for feature lists.`,
-        aHtml: undefined,
-      };
-    }
-    if (item.id === 'windows-reqs' && route !== '/faq/') {
-      return {
-        ...item,
-        a: `Open the ${link('PC requirements checklist', '/guides/system-requirements/')} before you buy.`,
+        a: `Open checkout from the pricing page or the ${link('checkout hub', PRIMARY_CHECKOUT_PATH)} after you confirm Cloud DMA costs.`,
         aHtml: undefined,
       };
     }
@@ -204,6 +185,12 @@ function contextualizeFaqs(route: string, items: SiteFaqItem[]): SiteFaqItem[] {
 
 export function getContentPageFaqs(route: string): SiteFaqItem[] {
   if (route.startsWith('/guides/')) return [];
+  if (route === '/aion-classic-esp/') {
+    return contextualizeFaqs(route, siteFaqs.filter((f) => ['esp-modules', 'cloud-dma-required', 'stream-proof'].includes(f.id)));
+  }
+  if (route === '/cloud-dma-for-aion-classic/') {
+    return contextualizeFaqs(route, siteFaqs.filter((f) => ['cloud-dma-required', 'extra-purchases', 'windows-support'].includes(f.id)));
+  }
   return contextualizeFaqs(route, siteFaqs.slice(0, 4));
 }
 

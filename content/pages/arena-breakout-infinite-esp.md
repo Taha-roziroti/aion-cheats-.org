@@ -1,23 +1,65 @@
 ---
-title: "Feature page A | Content placeholder"
-description: "First feature landing page shell with markdown layout, breadcrumbs, and checkout panel slots awaiting your documentation."
+title: "Content page placeholder"
+description: "Markdown body placeholder for redirect or legacy routes. Replace or remove this file when slugs are finalized."
 slug: "/arena-breakout-infinite-esp/"
 ---
 
-# Feature page A
+## Legacy redirect source placeholder
 
-Use this route for your first major feature explanation. The article wrapper, table of contents hooks, and checkout sidebar stay functional while you draft long-form copy.
+Introduction (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-![Dota 2 hero ESP overlay in a skirmish](/images/showcase/dota-axe-combat.webp)
+## Overview placeholder
 
-Link readers to [feature page B](/arena-breakout-infinite-aimbot/), [pricing](/arena-breakout-infinite-cheats-pricing/), or the [homepage](/) as you build cross-links.
+Overview (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Overview detail (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-[**Placeholder checkout CTA**](AFFILIATE_LINK_PLACEHOLDER)
+- /arena-breakout-infinite-esp/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-## Questions
+## Feature list placeholder
 
-**What belongs on this page?**  
-Product feature details, screenshots, and FAQs specific to module A.
+Feature list (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Feature list detail (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-**Is this indexed?**  
-Yes—SEO metadata is wired; swap title and description when your keywords are final.
+- /arena-breakout-infinite-esp/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Pricing notes placeholder
+
+Pricing notes (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Pricing notes detail (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-esp/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Setup pointers placeholder
+
+Setup pointers (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Setup pointers detail (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-esp/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Support and FAQ placeholder
+
+Support and FAQ (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Support and FAQ detail (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-esp/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Next steps placeholder
+
+Next steps (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Next steps detail (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-esp/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+Closing (/arena-breakout-infinite-esp/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.

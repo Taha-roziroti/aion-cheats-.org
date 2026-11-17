@@ -34,10 +34,9 @@ const purchaseUrl = PRIMARY_CHECKOUT_PATH;
     <div
       class="pointer-events-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-xl border border-border bg-card/95 px-4 text-foreground shadow-sm sm:px-5 xl:grid xl:h-[4.25rem] xl:max-w-[84rem] xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:items-center xl:gap-4 xl:px-6"
     >
-    <a href="/" class="inline-flex min-w-0 max-w-[46%] shrink-0 items-center gap-2 font-[family-name:var(--font-heading)] text-base font-semibold tracking-tight sm:max-w-none xl:justify-self-start xl:text-lg" aria-label={t.ui.homeAria}>
-      <img src="/apple-touch-icon.png" alt={SITE_LOGO_ALT} width="32" height="32" class="size-8 shrink-0 rounded-md" />
-      <span class="truncate" aria-hidden="true">ABI <span class="text-muted-foreground">Cheats</span></span>
-      <span class="sr-only"> site header</span>
+    <a href="/" class="inline-flex min-w-0 max-w-[46%] shrink-0 items-center gap-2 font-[family-name:var(--font-heading)] text-base font-semibold tracking-tight sm:max-w-none xl:justify-self-start xl:text-lg">
+      <img src="/apple-touch-icon.png" alt="" width="32" height="32" class="size-8 shrink-0 rounded-md" aria-hidden="true" />
+      <span class="truncate">{t.site.name}</span>
     </a>
 
     <nav
@@ -60,7 +59,7 @@ const purchaseUrl = PRIMARY_CHECKOUT_PATH;
 
     <div class="flex shrink-0 items-center gap-2 xl:justify-self-end">
       <div class="hidden items-center xl:flex">
-        <Button as="a" href={purchaseUrl} variant="primary" size="sm" class="shrink-0 rounded-lg" aria-label={t.ui.checkoutAria}>
+        <Button as="a" href={purchaseUrl} variant="primary" size="sm" class="shrink-0 rounded-lg">
           {t.ui.browseCheats}
         </Button>
       </div>
@@ -102,7 +101,7 @@ const purchaseUrl = PRIMARY_CHECKOUT_PATH;
               variant="primary"
               size="sm"
               class="box-border w-full max-w-full justify-center"
-              aria-label={t.ui.checkoutAria}
+            
             >
               {t.ui.browseCheatsMobile}
             </Button>

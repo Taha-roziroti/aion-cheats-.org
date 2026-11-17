@@ -52,23 +52,13 @@ export const blogTagIcons: Record<string, IconName> = {
 
 export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'espActive', label: 'ESP Active' },
-  { icon: 'radarOnline', label: 'Radar Online' },
-  { icon: 'seasonBuild', label: 'Season Build' },
-  { icon: 'undetected', label: 'Undetected' },
-  { icon: 'softAim', label: 'Soft Aim Ready' },
-  { icon: 'noRecoil', label: 'No Recoil' },
-  { icon: 'streamProof', label: 'Stream Proof' },
-  { icon: 'lootEsp', label: 'Loot ESP' },
-  { icon: 'skeletonEsp', label: 'Skeleton ESP' },
-  { icon: 'uavRadar', label: 'UAV Radar' },
-  { icon: 'mapHack', label: 'Map Hack' },
+  { icon: 'softAim', label: 'Aimbot Ready' },
+  { icon: 'radarOnline', label: 'Player ESP' },
+  { icon: 'boneSelect', label: 'Aim Settings' },
+  { icon: 'streamProof', label: 'Overlay Menu' },
+  { icon: 'undetected', label: 'Listed Build' },
   { icon: 'support247', label: '24/7 Support' },
   { icon: 'instantDelivery', label: 'Instant Delivery' },
-  { icon: 'rankedSafe', label: 'Ranked Safe' },
-  { icon: 'triggerBot', label: 'Trigger Bot' },
-  { icon: 'boneSelect', label: 'Bone Select' },
-  { icon: 'liveStatus', label: 'Live Status' },
-  { icon: 'autoUpdates', label: 'Auto Updates' },
 ];
 
 export const heroStatIcons: IconName[] = [

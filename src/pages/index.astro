@@ -9,7 +9,7 @@ import { PLACEHOLDER_COPY } from '../data/placeholders';
 import { PRIMARY_SHOWCASE_IMAGE } from '../data/showcaseImages';
 import { faqPageSchemaFromPairs, productSchema } from '../utils/schema';
 import { faqItemsFromMarkdown } from '../utils/markdownFaq';
-import { HERO_SECTION_LCP_PRELOAD } from '../data/showcaseImages';
+import { HERO_SHOWCASE_SLIDES } from '../data/showcaseImages';
 
 const homeEntry = await loadContentPage('index');
 const home = homeEntry.data as { title: string; description: string; slug: string };
@@ -52,9 +52,11 @@ const jsonLd = [
     slot="head"
     rel="preload"
     as="image"
-    href={HERO_SECTION_LCP_PRELOAD}
+    href="/images/showcase/aion-visuals-512.webp"
     type="image/webp"
     fetchpriority="high"
+    imagesrcset="/images/showcase/aion-visuals-512.webp 512w, /images/showcase/aion-visuals-640.webp 640w"
+    imagesizes="(min-width: 1024px) 490px, 0px"
   />
   <HomeLanding />
 </BaseLayout>

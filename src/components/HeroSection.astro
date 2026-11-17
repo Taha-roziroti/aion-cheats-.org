@@ -2,25 +2,19 @@
 import { t } from '../i18n';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import { heroSlides } from '../data/landingData';
-import { compatibilityIcons, heroStatIcons, heroStatusPills } from '../data/sectionIcons';
-import ImageSlider from './ImageSlider.astro';
+import { heroStatIcons, heroStatusPills } from '../data/sectionIcons';
 import ResponsiveImage from './ResponsiveImage.astro';
 import { HERO_SECTION_BACKGROUND } from '../data/showcaseImages';
-import { HERO_BACKGROUND_ALT } from '../utils/imageAlt';
-import { HERO_IMAGE_WIDTHS } from '../utils/responsiveImage';
+import { HERO_IMAGE_SIZES, HERO_IMAGE_WIDTHS } from '../utils/responsiveImage';
 import Icon from './icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
 import { Badge } from '@/components/starwind/badge';
 
 const h = t.hero;
 
-const heroMarqueePills = [
-  ...heroStatusPills,
-  ...t.compatibility.items.map((label, i) => ({
-    label,
-    icon: compatibilityIcons[i] ?? 'check',
-  })),
-];
+/** Cap marquee pills to limit hub DOM size (Lighthouse §10) while keeping motion smooth. */
+const heroMarqueePills = heroStatusPills.slice(0, 8);
+const primaryHeroSlide = heroSlides[0];
 ---
 
 <section
@@ -31,21 +25,22 @@ const heroMarqueePills = [
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <ResponsiveImage
       src={HERO_SECTION_BACKGROUND}
-      alt={HERO_BACKGROUND_ALT}
+      alt=""
+      decorative
       width={1024}
-      height={576}
+      height={640}
       widths={HERO_IMAGE_WIDTHS}
-      sizes="100vw"
-      loading="eager"
-      fetchPriority="high"
-      class="absolute inset-0 h-full w-full object-cover object-[center_38%] brightness-[0.92] saturate-[1.12]"
+      sizes="(min-width: 1024px) 50vw, 0px"
+      loading="lazy"
+      fetchPriority="low"
+      class="absolute inset-0 h-full w-full object-cover object-[right_center] brightness-[0.88] saturate-[1.05]"
     />
     <div class="absolute inset-0 bg-background/40" />
     <div
       class="absolute inset-0 bg-gradient-to-r from-background/95 from-0% via-background/55 via-45% to-background/15 to-100%"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-background/75 via-transparent via-35% to-background/25" />
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--primary)_0%,transparent_55%)] opacity-10" />
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--foreground)_0%,transparent_55%)] opacity-[0.06]" />
   </div>
 
   <div class="relative mx-auto flex max-w-6xl flex-col justify-center px-5 pb-8 pt-6 md:pb-10 md:pt-8">
@@ -53,13 +48,13 @@ const heroMarqueePills = [
       <div class="w-full max-w-xl space-y-6 text-left md:space-y-7 lg:max-w-2xl">
         <Badge variant="secondary" class="normal-case tracking-normal">{h.eyebrow}</Badge>
 
-        <h1
+        <p
           id="hero-title"
           class="text-4xl font-bold leading-[1.08] tracking-tight md:text-5xl lg:text-[3.25rem]"
         >
           <span class="block text-foreground">{h.titleLine1}</span>
           <span class="mt-1 block text-primary">{h.titleLine2}</span>
-        </h1>
+        </p>
 
         <p class="max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-neutral-400 md:text-base">
           {h.subtitle}
@@ -78,7 +73,7 @@ const heroMarqueePills = [
           </Button>
           <Button
             as="a"
-            href="/dota-2-cheats-review/"
+            href="/aion-classic-pricing/"
             variant="secondary"
             size="lg"
             class="rounded-xl"
@@ -89,7 +84,27 @@ const heroMarqueePills = [
       </div>
 
       <div class="mx-auto flex w-full max-w-xl flex-col items-center gap-5 lg:mx-0 lg:max-w-none lg:items-end">
-        <ImageSlider images={heroSlides} id="hero-slider" variant="hero" desktopOnly />
+        {primaryHeroSlide && (
+          <figure
+            class="relative hidden w-full max-w-[490px] rounded-xl border border-border bg-card p-2 shadow-sm lg:block"
+            id="hero-showcase"
+          >
+            <div class="aspect-[16/10] overflow-hidden rounded-lg bg-muted/30">
+              <ResponsiveImage
+                src={primaryHeroSlide.src}
+                alt={primaryHeroSlide.alt}
+                width={960}
+                height={540}
+                widths={HERO_IMAGE_WIDTHS}
+                loading="eager"
+                fetchPriority="high"
+                sizes={HERO_IMAGE_SIZES}
+                desktopOnly
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </figure>
+        )}
         <div class="grid w-full grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4 lg:grid-cols-2">
           {h.metrics.map((m, i) => (
             <div class="flex min-w-0 items-center gap-3 rounded-xl border border-border/80 bg-card/70 px-3 py-3 shadow-sm shadow-black/10 transition-colors hover:border-primary/40">

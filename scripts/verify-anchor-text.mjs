@@ -8,8 +8,6 @@ const errors = [];
 
 const AUDIT_ROUTES = new Set([
   ...INDEXABLE_MONEY_ROUTES,
-  '/dota-2-scripts/',
-  '/guides/system-requirements/',
   '/guides/cloud-dma-setup/',
   '/about/',
   '/support/',

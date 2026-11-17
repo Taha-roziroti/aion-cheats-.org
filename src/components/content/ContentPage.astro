@@ -3,6 +3,8 @@ import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import CheckoutProductPicker, { type CheckoutProductId } from '../checkout/CheckoutProductPicker.astro';
+import CheckoutDirectPanel from '../checkout/CheckoutDirectPanel.astro';
+import { dedicatedCheckoutProduct } from '../../config/checkout';
 import AdditionalCostsCallout from '../checkout/AdditionalCostsCallout.astro';
 import ContentFigures from './ContentFigures.astro';
 import ContentHeroImage from './ContentHeroImage.astro';
@@ -45,13 +47,18 @@ const jsonLd = jsonLdForContentPage({
 });
 const ctaHref =
   ('endCtaHref' in data ? data.endCtaHref : undefined) ??
-  defaultEndCtaHref(route, 'checkout' in data ? data.checkout : undefined);
+  defaultEndCtaHref(
+    route,
+    ('checkout' in data ? data.checkout : undefined) ?? dedicatedCheckoutProduct(route) ?? undefined,
+  );
 const sidebarDefaultProduct: CheckoutProductId =
-  'checkout' in data && data.checkout === 'cloud-dma'
+  ('checkout' in data && data.checkout === 'cloud-dma'
     ? 'cloud-dma'
     : 'checkout' in data && data.checkout === 'hwid-spoofer'
       ? 'hwid-spoofer'
-      : 'main-product';
+      : dedicatedCheckoutProduct(route)) ?? 'main-product';
+const useDedicatedCheckoutSidebar =
+  ('checkout' in data && Boolean(data.checkout)) || dedicatedCheckoutProduct(route) !== null;
 const useProductShell =
   'layout' in data && (data.layout === 'product' || data.layout === 'pricing');
 const ogType = 'layout' in data && data.layout === 'article' ? 'article' : 'website';
@@ -62,7 +69,7 @@ const lcpPreload =
 
 const logoAltByRoute: Record<string, string> = {
   '/': 'Home – logo',
-  '/pricing/': 'Cheats pricing – logo',
+  '/pricing/': 'ESP and aimbot pricing – logo',
   '/cloud-dma/': 'Cloud DMA – logo',
   '/hwid-spoofer/': 'HWID Spoofer – logo',
   '/guides/cloud-dma-setup/': 'DMA setup – logo',
@@ -118,14 +125,22 @@ const pageFaqTopics = pageFaqs ? faqFilterTopicsForItems(pageFaqs) : [];
               <ContentFigures figures={data.figures} />
             </div>
             <div class="not-prose mt-8 lg:hidden">
-              <CheckoutProductPicker defaultProduct={sidebarDefaultProduct} />
+              {useDedicatedCheckoutSidebar ? (
+                <CheckoutDirectPanel product={sidebarDefaultProduct} />
+              ) : (
+                <CheckoutProductPicker defaultProduct={sidebarDefaultProduct} />
+              )}
             </div>
             {data.showAdditionalCostsCallout ? (
               <AdditionalCostsCallout class="not-prose mt-8" />
             ) : null}
           </div>
           <div class="hidden lg:block">
-            <CheckoutProductPicker defaultProduct={sidebarDefaultProduct} />
+            {useDedicatedCheckoutSidebar ? (
+              <CheckoutDirectPanel product={sidebarDefaultProduct} />
+            ) : (
+              <CheckoutProductPicker defaultProduct={sidebarDefaultProduct} />
+            )}
           </div>
         </div>
       </section>

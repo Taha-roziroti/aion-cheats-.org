@@ -1,6 +1,8 @@
-/** Product screenshots under /images/showcase/ (responsive widths from optimize-images). */
+/** Product screenshots — Aion Classic ESP and aimbot menu captures. */
 
-export const SHOWCASE_BASE = '/images/showcase';
+const base = (name: string) => `/images/showcase/${name}.webp`;
+
+export const SHOWCASE_BASE = base('aion-visuals');
 
 export interface ShowcaseShot {
   src: string;
@@ -9,72 +11,56 @@ export interface ShowcaseShot {
   captionDesc?: string;
 }
 
-const shot = (file: string, alt: string, caption?: string, captionDesc?: string): ShowcaseShot => ({
-  src: `${SHOWCASE_BASE}/${file}`,
-  alt,
-  caption,
-  captionDesc,
-});
-
-export const SHOWCASE_SHOTS: ShowcaseShot[] = [
-  shot(
-    'dota-drow-teamfight.webp',
-    'Dota 2 gameplay feature preview with hero overlays and map information',
-    'Teamfight view',
-    'Gameplay screenshot showing HUD and in-match overlays from the listed product.',
-  ),
-  shot(
-    'dota-huskar-combat.webp',
-    'Dota 2 cheats software interface during ranked combat',
-    'Combat HUD',
-    'In-game view with health bars and minimap visible.',
-  ),
-  shot(
-    'dota-magnus-overlay.webp',
-    'Dota 2 cheat menu screenshot with ability cooldown overlays',
-    'Cooldown tracking',
-    'Screenshot showing ability timers above enemy heroes.',
-  ),
-  shot(
-    'dota-invoker-river.webp',
-    'Dota 2 maphack map visibility preview near the river',
-    'Map awareness',
-    'River fight with minimap and standard Dota 2 interface.',
-  ),
-  shot(
-    'dota-axe-combat.webp',
-    'Dota 2 hero ESP player information overlay in a skirmish',
-    'Hero ESP',
-    'Screenshot with extra readouts above heroes during combat.',
-  ),
-  shot(
-    'dota-low-poly-map.webp',
-    'Dota 2 map information interface with simplified terrain view',
-    'Map rendering',
-    'Product screenshot showing an alternate map display mode.',
-  ),
-  shot(
-    'dota-meta-picker.webp',
-    'Dota 2 cheat menu screenshot with hero selection statistics',
-    'Menu overlay',
-    'Hero picker screen with additional stat overlays.',
-  ),
-  shot(
-    'dota-feature-menu.webp',
-    'Dota 2 cheats software interface feature panel',
-    'Feature panel',
-    'Menu or configuration screenshot from the product showcase.',
-  ),
+export const PRODUCT_SHOTS: ShowcaseShot[] = [
+  {
+    src: base('aion-visuals'),
+    alt: 'Aion Classic player nameplate ESP menu screenshot',
+    caption: 'Player Visual',
+    captionDesc: 'Aion Classic player ESP overlay preview with nameplates and distance.',
+  },
+  {
+    src: base('aion-world'),
+    alt: 'Aion Classic gathering and rare spawn ESP world menu',
+    caption: 'World & radar',
+    captionDesc: 'Gathering nodes, rare spawns, chest ESP, and minimap radar settings.',
+  },
+  {
+    src: base('aion-aimbot'),
+    alt: 'Aion Classic settings menu configuration panel',
+    caption: 'Menu panel',
+    captionDesc: 'In-game menu layout for supported Aion Classic builds.',
+  },
+  {
+    src: base('aion-misc'),
+    alt: 'Cloud DMA for Aion Classic connection status panel',
+    caption: 'Misc & cloud',
+    captionDesc: 'Stream-proof options and Cloud DMA single-PC Hyper-V status.',
+  },
+  {
+    src: base('aion-gameplay'),
+    alt: 'Aion Classic in-game combat screenshot',
+    caption: 'In-game',
+    captionDesc: 'Gameplay capture for Aion Classic ESP and aimbot pricing context.',
+  },
 ];
 
-export const HERO_SHOWCASE_SLIDES = SHOWCASE_SHOTS.slice(0, 5).map((s) => ({
+/** Eight slots for carousels that expect extra thumbs — repeats gameplay/visuals. */
+export const SHOWCASE_SHOTS: ShowcaseShot[] = [
+  ...PRODUCT_SHOTS,
+  PRODUCT_SHOTS[0]!,
+  PRODUCT_SHOTS[4]!,
+  PRODUCT_SHOTS[2]!,
+];
+
+/** Hero carousel — cap slides to limit DOM size on the hub (Lighthouse §10). */
+export const HERO_SHOWCASE_SLIDES = PRODUCT_SHOTS.slice(0, 3).map((s) => ({
   src: s.src,
   alt: s.alt,
-  caption: s.caption ?? 'Feature preview',
+  caption: s.caption ?? s.alt,
   captionDesc: s.captionDesc ?? s.alt,
 }));
 
-export const PRIMARY_SHOWCASE_IMAGE = SHOWCASE_SHOTS[0]!.src;
+export const PRIMARY_SHOWCASE_IMAGE = PRODUCT_SHOTS[0]!.src;
 
 export const HERO_SECTION_BACKGROUND = '/images/hero/hero-background.webp';
-export const HERO_SECTION_LCP_PRELOAD = '/images/hero/hero-background-640.webp';
+export const HERO_SECTION_LCP_PRELOAD = '/images/hero/hero-background-512.webp';

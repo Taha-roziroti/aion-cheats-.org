@@ -1,17 +1,15 @@
-/** Site-wide marketing defaults — dotacheat.com / en-US. */
+/** Site-wide marketing defaults — AionCheats.org US English. */
 
-import { PRIMARY_SHOWCASE_IMAGE, SHOWCASE_SHOTS } from './showcaseImages';
-
-export const PLACEHOLDER_IMAGE = PRIMARY_SHOWCASE_IMAGE;
-export const PLACEHOLDER_IMAGE_ALT = SHOWCASE_SHOTS[0]?.alt ?? 'Dota 2 gameplay feature preview';
+export const PLACEHOLDER_IMAGE = '/images/placeholder.svg';
+export const PLACEHOLDER_IMAGE_ALT = 'Image placeholder — replace with a product screenshot or brand asset.';
 
 export const PLACEHOLDER_COPY = {
-  title: 'Dota 2 Cheats',
-  eyebrow: 'DotaCheat · Windows PC',
+  title: 'Aion Classic ESP & Aimbot',
+  eyebrow: 'AionCheats.org · Aion Classic · Windows',
   subtitle:
-    'Review map vision, hero ESP, gameplay timers, and other modules listed for the current Windows build before you choose a plan.',
-  feature: 'Map vision, ward information, and hero overlays for supported Dota 2 clients on PC.',
-  cta: 'View plans and pricing',
-  productName: 'Dota 2 Cheats',
-  siteName: 'DotaCheat',
+    'Main plan: player ESP and aimbot on supported Windows 10 and 11 builds. Cloud DMA and HWID Spoofer are separate supporting products—not bundled.',
+  feature: 'ESP and aimbot modules from the partner listing.',
+  cta: 'Buy ESP & Aimbot Plan',
+  productName: 'Aion Classic ESP & Aimbot',
+  siteName: 'AionCheats',
 } as const;

@@ -1,0 +1,234 @@
+{
+  "generatedAt": "2026-11-17T14:42:45.995Z",
+  "floor": 95,
+  "pages": [
+    {
+      "path": "/",
+      "template": "home",
+      "formFactor": "mobile",
+      "median": {
+        "performance": 98,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 98,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "template": "home",
+      "formFactor": "desktop",
+      "median": {
+        "performance": 68,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 68,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/aion-classic-esp/",
+      "template": "spoke-article",
+      "formFactor": "mobile",
+      "median": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 100,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/aion-classic-esp/",
+      "template": "spoke-article",
+      "formFactor": "desktop",
+      "median": {
+        "performance": 90,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 90,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/aion-classic-pricing/",
+      "template": "commercial",
+      "formFactor": "mobile",
+      "median": {
+        "performance": 96,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 96,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/aion-classic-pricing/",
+      "template": "commercial",
+      "formFactor": "desktop",
+      "median": {
+        "performance": 90,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 90,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/cloud-dma-for-aion-classic/",
+      "template": "product",
+      "formFactor": "mobile",
+      "median": {
+        "performance": 99,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 99,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/cloud-dma-for-aion-classic/",
+      "template": "product",
+      "formFactor": "desktop",
+      "median": {
+        "performance": 90,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 90,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/faq/",
+      "template": "faq",
+      "formFactor": "mobile",
+      "median": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 100,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/faq/",
+      "template": "faq",
+      "formFactor": "desktop",
+      "median": {
+        "performance": 91,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "performance": 91,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      ]
+    },
+    {
+      "path": "/404/",
+      "template": "404",
+      "formFactor": "mobile",
+      "median": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 66
+      },
+      "runs": [
+        {
+          "performance": 100,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 66
+        }
+      ]
+    },
+    {
+      "path": "/404/",
+      "template": "404",
+      "formFactor": "desktop",
+      "median": {
+        "performance": 91,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 66
+      },
+      "runs": [
+        {
+          "performance": 91,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 66
+        }
+      ]
+    }
+  ]
+}

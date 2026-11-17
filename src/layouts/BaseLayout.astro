@@ -49,8 +49,7 @@ const {
 const pathname = Astro.url.pathname;
 const routeOgImage = ogImageForPath(pathname);
 const ogImage = ogImageProp ?? routeOgImage;
-const legacyNoindex = pathname.startsWith('/products/dota-2-cheats');
-const resolvedNoindex = noindex || legacyNoindex;
+const resolvedNoindex = noindex;
 const robotsContent = resolvedNoindex
   ? 'noindex, follow'
   : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
@@ -64,7 +63,6 @@ const mergedJsonLd = jsonLd
 
 const sharePaths = new Set<string>([
   ...INDEXABLE_MONEY_ROUTES,
-  '/dota-2-scripts/',
   '/about/',
   '/privacy/',
   '/terms/',
@@ -141,17 +139,18 @@ const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pat
     {TWITTER_SITE && <meta name="twitter:site" content={TWITTER_SITE} />}
     {TWITTER_CREATOR && <meta name="twitter:creator" content={TWITTER_CREATOR} />}
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bebas+Neue&display=optional"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bebas+Neue&display=optional"
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap"
         rel="stylesheet"
       />
     </noscript>
@@ -178,10 +177,19 @@ const showShareLinks = sharePaths.has(pathname.endsWith('/') ? pathname : `${pat
           .catch(() => {});
       };
       const scheduleMotion = () => {
+        let started = false;
+        const go = () => {
+          if (started) return;
+          started = true;
+          bootMotion();
+        };
+        window.addEventListener('scroll', go, { once: true, passive: true });
+        window.addEventListener('pointerdown', go, { once: true });
+        window.addEventListener('keydown', go, { once: true });
         if (typeof requestIdleCallback === 'function') {
-          requestIdleCallback(bootMotion, { timeout: 2200 });
+          requestIdleCallback(go, { timeout: 12000 });
         } else {
-          setTimeout(bootMotion, 1);
+          window.setTimeout(go, 12000);
         }
       };
       if (document.readyState === 'complete') {

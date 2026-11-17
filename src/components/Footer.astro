@@ -11,10 +11,10 @@ const { logoAlt } = Astro.props;
 const footerLogoAlt = logoAlt?.trim() ? logoAlt : SITE_LOGO_ALT;
 
 const resourceLinks = [
-  { href: '/#products', label: 'Pricing', ariaLabel: 'Pricing' },
+  { href: '/aion-classic-pricing/', label: 'Plans & pricing', ariaLabel: 'Plans and pricing' },
   { href: '/go/', label: 'All products', ariaLabel: 'Checkout hub' },
-  { href: '/guides/cloud-dma-setup/', label: 'Hyper-V setup guide', ariaLabel: 'Setup guide' },
-  { href: '/guides/system-requirements/', label: 'PC requirements', ariaLabel: 'Requirements' },
+  { href: '/guides/cloud-dma-setup/', label: 'Cloud DMA setup', ariaLabel: 'Cloud DMA setup guide' },
+  { href: '/aion-classic-system-requirements/', label: 'PC requirements', ariaLabel: 'System requirements' },
   { href: '/support/', label: 'Support', ariaLabel: 'Support' },
 ];
 
@@ -29,10 +29,9 @@ const legalLinks = [
   <div class="mx-auto max-w-6xl px-5">
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
-        <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-semibold" aria-label={t.ui.homeAria}>
-          <img src="/logo.svg" alt={footerLogoAlt} width="32" height="32" class="rounded-md" />
-          <span aria-hidden="true">Dota<span class="text-muted-foreground">Cheat</span></span>
-          <span class="sr-only"> site footer</span>
+        <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-semibold">
+          <img src="/logo.svg" alt="" width="32" height="32" class="rounded-md" aria-hidden="true" />
+          <span>{t.site.name}</span>
         </a>
         <p class="text-sm text-muted-foreground">{t.footer.tagline}</p>
       </div>
@@ -45,7 +44,6 @@ const legalLinks = [
               <a
                 href={link.href}
                 class="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                aria-label={link.ariaLabel}
                 {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
               >
                 {link.label}
@@ -60,7 +58,7 @@ const legalLinks = [
         <ul class="mt-3 space-y-2">
           {resourceLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-sm text-muted-foreground transition-colors hover:text-foreground" aria-label={link.ariaLabel}>
+              <a href={link.href} class="text-sm text-muted-foreground transition-colors hover:text-foreground">
                 {link.label}
               </a>
             </li>

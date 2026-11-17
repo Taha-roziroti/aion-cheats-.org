@@ -13,8 +13,9 @@ const dist = path.join(projectRoot, 'dist');
 
 const AUDIT_HTML_ROUTES = new Set([
   ...INDEXABLE_MONEY_ROUTES,
-  '/dota-2-scripts/',
-  '/guides/system-requirements/',
+  '/aion-classic-esp/',
+  '/aion-classic-pricing/',
+  '/aion-classic-system-requirements/',
   '/guides/cloud-dma-setup/',
   '/about/',
   '/support/',
@@ -242,7 +243,9 @@ function runSubcommand(cmd, args, label) {
 function runCspell() {
   const globs = [
     'content/pages/index.md',
-    'content/pages/dota-2-*.md',
+    'content/pages/aion-classic-*.md',
+    'content/pages/cloud-dma-for-aion-classic.md',
+    'content/pages/cloud-dma-setup.md',
     'src/data/faq.ts',
     'src/pages/404.astro',
   ];
@@ -274,6 +277,9 @@ function main() {
   runSubcommand('node', ['scripts/verify-unique-copy.mjs'], 'verify-unique-copy');
   runSubcommand('node', ['scripts/verify-images.mjs'], 'verify-images');
   runSubcommand('node', ['scripts/verify-anchor-text.mjs'], 'verify-anchor-text');
+  runSubcommand('node', ['scripts/generate-anchor-inventory.mjs'], 'generate-anchor-inventory');
+  runSubcommand('node', ['scripts/verify-anchor-inventory.mjs'], 'verify-anchor-inventory');
+  runSubcommand('node', ['scripts/verify-keywords.mjs'], 'verify-keywords');
 
   const files = walkHtmlFiles(dist);
   for (const file of files) {

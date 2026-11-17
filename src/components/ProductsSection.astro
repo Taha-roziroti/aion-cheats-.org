@@ -13,6 +13,7 @@ import {
 } from '@/components/starwind/carousel';
 
 const s = t.products;
+const useCarousel = landingProducts.length > 3;
 
 function cardIcon(product: (typeof landingProducts)[number]) {
   return product.icon;
@@ -21,6 +22,21 @@ function cardIcon(product: (typeof landingProducts)[number]) {
 function cardLabel(product: (typeof landingProducts)[number]) {
   return product.label;
 }
+
+const cardProps = (product: (typeof landingProducts)[number]) => ({
+  label: cardLabel(product),
+  title: product.title,
+  href: product.href,
+  buyUrl: product.buyUrl,
+  features: product.features,
+  more: product.more,
+  icon: cardIcon(product),
+  badge: product.badge,
+  variant: product.variant,
+  buyLabel: 'Buy now',
+  viewLabel: 'View details',
+  maxFeatures: 5,
+});
 ---
 
 <section id="products" class="py-16 md:py-24" aria-labelledby="products-title">
@@ -34,47 +50,47 @@ function cardLabel(product: (typeof landingProducts)[number]) {
       motionReveal="up"
     />
 
-    <div class="products-carousel" data-products-carousel data-lenis-prevent>
-      <Carousel
-        autoInit
-        opts={{ align: 'start', containScroll: 'trimSnaps', dragFree: false }}
-        class="products-carousel__root"
-      >
-        <div class="products-carousel__stage">
-          <CarouselPrevious class="products-carousel__arrow products-carousel__arrow--prev" hidden />
-          <CarouselNext class="products-carousel__arrow products-carousel__arrow--next is-visible" />
-          <div class="products-carousel__viewport">
-            <CarouselContent class="products-carousel__track">
-              {
-                landingProducts.map((product) => (
-                  <CarouselItem class="products-carousel__slide">
-                    <CatalogCard
-                      class="catalog-card--carousel"
-                      label={cardLabel(product)}
-                      title={product.title}
-                      href={product.href}
-                      buyUrl={product.buyUrl}
-                      features={product.features}
-                      more={product.more}
-                      icon={cardIcon(product)}
-                      badge={product.badge}
-                      variant={product.variant}
-                      buyLabel="Buy now"
-                      viewLabel="View details"
-                      maxFeatures={5}
-                    />
-                  </CarouselItem>
-                ))
-              }
-            </CarouselContent>
-          </div>
+    {
+      useCarousel ? (
+        <div class="products-carousel" data-products-carousel data-lenis-prevent>
+          <Carousel
+            autoInit
+            opts={{ align: 'start', containScroll: 'trimSnaps', dragFree: false }}
+            class="products-carousel__root"
+          >
+            <div class="products-carousel__stage">
+              <CarouselPrevious class="products-carousel__arrow products-carousel__arrow--prev" hidden />
+              <CarouselNext class="products-carousel__arrow products-carousel__arrow--next is-visible" />
+              <div class="products-carousel__viewport">
+                <CarouselContent class="products-carousel__track">
+                  {landingProducts.map((product) => (
+                    <CarouselItem class="products-carousel__slide">
+                      <CatalogCard class="catalog-card--carousel" {...cardProps(product)} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </div>
+            </div>
+          </Carousel>
         </div>
-      </Carousel>
-    </div>
+      ) : (
+        <ul class="mt-12 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
+          {landingProducts.map((product) => (
+            <li class="min-h-0">
+              <CatalogCard class="h-full" {...cardProps(product)} />
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </div>
 </section>
 
-<script>
-  import { setupProductsCarousel } from '../scripts/products-carousel.ts';
-  setupProductsCarousel();
-</script>
+{
+  useCarousel ? (
+    <script>
+      import { setupProductsCarousel } from '../scripts/products-carousel.ts';
+      setupProductsCarousel();
+    </script>
+  ) : null
+}

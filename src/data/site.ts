@@ -16,36 +16,42 @@ export const TITLE_PREFIX = PLACEHOLDER_COPY.title;
 export const PRODUCT_ID = `${SITE_URL}/#product`;
 
 export const SITE_PURPOSE =
-  'Independent guides and checkout paths for Dota 2 cheat software on Windows PC, including map vision, hero ESP, and related modules listed on the vendor build.';
+  'Affiliate information site for Aion Classic ESP and aimbot on the main plan, plus Cloud DMA and HWID Spoofer supporting products for US players.';
 
-export const SITE_ABOUT = ['Dota 2 cheats', 'Maphack', 'Hero ESP', 'Scripts', 'Windows PC'] as const;
+export const SITE_ABOUT = [
+  'Aion Classic ESP and aimbot',
+  'Pricing',
+  'Cloud DMA',
+  'HWID Spoofer',
+  'System requirements',
+] as const;
 
 export const LISTED_PRICES = {
   monthlyUsd: 35,
   lifetimeUsd: 150,
-  cloudDmaLifetimeUsd: 0,
+  cloudDmaLifetimeUsd: 50,
 } as const;
 
 export const SEO_ROUTE_INTENTS: Record<string, string> = {
-  '/': 'dota 2 cheats, buy dota 2 cheats, plans',
-  '/dota-2-maphack/': 'dota 2 maphack, map hack, fog of war',
-  '/dota-2-hero-esp/': 'dota 2 hero esp, player esp',
-  '/dota-2-cheats-review/': 'dota 2 cheats review, features',
-  '/dota-2-scripts/': 'dota 2 scripts, hero scripts',
-  '/faq/': 'dota 2 cheats faq',
-  '/support/': 'dota cheat support',
+  '/': 'Aion Classic ESP and aimbot, monthly and lifetime pricing',
+  '/aion-classic-esp/': 'Aion Classic ESP and aimbot main plan features',
+  '/aion-classic-pricing/': 'Aion Classic ESP and aimbot pricing, monthly vs lifetime',
+  '/cloud-dma-for-aion-classic/': 'Cloud DMA for Aion Classic setup and requirements',
+  '/aion-classic-system-requirements/': 'Aion Classic ESP aimbot and Cloud DMA system requirements',
+  '/faq/': 'Aion Classic checkout and Cloud DMA FAQ',
+  '/support/': 'AionCheats support channels and vendor ticket tips',
+  '/guides/cloud-dma-setup/': 'Cloud DMA setup outline for Aion Classic Hyper-V',
 };
 
 export { INDEXABLE_MONEY_ROUTES } from '../../config/site.mjs';
 
 export const OG_IMAGES: Record<string, string> = {
   '/': '/og/home.jpg',
-  '/dota-2-maphack/': '/og/home.jpg',
-  '/dota-2-hero-esp/': '/og/home.jpg',
-  '/dota-2-cheats-review/': '/og/pricing.jpg',
-  '/dota-2-scripts/': '/og/default.jpg',
+  '/aion-classic-esp/': '/og/home.jpg',
+  '/aion-classic-pricing/': '/og/pricing.jpg',
+  '/cloud-dma-for-aion-classic/': '/og/cloud-dma.jpg',
+  '/aion-classic-system-requirements/': '/og/requirements.jpg',
   '/faq/': '/og/faq.jpg',
-  '/guides/system-requirements/': '/og/requirements.jpg',
   default: '/og/default.jpg',
 };
 
@@ -57,17 +63,20 @@ export function ogImageForPath(pathname: string): string {
 export const SITEMAP_IMAGES = buildSitemapImages(SITE_URL) as Record<string, { loc: string; title: string }[]>;
 
 export const KEYWORD_REDIRECTS: [string, string][] = [
-  ['/pricing', '/#products'],
-  ['/pricing/', '/#products'],
-  ['/arena-breakout-infinite-esp/', '/dota-2-hero-esp/'],
-  ['/arena-breakout-infinite-aimbot/', '/dota-2-scripts/'],
-  ['/arena-breakout-infinite-cheats-pricing/', '/#products'],
-  ['/cloud-dma-for-arena-breakout-infinite/', '/'],
-  ['/arena-breakout-infinite-hwid-spoofer/', '/products/dota-2-cheats/hwid-spoofer/'],
-  ['/cloud-dma/', '/'],
-  ['/hwid-spoofer/', '/products/dota-2-cheats/hwid-spoofer/'],
+  ['/pricing', '/aion-classic-pricing/'],
+  ['/pricing/', '/aion-classic-pricing/'],
+  ['/dota-2-maphack/', '/aion-classic-esp/'],
+  ['/dota-2-hero-esp/', '/aion-classic-esp/'],
+  ['/dota-2-cheats-review/', '/aion-classic-pricing/'],
+  ['/dota-2-scripts/', '/'],
+  ['/cloud-dma-for-arena-breakout-infinite/', '/cloud-dma-for-aion-classic/'],
+  ['/guides/system-requirements/', '/aion-classic-system-requirements/'],
+  ['/arena-breakout-infinite-esp/', '/aion-classic-esp/'],
+  ['/arena-breakout-infinite-cheats-pricing/', '/aion-classic-pricing/'],
+  ['/cloud-dma/', '/cloud-dma-for-aion-classic/'],
+  ['/hwid-spoofer/', '/aion-classic-system-requirements/#hwid-spoofer'],
   ['/sitemap-index.xml', '/sitemap.xml'],
   ['/sitemap-0.xml', '/sitemap.xml'],
-  ['/dota-2-vac-ban-risk', '/dota-2-cheats-review/'],
-  ['/dota-2-vac-ban-risk/', '/dota-2-cheats-review/'],
+  ['/dota-2-vac-ban-risk', '/aion-classic-pricing/'],
+  ['/dota-2-vac-ban-risk/', '/aion-classic-pricing/'],
 ];

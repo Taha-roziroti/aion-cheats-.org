@@ -1,9 +1,15 @@
 ---
 interface Props {
   class?: string;
+  pricingLinkLabel?: string;
+  setupLinkLabel?: string;
 }
 
-const { class: className = '' } = Astro.props;
+const {
+  class: className = '',
+  pricingLinkLabel = 'ESP & aimbot plan costs',
+  setupLinkLabel = 'Hyper-V setup walkthrough',
+} = Astro.props;
 ---
 
 <aside
@@ -14,8 +20,8 @@ const { class: className = '' } = Astro.props;
     Cloud DMA license is not the full setup cost
   </h2>
   <p class="mt-2 text-muted-foreground">
-    The listed Cloud DMA price covers the infrastructure license only. You must also purchase and maintain these
-    separate services before activation:
+    The listed Cloud DMA price ($50 lifetime at publish time) covers the infrastructure license only. You must also
+    purchase and maintain these separate services before activation:
   </p>
   <ul class="mt-3 list-disc space-y-2 pl-5 text-muted-foreground">
     <li>
@@ -26,12 +32,14 @@ const { class: className = '' } = Astro.props;
       <strong class="text-foreground">Static Server</strong> — dedicated server component with its own fee.
     </li>
     <li>
-      <strong class="text-foreground">AWS</strong> — cloud resources with separate billing; not included in the $50 license.
+      <strong class="text-foreground">AWS</strong> — cloud resources with separate billing; not included in the $50
+      license.
     </li>
   </ul>
   <p class="mt-3 text-muted-foreground">
-    Budget for all three in addition to the license before you reach checkout. See the
-    <a class="text-primary underline-offset-2 hover:underline" href="/support/">addon billing help</a> and the
-    <a class="text-primary underline-offset-2 hover:underline" href="/guides/cloud-dma-setup/">installation and Hyper-V checklist</a> for context.
+    Budget for all three in addition to the license before checkout. See
+    <a class="text-primary underline-offset-2 hover:underline" href="/aion-classic-pricing/">{pricingLinkLabel}</a> and
+    <a class="text-primary underline-offset-2 hover:underline" href="/guides/cloud-dma-setup/">{setupLinkLabel}</a> for
+    context.
   </p>
 </aside>

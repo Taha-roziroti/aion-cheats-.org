@@ -1,21 +1,65 @@
 ---
-title: "Add-on product | Overview placeholder"
-description: "Secondary product overview page with the same SEO shell as primary routes. Swap in technical copy for your add-on offering."
+title: "Content page placeholder"
+description: "Markdown body placeholder for redirect or legacy routes. Replace or remove this file when slugs are finalized."
 slug: "/cloud-dma-for-arena-breakout-infinite/"
 ---
 
-# Add-on product overview
+## Legacy redirect source placeholder
 
-Describe infrastructure, virtualization, or companion licenses on this page. Setup steps can live in the [setup guide](/guides/cloud-dma-setup/) while this page stays sales-focused.
+Introduction (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-![Dota 2 map information interface](/images/showcase/dota-low-poly-map.webp)
+## Overview placeholder
 
-[**Placeholder checkout CTA**](AFFILIATE_LINK_PLACEHOLDER)
+Overview (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Overview detail (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-## Questions
+- /cloud-dma-for-arena-breakout-infinite/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-**Does this share checkout with the main plan?**  
-The UI supports separate checkout IDs—configure them in checkout config files.
+## Feature list placeholder
 
-**What about requirements?**  
-Point readers to the [requirements checklist](/guides/system-requirements/) for hardware notes.
+Feature list (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Feature list detail (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /cloud-dma-for-arena-breakout-infinite/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Pricing notes placeholder
+
+Pricing notes (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Pricing notes detail (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /cloud-dma-for-arena-breakout-infinite/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Setup pointers placeholder
+
+Setup pointers (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Setup pointers detail (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /cloud-dma-for-arena-breakout-infinite/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Support and FAQ placeholder
+
+Support and FAQ (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Support and FAQ detail (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /cloud-dma-for-arena-breakout-infinite/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Next steps placeholder
+
+Next steps (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Next steps detail (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /cloud-dma-for-arena-breakout-infinite/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+Closing (/cloud-dma-for-arena-breakout-infinite/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.

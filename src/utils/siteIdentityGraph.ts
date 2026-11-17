@@ -1,5 +1,6 @@
 import {
   SITE_ABOUT,
+  SITE_HOST,
   SITE_NAME,
   SITE_PURPOSE,
   SITE_URL,

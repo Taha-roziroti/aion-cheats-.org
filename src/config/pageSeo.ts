@@ -1,82 +1,37 @@
-/**
- * Central titles/descriptions (mirrors content/pages frontmatter).
- */
+export type PageSeoEntry = { title: string; description: string };
 
-export interface PageSeoEntry {
-  title: string;
-  description: string;
-}
-
-export const PAGE_SEO: Record<string, PageSeoEntry> = {
+export const PAGE_SEO_OVERRIDES: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Dota 2 Cheats: Features, Pricing & Windows PC Plans',
+    title: 'Aion Classic ESP & Aimbot | Pricing',
     description:
-      'See Dota 2 cheats features, Windows requirements and current plans. Compare the 31-day and lifetime options before choosing.',
+      'Main plan: Aion Classic player ESP and aimbot. Compare monthly and lifetime access; Cloud DMA and HWID Spoofer sold separately.',
   },
-  '/dota-2-maphack/': {
-    title: 'Dota 2 Maphack: Map Vision, Ward ESP & Fog Control',
+  '/aion-classic-esp/': {
+    title: 'Aion Classic ESP & Aimbot Features',
     description:
-      'See what the Dota 2 maphack listing says about fog of war, ward placement ESP and map information. Check the feature details.',
+      'ESP and aimbot modules on the main plan. Cloud DMA and HWID Spoofer are separate supporting products.',
   },
-  '/dota-2-hero-esp/': {
-    title: 'Dota 2 Hero ESP: Player Levels, Items & ESP Overlays',
+  '/aion-classic-pricing/': {
+    title: 'Aion Classic ESP & Aimbot Pricing',
     description:
-      'Explore Dota 2 hero ESP features, including player levels, item information and enemy inventory visibility. See the listed functionality.',
+      'Compare $35 monthly and $150 lifetime ESP and aimbot access. Cloud DMA and HWID Spoofer are not included in the main plan.',
   },
-  '/dota-2-cheats-review/': {
-    title: 'Dota 2 Cheats Review: Features, Pricing & Verdict',
-    description:
-      'Read our Dota 2 cheats review covering listed features, Windows requirements, plans and pricing. Check the details before purchasing.',
+  '/cloud-dma-for-aion-classic/': {
+    title: 'Cloud DMA for Aion Classic | Setup & Requirements',
+    description: 'Cloud DMA supporting product for Aion Classic—separate from the ESP and aimbot main plan.',
   },
-  '/dota-2-scripts/': {
-    title: 'Dota 2 Scripts Guide: Last-Hit Help & Auto-Dodge',
+  '/aion-classic-system-requirements/': {
+    title: 'Aion Classic ESP & Aimbot System Requirements',
     description:
-      'Understand Dota 2 scripts, last-hit assistance and auto-dodge features. See how individual functions compare with a full product package.',
-  },
-  '/faq/': {
-    title: 'Dota 2 Cheats FAQ: Plans, Pricing & Windows Setup',
-    description:
-      'Frequently asked questions about Dota 2 cheat plans, Windows requirements, checkout, and how feature lists map to the current product build.',
-  },
-  '/support/': {
-    title: 'DotaCheat Support: Checkout Help & License Delivery',
-    description:
-      'Get help with Dota 2 cheat checkout, license delivery, and Windows compatibility before you purchase or install supported modules.',
-  },
-  '/about/': {
-    title: 'About DotaCheat – Independent Dota 2 Product Guides',
-    description:
-      'Learn how DotaCheat publishes feature guides, pricing, and setup notes for Windows players evaluating third-party Dota 2 software.',
-  },
-  '/guides/system-requirements/': {
-    title: 'Dota 2 Cheat System Requirements: Windows 10 & 11 PC',
-    description:
-      'Windows 10 and 11 requirements for Dota 2 cheat software, including RAM, CPU, Steam client builds, and security settings to verify first.',
-  },
-  '/guides/cloud-dma-setup/': {
-    title: 'Cloud DMA Setup Guide for Dota 2 on Windows PC',
-    description:
-      'Prepare Hyper-V, firmware, and network settings before optional Cloud DMA add-ons. Step-by-step checklist for United States Windows builds.',
-  },
-  '/privacy/': {
-    title: 'DotaCheat Privacy Policy – Analytics & Support Email',
-    description:
-      'Privacy policy for dotacheat.com: analytics cookies, support email, and checkout partner data when you contact us or complete an order.',
-  },
-  '/terms/': {
-    title: 'DotaCheat Terms of Service: Licenses, Pricing & Refunds',
-    description:
-      'Terms and conditions for Dota 2 cheat plans, refunds, and acceptable use on supported Windows PCs purchased through our checkout flow.',
+      'Windows, GPU, and security requirements for the main plan plus Cloud DMA and HWID Spoofer supporting products.',
   },
 };
 
-export function normalizeSeoPath(pathname: string): string {
-  let path = pathname || '/';
-  if (!path.startsWith('/')) path = `/${path}`;
-  if (path !== '/' && !path.endsWith('/')) path = `${path}/`;
-  return path;
+function normalizePath(pathname: string): string {
+  if (!pathname || pathname === '/') return '/';
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
 }
 
-export function getPageSeoEntry(pathname: string): PageSeoEntry | undefined {
-  return PAGE_SEO[normalizeSeoPath(pathname)];
+export function getPageSeoEntry(pathname: string): PageSeoEntry | null {
+  return PAGE_SEO_OVERRIDES[normalizePath(pathname)] ?? null;
 }

@@ -7,7 +7,7 @@ import { Button } from '@/components/starwind/button';
 
 <BaseLayout
   title={`Page not found | ${t.site.name}`}
-  description="The page you requested could not be found. Return to the homepage, pricing, or support placeholders."
+  description="The page you requested could not be found. Return to the Aion Classic homepage, pricing guide, FAQ, or support."
   noindex={true}
 >
   <section class="py-16 md:py-24">
@@ -15,14 +15,14 @@ import { Button } from '@/components/starwind/button';
       <p class="text-sm font-semibold uppercase tracking-wider text-primary">404</p>
       <h1 class="mt-3 text-3xl font-bold uppercase md:text-4xl">Page not found</h1>
       <p class="mt-4 text-muted-foreground">
-        That URL does not exist or may have moved. Head back to the homepage or open the pricing and FAQ placeholders.
+        That URL does not exist or may have moved. Head back to the homepage or open pricing, the FAQ, or support.
       </p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <Button as="a" href="/" variant="primary">
           Back to home
           <Icon name="arrowRight" size={17} />
         </Button>
-        <Button as="a" href="/#products" variant="outline">
+        <Button as="a" href="/aion-classic-pricing/" variant="outline">
           View pricing
         </Button>
         <Button as="a" href="/faq/" variant="outline">Read FAQ</Button>

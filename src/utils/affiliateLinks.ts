@@ -4,7 +4,11 @@ const AFFILIATE_PLACEHOLDER = 'AFFILIATE_LINK_PLACEHOLDER';
 
 export function affiliateHrefForContentSlug(slug: string): string {
   const normalized = slug.endsWith('/') ? slug : `${slug}/`;
-  if (normalized.includes('cloud-dma-for-arena-breakout-infinite')) {
+  if (
+    normalized.includes('cloud-dma-for-aion-classic') ||
+    normalized.includes('cloud-dma-for-arena-breakout-infinite') ||
+    normalized.includes('cloud-dma-setup')
+  ) {
     return checkoutPath('cloudDma');
   }
   if (normalized.includes('hwid-spoofer')) {
@@ -20,7 +24,13 @@ export function injectAffiliateLinks(markdownBody: string, slug: string): string
 
 export function checkoutProductForSlug(slug: string): CheckoutProduct {
   const normalized = slug.endsWith('/') ? slug : `${slug}/`;
-  if (normalized.includes('cloud-dma-for-arena-breakout-infinite')) return 'cloudDma';
+  if (
+    normalized.includes('cloud-dma-for-aion-classic') ||
+    normalized.includes('cloud-dma-for-arena-breakout-infinite') ||
+    normalized.includes('cloud-dma-setup')
+  ) {
+    return 'cloudDma';
+  }
   if (normalized.includes('hwid-spoofer')) return 'hwidSpoofer';
   return 'mainProduct';
 }

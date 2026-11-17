@@ -1,0 +1,59 @@
+{
+  "site": "aioncheats.org",
+  "locale": "en-US",
+  "pages": [
+    {
+      "path": "/",
+      "primary": "Aion Classic ESP and aimbot",
+      "secondaries": [
+        "Aion Classic ESP",
+        "Aion Classic aimbot",
+        "Buy Aion Classic ESP",
+        "Aion Classic overlay software"
+      ],
+      "intent": "commercial"
+    },
+    {
+      "path": "/aion-classic-esp/",
+      "primary": "Aion Classic ESP",
+      "secondaries": [
+        "Aion Classic player ESP",
+        "Aion Classic aimbot",
+        "Aion Classic nameplate ESP",
+        "Aion Classic distance overlay"
+      ],
+      "intent": "informational"
+    },
+    {
+      "path": "/aion-classic-pricing/",
+      "primary": "Aion Classic ESP aimbot pricing",
+      "secondaries": [
+        "Aion Classic ESP monthly plan",
+        "Aion Classic aimbot lifetime plan",
+        "Aion Classic monthly vs lifetime access"
+      ],
+      "intent": "commercial"
+    },
+    {
+      "path": "/cloud-dma-for-aion-classic/",
+      "primary": "Cloud DMA for Aion Classic",
+      "secondaries": [
+        "Aion Classic Cloud DMA requirements",
+        "Aion Classic Cloud DMA setup",
+        "Cloud DMA Aion Classic price"
+      ],
+      "intent": "commercial"
+    },
+    {
+      "path": "/aion-classic-system-requirements/",
+      "primary": "Aion Classic system requirements",
+      "secondaries": [
+        "Aion Classic ESP Windows 11",
+        "Aion Classic aimbot compatibility",
+        "Aion Classic setup",
+        "Aion Classic minimum PC requirements"
+      ],
+      "intent": "informational"
+    }
+  ]
+}

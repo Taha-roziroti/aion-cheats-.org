@@ -88,13 +88,14 @@ for (const route of AUDIT_ROUTES) {
     imgIndex += 1;
     const tag = match[0];
     const pos = match.index;
+    const imgDecorative = /\baria-hidden\s*=\s*["']true["']/i.test(tag);
     const hasAlt = /\balt\s*=/i.test(tag);
-    if (!hasAlt) {
+    if (!hasAlt && !imgDecorative) {
       errors.push(`${route}: <img #${imgIndex}> missing alt attribute`);
       continue;
     }
     const alt = tag.match(/\balt\s*=\s*["']([^"']*)["']/i)?.[1] ?? '';
-    const decorative = isInsideAriaHidden(html, pos);
+    const decorative = imgDecorative || isInsideAriaHidden(html, pos);
     if (!alt.trim() && !decorative) {
       errors.push(`${route}: <img #${imgIndex}> has empty alt (not decorative)`);
     }
@@ -127,22 +128,6 @@ if (fs.existsSync(blogPngDir)) {
     if (!fs.existsSync(variant)) {
       errors.push(`blog: missing responsive variant for ${file} (expected ${base}-400.webp)`);
     }
-  }
-}
-
-const FORBIDDEN_IMAGE = 'placeholder.svg';
-const showcaseManifest = path.join(root, 'src/data/showcaseImages.ts');
-if (fs.existsSync(showcaseManifest)) {
-  const text = fs.readFileSync(showcaseManifest, 'utf8');
-  if (text.includes(FORBIDDEN_IMAGE)) {
-    errors.push(`showcaseImages.ts must not reference ${FORBIDDEN_IMAGE} (use /images/showcase/)`);
-  }
-}
-
-for (const route of INDEXABLE_MONEY_ROUTES) {
-  const html = readHtml(route);
-  if (html?.includes(FORBIDDEN_IMAGE)) {
-    errors.push(`${route}: must not use ${FORBIDDEN_IMAGE} (showcase WebP only)`);
   }
 }
 

@@ -13,8 +13,9 @@ export const ABI_HERO_SLIDES: ProductSlide[] = SHOWCASE_SHOTS.slice(0, 6).map((s
 export const ABI_GALLERY = SHOWCASE_SHOTS.map((s) => ({ src: s.src, alt: s.alt }));
 
 export const ABI_PAGE_PREVIEW: Record<string, string> = {
-  '/dota-2-maphack/': `${SHOWCASE_SHOTS[3]!.src}`,
-  '/dota-2-hero-esp/': `${SHOWCASE_SHOTS[4]!.src}`,
-  '/dota-2-cheats-review/': `${SHOWCASE_SHOTS[1]!.src}`,
-  '/dota-2-scripts/': `${SHOWCASE_SHOTS[2]!.src}`,
+  '/': SHOWCASE_SHOTS[0]!.src,
+  '/aion-classic-esp/': SHOWCASE_SHOTS[0]!.src,
+  '/aion-classic-pricing/': SHOWCASE_SHOTS[4]!.src,
+  '/cloud-dma-for-aion-classic/': SHOWCASE_SHOTS[3]!.src,
+  '/aion-classic-system-requirements/': SHOWCASE_SHOTS[3]!.src,
 };

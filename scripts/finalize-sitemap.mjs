@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { SITE_URL } from '../config/site.mjs';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
@@ -41,7 +42,7 @@ fs.writeFileSync(path.join(dist, 'sitemap.xml'), formatted, 'utf8');
 const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://dotacheats.com/sitemap.xml</loc>
+    <loc>${SITE_URL}/sitemap.xml</loc>
     <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
   </sitemap>
 </sitemapindex>

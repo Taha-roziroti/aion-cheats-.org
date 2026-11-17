@@ -4,13 +4,15 @@ const ZADEYO_BASE = 'https://zadeyo.com/go/TAHA';
 const zadeyoProduct = (path) =>
   `${ZADEYO_BASE}?to=${encodeURIComponent(path)}`;
 
+const AION_CLASSIC = '/products/aion-classic';
+
 export const CHECKOUT_URLS = {
-  mainProduct: zadeyoProduct('/products/dota-2'),
+  mainProduct: zadeyoProduct(AION_CLASSIC),
   cloudDma: zadeyoProduct('/products/cloud-dma'),
   hwidSpoofer: zadeyoProduct('/products/hwid-spoofer'),
-  dota2: zadeyoProduct('/products/dota-2'),
-  skinChanger: zadeyoProduct('/products/dota-2'),
-  ugc: zadeyoProduct('/products/dota-2'),
+  dota2: zadeyoProduct(AION_CLASSIC),
+  skinChanger: zadeyoProduct(AION_CLASSIC),
+  ugc: zadeyoProduct(AION_CLASSIC),
 };
 
 /** Slugs served by `src/pages/go/[slug].astro` (instant client redirect — no edge 302). */

@@ -1,5 +1,5 @@
-/** Single source of truth for monthly access length (FAQ and plan selector). Matches Zadeyo listing. */
-export const MONTHLY_ACCESS_DAYS = 31;
+/** Listed partner-store prices — re-verify on Zadeyo before launch. */
+export const MONTHLY_ACCESS_DAYS = 30;
 
 export type ProductPlanId = 'monthly' | 'lifetime' | 'onetime';
 
@@ -17,7 +17,7 @@ const mainProductPlans: ProductPlan[] = [
     priceUsd: 35,
     priceNote: `USD · ${MONTHLY_ACCESS_DAYS}-day access`,
   },
-  { id: 'lifetime', label: 'Lifetime', priceUsd: 150, priceNote: 'USD · one-time' },
+  { id: 'lifetime', label: 'Lifetime', priceUsd: 150, priceNote: 'USD · one-time payment' },
 ];
 
 const hwidSpooferPlans: ProductPlan[] = [
@@ -33,8 +33,8 @@ const cloudDmaPlans: ProductPlan[] = [
   {
     id: 'lifetime',
     label: 'Lifetime license',
-    priceUsd: 0,
-    priceNote: 'USD · license only (see add-ons)',
+    priceUsd: 50,
+    priceNote: 'USD · license only (add-ons extra)',
   },
 ];
 

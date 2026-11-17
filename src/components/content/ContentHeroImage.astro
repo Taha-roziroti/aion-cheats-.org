@@ -14,15 +14,16 @@ interface Props {
 }
 
 const { src, alt, priority = false, class: className = '' } = Astro.props;
-const srcSet = responsiveSrcSet(src, HERO_IMAGE_WIDTHS);
-const imgSrc = defaultWebpSrc(src, HERO_IMAGE_WIDTHS);
+const isSvg = src.toLowerCase().endsWith('.svg');
+const srcSet = isSvg ? undefined : responsiveSrcSet(src, HERO_IMAGE_WIDTHS);
+const imgSrc = isSvg ? src : defaultWebpSrc(src, HERO_IMAGE_WIDTHS);
 ---
 
 <figure class={`overflow-hidden rounded-2xl border border-border bg-muted/20 ${className}`}>
   <img
     src={imgSrc}
     srcset={srcSet}
-    sizes={HERO_IMAGE_SIZES}
+    sizes={isSvg ? undefined : '(min-width: 1024px) min(42rem, 50vw), 100vw'}
     alt={alt}
     width={960}
     height={540}

@@ -1,60 +1,65 @@
 ---
-route: "/guides/system-requirements/"
-seoTitle: "Dota 2 Cheat System Requirements: Windows 10 & 11 PC"
-metaDescription: "Windows 10 and 11 requirements for Dota 2 cheat software, including RAM, CPU, Steam client builds, and security settings to verify first."
-schemaTypes: ["WebPage", "Article"]
-layout: "article"
-articlePublished: "2026-01-01"
-heroImage:
-  src: "/images/showcase/dota-feature-menu.webp"
-  alt: "Dota 2 cheat software feature panel on Windows PC"
-ogImage: "/og/requirements.jpg"
+title: "System Requirements Guide Template: Hardware Checklist Placeholder"
+description: "Requirements guide using the shared markdown SEO shell. List CPU, OS, and client versions once you validate them on hardware."
+slug: "/guides/system-requirements/"
 ---
 
-# Dota 2 cheat system requirements for Windows PC
+## System requirements guide placeholder
 
-Before you open checkout for **Dota 2 cheats**, confirm that your everyday gaming PC matches the vendor’s Windows expectations. Most support issues we see in tickets are not “broken features”—they are mismatched builds, outdated Steam clients, or security software blocking loaders.
+Introduction (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-This guide summarizes the hardware and software checklist we publish on dotacheat.com. It is not a guarantee that every module runs on every machine; use it to self-qualify, then read the [listed module review page](/dota-2-cheats-review/) for feature-level detail.
+## Overview placeholder
 
-![Dota 2 cheat software feature panel](/images/showcase/dota-feature-menu.webp)
+Overview (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Overview detail (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-Pair this guide with the [optional Cloud DMA walkthrough](/guides/cloud-dma-setup/) when you plan to add DMA hardware, and keep the [checkout and billing FAQ](/faq/) open for overlapping billing questions.
+- /guides/system-requirements/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-## Supported operating systems
+## Feature list placeholder
 
-The listing targets **64-bit Windows 10 and Windows 11** with current cumulative updates installed. Avoid Insider preview builds on your main Dota account unless you accept that drivers and anti-cheat stacks shift without notice.
+Feature list (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Feature list detail (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-- Keep at least 20–30 GB free on the system drive for Steam, Dota 2, and temporary loader files.
-- Use an administrator-capable account for one-time driver or Hyper-V tasks, then return to a standard user for daily play if you prefer.
+- /guides/system-requirements/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-## CPU, RAM, and GPU baseline
+## Pricing notes placeholder
 
-Dota 2 is not unusually heavy, but overlays and ESP modules add margin on top of the base game.
+Pricing notes (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Pricing notes detail (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-| Component | Practical baseline |
-| --- | --- |
-| CPU | Quad-core x64 processor from the last several generations (Intel or AMD) |
-| RAM | 16 GB system memory; close background browsers before long sessions |
-| GPU | Any DirectX 11–capable card that already runs Dota 2 at your target resolution |
-| Storage | SSD strongly recommended for faster patch and replay load times |
+- /guides/system-requirements/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-Integrated graphics can work if Dota already runs smoothly; stutter from the GPU will feel worse once overlays draw extra information.
+## Setup pointers placeholder
 
-## Steam client and Dota 2 build
+Setup pointers (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Setup pointers detail (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-Install **Steam** from the official client and update Dota 2 to the current public branch unless the vendor explicitly documents a different build.
+- /guides/system-requirements/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-Sign in with the account you intend to use for ranked or casual play—HWID and license tools bind to the machine profile active at activation time. After major Windows updates, relaunch Steam once so file hooks stay consistent.
+## Support and FAQ placeholder
 
-## Security software and virtualization
+Support and FAQ (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Support and FAQ detail (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-Windows Defender or third-party antivirus may quarantine cheat loaders. If support asks you to whitelist a folder, do so deliberately and scan downloads first.
+- /guides/system-requirements/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-Optional Cloud DMA add-ons require **virtualization features** enabled in firmware and, for Hyper-V style setups, the Windows features turned on in Control Panel. Those steps live in the [Hyper-V DMA preparation guide](/guides/cloud-dma-setup/); do not enable Hyper-V unless you actually purchased that add-on.
+## Next steps placeholder
 
-## Network and checkout
+Next steps (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Next steps detail (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-A stable wired or low-latency Wi-Fi connection is enough for license retrieval. Complete purchases only through our [secure checkout bridge](/go/) so vendor receipts stay aligned with your order.
+- /guides/system-requirements/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-If you meet the checklist above, move on to feature-specific pages such as [Dota 2 maphack modules](/dota-2-maphack/) or the [hero ESP module guide](/dota-2-hero-esp/), compare [31-day and lifetime plan cards](/#products), and [open a support ticket](/support/) if a requirement is unclear before you pay.
+Closing (/guides/system-requirements/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.

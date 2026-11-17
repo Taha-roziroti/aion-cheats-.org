@@ -835,3 +835,28 @@ html:not(.dark) .deployment-cta-secondary:hover {
     animation: none !important;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  html {
+    background-color: var(--background, #0a0a0a);
+  }
+}
+
+main#main-content > section:nth-of-type(n + 2) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 520px;
+}
+
+#abi-overview.home-seo-body {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 2400px;
+}
+
+.home-heavy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}

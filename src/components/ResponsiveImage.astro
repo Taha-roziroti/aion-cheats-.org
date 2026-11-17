@@ -16,6 +16,7 @@ interface Props {
   widths?: readonly number[];
   class?: string;
   desktopOnly?: boolean;
+  decorative?: boolean;
 }
 
 const {
@@ -29,7 +30,11 @@ const {
   widths = DEFAULT_IMAGE_WIDTHS,
   class: className,
   desktopOnly = false,
+  decorative = false,
 } = Astro.props;
+
+const resolvedAlt = decorative ? '' : alt;
+const ariaHidden = decorative ? 'true' : undefined;
 
 const isRaster = /\.(png|jpe?g|webp)$/i.test(src);
 const srcSet = responsiveSrcSet(src, widths);
@@ -47,7 +52,7 @@ const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
       <img
         src={imgSrc}
         srcset={desktopOnly ? undefined : srcSet}
-        alt={alt}
+        alt={resolvedAlt}
         width={width}
         height={height}
         loading={loading}
@@ -55,18 +60,20 @@ const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
         fetchpriority={fetchPriority}
         sizes={pictureSizes}
         class={className}
+        aria-hidden={ariaHidden}
       />
     </picture>
   ) : (
     <img
       src={src}
-      alt={alt}
+      alt={resolvedAlt}
       width={width}
       height={height}
       loading={loading}
       decoding="async"
       fetchpriority={fetchPriority}
       class={className}
+      aria-hidden={ariaHidden}
     />
   )
 }

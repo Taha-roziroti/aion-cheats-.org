@@ -1,23 +1,65 @@
 ---
-title: "Feature page B | Content placeholder"
-description: "Second feature landing page shell with FAQ blocks and affiliate injection ready for your finalized feature descriptions."
+title: "Content page placeholder"
+description: "Markdown body placeholder for redirect or legacy routes. Replace or remove this file when slugs are finalized."
 slug: "/arena-breakout-infinite-aimbot/"
 ---
 
-# Feature page B
+## Legacy redirect source placeholder
 
-Reserve this URL for a second feature cluster—controls, tuning options, or combat assistance documentation depending on your catalog.
+Introduction (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-![Dota 2 scripts interface with ability cooldown overlays](/images/showcase/dota-magnus-overlay.webp)
+## Overview placeholder
 
-Cross-link to [feature page A](/arena-breakout-infinite-esp/) and the [requirements guide](/guides/system-requirements/) while content is in progress.
+Overview (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Overview detail (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-[**Placeholder checkout CTA**](AFFILIATE_LINK_PLACEHOLDER)
+- /arena-breakout-infinite-aimbot/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
 
-## Questions
+## Feature list placeholder
 
-**Can I rename this route later?**  
-Update the slug in frontmatter, page file, and redirects together to avoid broken links.
+Feature list (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Feature list detail (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
 
-**Where do images go?**  
-Replace `/images/placeholder.svg` with optimized WebP assets under `public/images/`.
+- /arena-breakout-infinite-aimbot/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Pricing notes placeholder
+
+Pricing notes (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Pricing notes detail (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-aimbot/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Setup pointers placeholder
+
+Setup pointers (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Setup pointers detail (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-aimbot/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Support and FAQ placeholder
+
+Support and FAQ (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Support and FAQ detail (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-aimbot/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+## Next steps placeholder
+
+Next steps (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+Next steps detail (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.
+
+- /arena-breakout-infinite-aimbot/ bullet placeholder one
+- Bullet placeholder two
+- Bullet placeholder three
+
+Closing (/arena-breakout-infinite-aimbot/): Intentional scaffold copy for this route only. It exists so layout, spacing, list rhythm, and internal links can be reviewed before you publish real product documentation. Replace this block with features, pricing, compatibility notes, checkout steps, and support guidance when your brief is approved.

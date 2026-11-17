@@ -50,28 +50,28 @@ export function breadcrumbsForRoute(route: string): BreadcrumbItem[] {
       { name: 'System requirements', path: '/guides/system-requirements/' },
     ];
   }
-  if (route === '/dota-2-maphack/') {
+  if (route === '/aion-classic-esp/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Dota 2 maphack', path: '/dota-2-maphack/' },
+      { name: 'Aion Classic ESP', path: '/aion-classic-esp/' },
     ];
   }
-  if (route === '/dota-2-hero-esp/') {
+  if (route === '/aion-classic-pricing/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Dota 2 hero ESP', path: '/dota-2-hero-esp/' },
+      { name: 'Pricing', path: '/aion-classic-pricing/' },
     ];
   }
-  if (route === '/dota-2-cheats-review/') {
+  if (route === '/cloud-dma-for-aion-classic/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Review', path: '/dota-2-cheats-review/' },
+      { name: 'Cloud DMA', path: '/cloud-dma-for-aion-classic/' },
     ];
   }
-  if (route === '/dota-2-scripts/') {
+  if (route === '/aion-classic-system-requirements/') {
     return [
       { name: 'Home', path: '/' },
-      { name: 'Dota 2 scripts', path: '/dota-2-scripts/' },
+      { name: 'System requirements', path: '/aion-classic-system-requirements/' },
     ];
   }
   return [{ name: 'Home', path: '/' }];
@@ -177,6 +177,8 @@ export function defaultEndCtaHref(
   if (checkout === 'main-product') return checkoutPath('mainProduct');
   if (route === '/pricing/') return checkoutPath('mainProduct');
   if (route === '/cloud-dma/') return checkoutPath('cloudDma');
+  if (route === '/cloud-dma-for-aion-classic/') return checkoutPath('cloudDma');
   if (route === '/hwid-spoofer/') return checkoutPath('hwidSpoofer');
+  if (route === '/guides/cloud-dma-setup/') return checkoutPath('cloudDma');
   return checkoutPath('mainProduct');
 }

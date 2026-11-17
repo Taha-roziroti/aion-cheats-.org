@@ -1,65 +1,77 @@
 # SEO audit log (`cursor-seo-audit-prompt.md`)
 
-Workflow: `npm run audit` → fix → rebuild → log. Script: `scripts/seo-audit.mjs` (frozen after pass 3; pass 5 only bugfixes/extensions aligned with Dota launch).
+Workflow: `npm run audit` → fix → rebuild → log. Companion: `npm run audit:perf` (Lighthouse on `astro preview`).
 
-## Pass 0 (baseline — 2026-03-18)
+## Pass 10 (Aion — 2026-11-17)
 
-- **Tooling:** `scripts/seo-audit.mjs`, `npm run audit`, cspell in audit, build verifiers chained inside `npm run build`.
-- **Evidence:** prior passes 1–2 on legacy ABI template; Dota migration left Arena URLs, ABI footer, placeholder FAQs, redirect map drift.
+- **Copy repositioning:** site-wide removal of generic “cheats” copy; **main plan = ESP + aimbot**; **Cloud DMA + HWID Spoofer** as separate supporting products (homepage product carousel, i18n, `productCatalog`, money markdown).
+- **URLs:** `/aion-classic-pricing/`, `/aion-classic-system-requirements/` with **301** from old `*-cheats-price*` / `*-cheat-system-requirements*` paths (`astro.config`, `_redirects`, `redirects.mjs`).
+- **SEO data:** `keywords.json`, `pageSeo.ts`, anchor uniqueness fixes after URL migration.
+- **Evidence:** `npm run build`, `npm run audit` (with build), `SKIP_BUILD=1 npm run audit` — **exit 0**.
+- **Still blocked:** desktop `audit:perf` performance &lt; 95 (see pass 9 report); Playwright §13 screenshots optional pass not run this session.
 
-## Pass 5 (Dota dotacheat.com — current)
+## Pass 9 (Aion — 2026-11-17)
 
-- **Fixed (links / redirects):** pricing → `/#products`, cloud-dma → `/`, hwid → product page; `public/_redirects`, `redirects.mjs`, `verify-redirects.mjs`, Astro redirect pages synced; removed internal links to Arena routes from home, footer, workflow, 404, FAQ data.
-- **Fixed (hygiene):** footer brand DotaCheat, tagline, workflow copy, `src/data/faq.ts` Dota FAQs, legal/support i18n bodies, breadcrumbs JSON-LD, AdditionalCostsCallout link.
-- **Audit script:** expanded `AUDIT_HTML_ROUTES` (Dota feature pages + guides); `REDIRECT_ONLY` Arena aliases; leakage patterns `Site template`, `ABI Cheats`.
-- **Evidence:** `npm run audit` (full build) exit 0; two additional `SKIP_BUILD=1 npm run audit` exit 0, no file changes between runs.
-- **Files touched:** see git diff (HeroSection, Footer, en.ts, faq.ts, redirects, seo-audit.mjs, etc.).
+- **Hub DOM diet:** hero carousel capped at 3 slides; homepage showcase gallery uses `PRODUCT_SHOTS` (5) not 8; DOM ~1,286 (was ~1,312).
+- **Fonts:** reverted bundled `@fontsource` (regressed mobile perf); kept async Google Fonts (`display=swap`).
+- **Playwright:** added `npm run audit:e2e` — smoke 5 routes + header link HTTP checks — **exit 0**.
+- **`audit:perf` (`LIGHTHOUSE_RUNS=1`):** mobile money templates **≥95**; **desktop performance** still below 95 (home **67**, spokes **88–89**). See `audit/lighthouse-report.json`.
+- **Evidence:** `npm run build`, `npm run audit`, `npm run audit:e2e` exit 0.
+
+## Pass 8 (Aion — 2026-11-17)
+
+- **Template leakage (§6):** removed physical routes under `src/pages/products/`, Dota/Arena markdown shells, and standalone `hwid-spoofer` / `cloud-dma` pages; legacy URLs remain **301-only** via `astro.config.mjs`, `redirects.mjs`, and `public/_redirects` (including `hwid-spoofer` → system requirements).
+- **A11y / Lighthouse:** fixed comparison table ARIA misuse (`WhySetupSection`), label/name mismatches (header/footer/checkout), primary contrast (`--cod-cta` → `#a855f7`), decorative logo `aria-hidden` on brand marks.
+- **Performance:** deferred GSAP/Lenis until scroll, keydown, pointer, or 8s idle; `inlineStylesheets: 'never'`; `content-visibility: auto` on home sections below the hero.
+- **404:** US English copy; pricing CTA → `/aion-classic-cheats-price/`.
+- **Evidence:** `npm run build` + `npm run audit` exit 0; `SKIP_BUILD=1 npm run audit` exit 0.
+- **`audit:perf` (`LIGHTHOUSE_RUNS=1`):** mobile templates ≥95 (home **95**); desktop performance still below floor on home (**67**) and spoke pages (~**91**); 404 SEO excluded from gate (`noindex`). Report: `audit/lighthouse-report.json`.
+
+## Prior pass 7 summary
+
+- `keywords.json`, anchor inventory + keyword verifiers, `npm run audit:perf`, view transitions, footer anchor fixes, three consecutive green `npm run audit`.
 
 ## Decisions
 
-- Title/description length in audit matches `verify-seo` (35–72 / 110–165), not literal 50–60, to avoid conflicting gates.
-- Legacy Arena markdown routes remain as redirect sources only; indexable pages must not link to them.
-- Homepage FAQ remains in `content/pages/index.md`; `siteFaqs` feeds components still using `getLandingFaqs`.
-- Launch commits on `main` (`9178330`, `bb4b3fe`); audit re-runs do not require new commits when clean.
+- **Anchor regions:** `generate-anchor-inventory.mjs`; body rules scoped to Aion money + support URLs until forum/blog legacy is removed or noindexed.
+- **Affiliate bridges:** `/go/*` out of sitemap; `rel="sponsored noopener"`.
+- **Metadata gates:** title/description 35–72 / 110–165 (aligned with `verify-seo`).
+- **Homepage headings:** verbatim brief allows three H1–H2 primary mentions on `/`.
+- **404 Lighthouse SEO:** scored separately from indexable templates (`noindex` by design).
+- **Desktop perf vs mobile:** home is a large hub (~190KB HTML with full money-page copy on-page); mobile lab meets 95; desktop lab remains blocked until HTML/paint budget is reduced without removing required SEO copy.
+- **No commits** unless user requests.
 
 ## Blocked
 
-| Item | Reason | Owner action |
-|------|--------|----------------|
-| Playwright viewport screenshots (§10) | No Playwright in repo | Add optional `e2e/` or manual visual QA |
-| Lighthouse 95+ matrix (§7) | Not automated in audit | Run Lighthouse on preview manually |
-| Real affiliate checkout URLs | Still `/go/*` → support placeholders | Supply production URLs in `checkout-redirects.mjs` |
-| External link live checks | Not in audit (unverified OK per prompt) | Spot-check vendor links before launch |
-| Guide markdown placeholder prose | `cloud-dma-setup.md` body still scaffold | Replace when Hyper-V content is ready |
+| Item | Reason |
+|------|--------|
+| Desktop Lighthouse performance 95+ on hub | ~190KB homepage `main` (hero + sections + full `index.md`); desktop perf **67** after deferrals |
+| Desktop Lighthouse 95+ on spokes (~91) | Heavy shared CSS/JS shell; needs further asset diet |
+| Playwright viewport screenshots §13 | Only `audit:e2e` smoke (no 375/768/1440 screenshots) |
+| Real affiliate URLs | `/go/*` placeholders |
+| Forum/blog scaffold URLs | Still build; not in sitemap |
 
 ## Review table (indexable / audited routes)
 
-| Page | spelling | spacing | images/alt | relevancy | status | notes |
-|------|----------|---------|------------|-----------|--------|-------|
-| `/` | pass | pass | pass | pass | pass | intents: dota 2 cheats |
-| `/dota-2-maphack/` | pass | pass | pass | pass | pass | primary: maphack |
-| `/dota-2-hero-esp/` | pass | pass | pass | pass | pass | primary: hero esp |
-| `/dota-2-cheats-review/` | pass | pass | pass | pass | pass | commercial review |
-| `/dota-2-scripts/` | pass | pass | pass | pass | pass | informational |
-| `/guides/system-requirements/` | pass | pass | pass | pass | pass | setup intent |
-| `/guides/cloud-dma-setup/` | pass | pass | pass | pass | pass | blocked body copy |
-| `/faq/` | pass | pass | pass | pass | pass | siteFaqs + filters |
-| `/about/` | pass | pass | pass | pass | pass | |
-| `/support/` | pass | pass | pass | pass | pass | |
-| `/privacy/` | pass | pass | pass | pass | pass | |
-| `/terms/` | pass | pass | pass | pass | pass | |
+| page | spelling | spacing | images/alt | relevancy | keywords/anchors | headings/visual | status | notes |
+|------|----------|---------|------------|-----------|------------------|-----------------|--------|-------|
+| `/` | pass | blocked | pass | pass | pass | blocked | pass | mobile perf 95; desktop perf blocked |
+| `/aion-classic-esp/` | pass | blocked | pass | pass | pass | pass | pass | |
+| `/aion-classic-pricing/` | pass | blocked | pass | pass | pass | pass | pass | ESP/aimbot pricing |
+| `/cloud-dma-for-aion-classic/` | pass | blocked | pass | pass | pass | pass | pass | supporting product |
+| `/aion-classic-system-requirements/` | pass | blocked | pass | pass | pass | pass | pass | incl. HWID section |
+| `/guides/cloud-dma-setup/` | pass | blocked | pass | pass | pass | pass | pass | |
+| `/faq/` | pass | blocked | pass | pass | pass | pass | pass | |
+| `/about/` | pass | blocked | pass | pass | pass | pass | pass | |
+| `/support/` | pass | blocked | pass | pass | pass | pass | pass | |
+| `/privacy/` | pass | blocked | pass | pass | pass | pass | pass | |
+| `/terms/` | pass | blocked | pass | pass | pass | pass | pass | |
 
-## Pass 6 (2026-11-14 re-verification)
+## Final verification (pass 8)
 
-- **Goal:** `cursor-seo-audit-prompt.md` — 3× green `npm run audit`, no code changes on runs 2–3.
-- **Evidence:** full `npm run audit` (includes `npm run build`) exit 0; then `SKIP_BUILD=1 npm run audit` ×2 exit 0.
-- **Repo state:** `main` at `bb4b3fe` on `origin` (Dota launch + audit prompt doc); working tree clean before pass 6.
-- **Issues found:** none scriptable; review table unchanged; blocked items unchanged.
+1. `npm run build` — **pass**
+2. `npm run audit` (with build) — **pass**
+3. `SKIP_BUILD=1 npm run audit` — **pass**
+4. `npm run audit:perf` — **partial** (mobile ≥95; desktop performance below 95)
 
-## Final verification (pass 5 & 6)
-
-1. `npm run audit` with build — **pass** (pass 5, pass 6)
-2. `SKIP_BUILD=1 npm run audit` — **pass** (no code changes)
-3. `SKIP_BUILD=1 npm run audit` — **pass** (no code changes)
-
-**Definition of done (A):** scriptable audit green ×3; review table all pass; blocked items documented. Judgment checks (Playwright/Lighthouse) remain blocked per §7/§10.
+**Definition of done:** **A** not met (desktop Lighthouse performance); **B** documented above with evidence.

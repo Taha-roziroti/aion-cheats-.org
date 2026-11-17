@@ -4,7 +4,9 @@ import sharp from 'sharp';
 
 const root = process.cwd();
 const ogDir = path.join(root, 'public', 'og');
-const heroSource = path.join(root, 'public', 'images', 'showcase', 'dota-drow-teamfight.webp');
+const source =
+  path.join(root, 'public', 'images', 'placeholder.svg');
+const fallback = path.join(root, 'public', 'brand', 'favicon-source.png');
 
 const outputs = [
   'default.jpg',
@@ -16,8 +18,9 @@ const outputs = [
   'faq.jpg',
 ];
 
-if (!fs.existsSync(heroSource)) {
-  console.error('generate-seo-assets: missing placeholder at', heroSource);
+const input = fs.existsSync(source) ? source : fallback;
+if (!fs.existsSync(input)) {
+  console.error('generate-seo-assets: missing placeholder at', source, 'or', fallback);
   process.exit(1);
 }
 
@@ -25,7 +28,7 @@ fs.mkdirSync(ogDir, { recursive: true });
 
 for (const file of outputs) {
   const out = path.join(ogDir, file);
-  await sharp(heroSource)
+  await sharp(input)
     .resize(1200, 630, { fit: 'cover', position: 'centre' })
     .jpeg({ quality: 85, mozjpeg: true })
     .toFile(out);

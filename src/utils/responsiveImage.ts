@@ -8,7 +8,7 @@ export const HERO_IMAGE_WIDTHS = [512, 640, 960] as const;
 export const HERO_IMAGE_SIZES = '(min-width: 1024px) 490px, 100vw';
 /** Thumbs ~148px CSS; 320w covers 2x DPR without pulling 640/960. */
 export const THUMB_IMAGE_WIDTHS = [320, 400] as const;
-export const DEFAULT_IMAGE_WIDTHS = [640, 960] as const;
+export const DEFAULT_IMAGE_WIDTHS = [512, 640] as const;
 
 export function stripRasterExt(src: string): string {
   return src.replace(RASTER_EXT, '');

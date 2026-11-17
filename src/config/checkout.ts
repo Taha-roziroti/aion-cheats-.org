@@ -34,6 +34,22 @@ export const PRIMARY_CHECKOUT_PATH = CHECKOUT_HUB_PATH;
 
 export type CheckoutProductPageId = 'main-product' | 'cloud-dma' | 'hwid-spoofer';
 
+/** Routes where checkout CTAs skip the product hub and go straight to one SKU. */
+export const DEDICATED_CHECKOUT_ROUTES: Record<string, CheckoutProductPageId> = {
+  '/guides/cloud-dma-setup/': 'cloud-dma',
+  '/cloud-dma-for-aion-classic/': 'cloud-dma',
+  '/cloud-dma-for-arena-breakout-infinite/': 'cloud-dma',
+  '/cloud-dma/': 'cloud-dma',
+  '/hwid-spoofer/': 'hwid-spoofer',
+  '/products/dota-2-cheats/hwid-spoofer/': 'hwid-spoofer',
+  '/arena-breakout-infinite-hwid-spoofer/': 'hwid-spoofer',
+};
+
+export function dedicatedCheckoutProduct(route: string): CheckoutProductPageId | null {
+  const path = route.endsWith('/') || route === '' ? route || '/' : `${route}/`;
+  return DEDICATED_CHECKOUT_ROUTES[path] ?? null;
+}
+
 export function checkoutPathForProductId(product: CheckoutProductPageId): string {
   switch (product) {
     case 'cloud-dma':
@@ -110,6 +126,13 @@ export function resolveCheckoutHref(href: string): string {
   }
   if (href.includes('%2Fproducts%2Fugc') || href.includes('/products/ugc')) {
     return checkoutPath('ugc');
+  }
+  if (
+    href.includes('%2Fproducts%2Faion-classic') ||
+    href.includes('/products/aion-classic') ||
+    (href.includes('/go/TAHA') && href.includes('aion-classic'))
+  ) {
+    return checkoutPath('mainProduct');
   }
   if (href.includes('%2Fproducts%2Fdota-2') || href.includes('/products/dota-2')) {
     return checkoutPath('dota2');

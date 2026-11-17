@@ -2,43 +2,34 @@
  * Canonical site host — imported by Astro, src/data/site.ts, and Node build scripts.
  */
 
-export const SITE_HOST = 'dotacheat.com';
+export const SITE_HOST = 'aioncheats.org';
 export const SITE_URL = `https://${SITE_HOST}`;
 
 /** Indexable commercial and feature URLs (verify-seo audits these). */
-export const INDEXABLE_MONEY_ROUTES = [
-  '/',
-  '/dota-2-maphack/',
-  '/dota-2-hero-esp/',
-  '/dota-2-cheats-review/',
-];
+export const INDEXABLE_MONEY_ROUTES = ['/', '/cloud-dma-for-aion-classic/'];
 
-function showcaseImage(siteUrl, file, title) {
-  return { loc: `${siteUrl}/images/showcase/${file}`, title };
-}
+const showcaseImage = (siteUrl, path, title) => ({
+  loc: `${siteUrl}${path}`,
+  title,
+});
 
 /** Google sitemap image namespace entries (keep in sync with src/data/site.ts). */
 export function buildSitemapImages(siteUrl = SITE_URL) {
+  const fallback = showcaseImage(siteUrl, '/images/showcase/aion-visuals.webp', 'Aion Classic player ESP overlay preview');
   return {
-    '/': [
-      showcaseImage(siteUrl, 'dota-drow-teamfight.webp', 'Dota 2 cheats software interface'),
-      showcaseImage(siteUrl, 'dota-huskar-combat.webp', 'Dota 2 gameplay feature preview'),
+    '/': [showcaseImage(siteUrl, '/images/showcase/aion-visuals.webp', 'Aion Classic player ESP overlay preview')],
+    '/aion-classic-esp/': [
+      showcaseImage(siteUrl, '/images/showcase/aion-visuals.webp', 'Aion Classic player nameplate ESP'),
     ],
-    '/dota-2-maphack/': [
-      showcaseImage(siteUrl, 'dota-invoker-river.webp', 'Dota 2 maphack map visibility preview'),
-      showcaseImage(siteUrl, 'dota-low-poly-map.webp', 'Dota 2 map information interface'),
+    '/aion-classic-pricing/': [
+      showcaseImage(siteUrl, '/images/showcase/aion-gameplay.webp', 'Aion Classic ESP and aimbot monthly and lifetime pricing'),
     ],
-    '/dota-2-hero-esp/': [
-      showcaseImage(siteUrl, 'dota-axe-combat.webp', 'Dota 2 hero ESP player information overlay'),
-      showcaseImage(siteUrl, 'dota-magnus-overlay.webp', 'Dota 2 enemy hero ESP interface'),
+    '/cloud-dma-for-aion-classic/': [
+      showcaseImage(siteUrl, '/images/showcase/aion-misc.webp', 'Cloud DMA for Aion Classic setup'),
     ],
-    '/dota-2-cheats-review/': [
-      showcaseImage(siteUrl, 'dota-drow-teamfight.webp', 'Dota 2 cheats review product interface'),
-      showcaseImage(siteUrl, 'dota-feature-menu.webp', 'Dota 2 cheat software feature demonstration'),
+    '/aion-classic-system-requirements/': [
+      showcaseImage(siteUrl, '/images/showcase/aion-misc.webp', 'Aion Classic ESP aimbot Windows system requirements'),
     ],
-    '/dota-2-scripts/': [
-      showcaseImage(siteUrl, 'dota-magnus-overlay.webp', 'Dota 2 scripts feature interface'),
-    ],
-    '/faq/': [{ loc: `${siteUrl}/og/faq.jpg`, title: 'DotaCheat FAQ' }],
+    '/faq/': [fallback],
   };
 }

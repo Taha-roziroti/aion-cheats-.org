@@ -1,5 +1,14 @@
 ---
-import ContentPage from '../../../components/content/ContentPage.astro';
+import MarkdownSeoPage from '../../../components/content/MarkdownSeoPage.astro';
 ---
 
-<ContentPage id="cloud-dma-setup" />
+<MarkdownSeoPage
+  id="cloud-dma-setup"
+  breadcrumbs={[
+    { name: 'Home', path: '/' },
+    { name: 'Guides', path: '/#guides' },
+    { name: 'Cloud DMA setup', path: '/guides/cloud-dma-setup/' },
+  ]}
+  checkoutProduct="cloud-dma"
+  showAdditionalCosts={false}
+/>
